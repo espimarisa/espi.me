@@ -1,0 +1,77 @@
+# Configs
+cfg.js
+cfg.json
+config.js
+config.json
+
+# Binaries
+ffmpeg
+ffmpeg.exe
+ffplay
+ffplay.exe
+ffprobe
+ffprobe.exe
+rethinkdb
+rethinkdb.exe
+Lavalink
+Lavalink.jar
+
+# Modules
+.sass-cache
+dist/
+docs/
+node_modules/
+out/
+rethinkdb_data/
+
+# Logs & lockfiles
+.npm
+logs/*
+npm
+npm-debug.log
+npm-error.log
+report.*
+yarn-debug.log
+yarn-error.log
+yarn.lock*
+
+# Windows
+*.stackdump
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+[Dd]esktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+Thumbs.db:encryptable
+$RECYCLE.BIN/
+
+# macOS
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+Icon
+Network Trash Folder
+Temporary Items
+
+# Linux
+*~
+.directory
+.fuse_hidden*
+.nfs*
+.Trash-*

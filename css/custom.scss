@@ -1,0 +1,109 @@
+.has-padding {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon {
+    color: #dbdbdb !important;
+  }
+  
+  .avatar {
+    border: 3px solid #dbdbdb;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .icon {
+    color: #000;
+  }
+  
+  .avatar {
+    border: 3px solid #000;
+  }
+}
+
+#sections {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5em;
+  div {
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: .5em;
+    background-color: #2f4053;
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.5);
+  }
+}
+
+.title {
+  margin-top: 0em;
+  font-size: 3em;
+  line-height: 0.5em;
+}
+
+.subtitle {
+  font-size: 1.6em;
+  line-height: 0.5em;
+}
+
+.heading {
+  font-size: 2em;
+  line-height: 0.25em;
+}
+
+
+
+
+/* centering is hard idk
+why it won't work
+todo: don't do this 
+
+Micah - use flex box :3
+*/
+
+#card {
+  display:flex;
+  justify-content: left;
+  align-items: center;
+  
+  #avatar {
+    border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    border: .2em solid white;
+  }
+  .sidecard {
+    
+    padding-left: 1em;
+    
+    
+    
+    .icon {
+      color: #000;
+      transition: all 0.2s;
+      padding-top: 3px;
+      -webkit-transition: all 0.2s;
+      text-decoration: none;
+    }
+    
+    .icon:hover {
+      opacity: 0.7;
+      transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      text-decoration: none;
+    }
+  }
+}
+
+
