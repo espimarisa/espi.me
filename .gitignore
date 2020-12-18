@@ -23,6 +23,8 @@ docs/
 node_modules/
 out/
 rethinkdb_data/
+_site/
+.jekyll-cache
 
 # Logs & lockfiles
 .npm

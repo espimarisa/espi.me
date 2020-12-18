@@ -1,0 +1,55 @@
+---
+layout: default
+title: Blog
+---
+
+<header id="main">
+  <h1>smol(blog)</h1>
+  <p class="subtitle">Ramblings about programming and technology.</p>
+  <div class="icons">
+    <a href="/" title="Back to homepage">
+      <em class="icon icon-home"></em>
+    </a>
+    <a href="/feed.xml" title="RSS Feed">
+      <em class="icon icon-rss"></em>
+    </a>
+  </div>
+  <hr />
+</header>
+
+<!-- List of posts -->
+<div id="posts">
+  {% for post in paginator.posts %}
+  <h2>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <small class="post-date">{{ post.date | date: "%B %d, %Y" }}</small>
+  </h2>
+
+  <p class="subtitle">{{ post.description }}</p>
+  {% endfor %}
+</div>
+
+<!-- Navigation arrows if more than 10 posts exist -->
+{% if site.posts.size > 10 %}
+<hr />
+
+<footer class="icons has-spacing">
+  <p class="subtitle">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" title="Previous 10 posts">
+    <em class="icon icon-left"></em>
+  </a>
+
+  {% else %}
+  <em class="icon icon-left"></em>
+  {% endif %} {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" title="Next 10 posts">
+    <em class="icon icon-right"></em>
+  </a>
+
+  {% else %}
+  <em class="icon icon-right"></em>
+  {% endif %}
+</footer>
+{% endif %}

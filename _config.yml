@@ -1,0 +1,43 @@
+title: espi.me
+description: Posts about computers, programming, and anything that interests me.
+permalink: /blog/:year/:title/
+url: https://espi.me
+logo: /assets/img/favicon.png
+
+twitter:
+  username: smolespi
+  card: summary
+
+socials:
+  github: smolespi
+  twitter: smolespi
+  twitter_domain: espi.me
+
+compress_html:
+  comments: all
+
+exclude:
+  - .editorconfig
+  - .eslintrc
+  - .gitignore
+  - .gitattributes
+  - .prettierrc
+  - .prettierignore
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+kramdown:
+  auto_ids: false
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-target-blank

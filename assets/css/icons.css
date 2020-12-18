@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "icons";
+  src: url("../font/icons.eot?84492394");
+  src: url("../font/icons.eot?84492394#iefix") format("embedded-opentype"), url("../font/icons.woff2?84492394") format("woff2"),
+    url("../font/icons.woff?84492394") format("woff"), url("../font/icons.ttf?84492394") format("truetype"),
+    url("../font/icons.svg?84492394#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0.5em;
+  font-size: 250%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+.icon-envelope:before {
+  content: "\e800";
+}
+.icon-youtube:before {
+  content: "\e801";
+}
+.icon-twitch:before {
+  content: "\e802";
+}
+.icon-reddit:before {
+  content: "\e803";
+}
+.icon-mastodon:before {
+  content: "\e804";
+}
+.icon-xmpp:before {
+  content: "\e805";
+}
+.icon-gitlab:before {
+  content: "\e806";
+}
+.icon-twitter:before {
+  content: "\e807";
+}
+.icon-github:before {
+  content: "\e808";
+}
+.icon-telegram:before {
+  content: "\e809";
+}
+.icon-npm:before {
+  content: "\e80a";
+}
+.icon-steam:before {
+  content: "\e80b";
+}
+.icon-discord:before {
+  content: "\e80c";
+}
+.icon-coffee:before {
+  content: "\e80d";
+}
+.icon-keybase:before {
+  content: "\e80e";
+}
+.icon-key:before {
+  content: "\e80f";
+}
+.icon-pleroma:before {
+  content: "\e810";
+}
+.icon-at:before {
+  content: "\e811";
+}
+.icon-exclamation-triangle:before {
+  content: "\e812";
+}
+.icon-bomb:before {
+  content: "\e813";
+}
+.icon-pen:before {
+  content: "\e814";
+}
+.icon-rss:before {
+  content: "\e815";
+}
+.icon-home:before {
+  content: "\e816";
+}
+.icon-link:before {
+  content: "\e817";
+}
+.icon-left:before {
+  content: "\e818";
+}
+.icon-right:before {
+  content: "\e819";
+}
+.icon-feather-alt:before {
+  content: "\e81a";
+}
