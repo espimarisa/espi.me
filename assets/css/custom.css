@@ -110,11 +110,19 @@ pre > code {
   body {
     font-size: 1.55rem;
   }
+
+  .subtitle {
+    line-height: 1em;
+  }
 }
 
 @media (max-width: 382px) {
   body {
     font-size: 1.35rem;
+  }
+
+  .subtitle {
+    line-height: 1em;
   }
 }
 
