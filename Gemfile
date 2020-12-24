@@ -8,4 +8,5 @@ gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-target-blank"
+gem "rouge"
 gem "wdm" if Gem.win_platform?

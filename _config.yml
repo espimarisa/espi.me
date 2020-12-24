@@ -29,8 +29,12 @@ exclude:
   - LICENSE
   - README.md
 
+markdown: kramdown
+highlighter: rouge
+
 kramdown:
   auto_ids: false
+  input: GFM
 
 paginate: 10
 paginate_path: "/blog/page:num/"
