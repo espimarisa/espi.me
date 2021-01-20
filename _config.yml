@@ -17,12 +17,10 @@ compress_html:
   comments: all
 
 exclude:
-  - .editorconfig
   - .eslintrc
   - .gitignore
   - .gitattributes
   - .prettierrc
-  - .prettierignore
   - CNAME
   - Gemfile
   - Gemfile.lock
