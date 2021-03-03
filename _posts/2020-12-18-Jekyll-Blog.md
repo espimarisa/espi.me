@@ -27,4 +27,4 @@ Overall, I'm pretty proud of this. I think I achieved my goals pretty decently. 
 
 [jekyll]: https://jekyllrb.com "Jekyll is a static site generator."
 [sakura]: https://github.com/oxalorg/sakura "Sakura is a classless CSS framework."
-[twitter]: https://twitter.com/smolespi "My Twitter page"
+[twitter]: https://twitter.com/sysdotini "My Twitter page"
