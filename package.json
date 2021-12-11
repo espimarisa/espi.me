@@ -1,0 +1,41 @@
+{
+  "private": "true",
+  "name": "@sysdotini/espi.me",
+  "version": "4.0.0-alpha",
+  "description": "My personal website and blog.",
+  "license": "MIT",
+  "author": "Espi <espi@riseup.net> (https://espi.me)",
+  "homepage": "https://github.com/sysdotini/espi.me#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sysdotini/espi.me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sysdotini/espi.me/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=6.0.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production eleventy",
+    "dev": "cross-env NODE_ENV=development eleventy --serve",
+    "format": "cross-env prettier --write './**/**/*.{css,cjs,js,json,sass,scss,liquid,md,mjs,toml,ts,yml}'",
+    "prebuild": "cross-env rimraf ./_site/",
+    "test": "eslint . && prettier --c ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@sysdotini/eslint-config": "^3.1.1",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  }
+}
