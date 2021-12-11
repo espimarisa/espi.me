@@ -14,8 +14,7 @@
     "url": "https://github.com/sysdotini/espi.me/issues"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "pnpm": ">=6.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production eleventy",
