@@ -20,7 +20,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production eleventy",
     "build:css": "cross-env NODE_ENV=production postcss ./src/css/**/*.css --dir ./dist/css",
-    "dev": "npm run build:css && cross-env NODE_ENV=development eleventy --serve",
+    "dev": "npm run build:css && cross-env NODE_ENV=development eleventy --watch --serve",
     "format": "cross-env prettier --write './**/**/*.{css,cjs,js,json,sass,scss,liquid,md,mjs,toml,ts,yml}'",
     "prebuild": "cross-env rimraf ./_site/",
     "test": "eslint . && prettier --c ."
