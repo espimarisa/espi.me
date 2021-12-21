@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Head -->
+    {% include "head" %}
+
+    <!-- Title -->
+    <title>Redirecting to {{ destination }}</title>
+
+    <!-- Redirect -->
+    <meta http-equiv="refresh" content="3; url='{{ destination }}'" />
+  </head>
+
+  <body>
+    Redirecting you to <a href="{{ destination }}">{{ destination }}</a>
+  </body>
+</html>
