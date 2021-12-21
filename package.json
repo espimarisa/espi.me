@@ -1,8 +1,8 @@
 {
   "private": "true",
   "name": "@sysdotini/espi.me",
-  "version": "4.0.0-alpha",
-  "description": "My personal website and blog.",
+  "version": "4.0.0",
+  "description": "My personal website, powered by Eleventy and Sakura.css.",
   "license": "MIT",
   "author": "Espi <espi@riseup.net> (https://espi.me)",
   "homepage": "https://github.com/sysdotini/espi.me#readme",
