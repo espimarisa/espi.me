@@ -2,8 +2,6 @@
   "extends": "@sysdotini/eslint-config",
 
   "rules": {
-    // TODO: Fix vanilla JS eslint configs
-    // Disable these in the core eslint config
     "node/no-unpublished-require": "off"
   }
 }
