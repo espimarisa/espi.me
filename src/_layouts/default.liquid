@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <!-- Head & SEO -->
-    {% seo %} {% include "head" %}
+    {% include "head" %}
   </head>
 
   <body>
     <!-- Main content -->
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
 
-    <!-- Footer -->
     {% include "footer" %}
   </body>
 </html>

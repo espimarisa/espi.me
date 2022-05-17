@@ -1,5 +1,6 @@
 const eleventyPluginTinyHTML = require("@sardine/eleventy-plugin-tinyhtml");
-const eleventyPluginSEO = require("eleventy-plugin-seo");
+const eleventyExternalLinks = require("eleventy-plugin-external-links");
+const eleventySass = require("eleventy-sass");
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
@@ -30,36 +31,40 @@ const tinyHTMLOptions = {
 };
 
 module.exports = (eleventyConfig) => {
-  // Copy `img/` to `_site/assets/img`
-  eleventyConfig.addPassthroughCopy("./src/assets/img");
+  // Makes all links open with noopener noreferrer
+  eleventyConfig.addPlugin(eleventyExternalLinks, {
+    rel: "noopener noreferrer",
+    extensions: [".liquid", ".html"],
+  });
 
+  // Copy `img/` to `_site/assets/img` and webfonts
+  eleventyConfig.addPassthroughCopy("./src/img");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
+
+  // Sets Liquid options
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
     strict_filters: true,
   });
 
-  // Enables the SEO plugin
-  eleventyConfig.addPlugin(eleventyPluginSEO, {
-    title: "espi.me",
-    description: "Hobbyist full-stack developer.",
-    url: IS_PRODUCTION ? "https://espi.me" : "",
-    author: "Espi",
-    twitter: "sysdotini",
-    image: "/assets/img/favicon.png",
-    options: {
-      titleStyle: "minimalistic",
-      titleDivider: "|",
-      imageWithBaseUrl: true,
-      twitterCardType: "summary_large_image",
-      showPageNumbers: true,
+  // Enables SASS support
+  eleventyConfig.addPlugin(eleventySass, {
+    compileOptions: {
+      permalink: () => {
+        return (data) => {
+          // Ensures we output files to a CSS directory
+          return data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+        };
+      },
+    },
+    sass: {
+      // Load from our SCSS folder
+      loadPaths: ["./src/scss"],
     },
   });
 
-  // Minification & optimisation if running in prod
-  if (IS_PRODUCTION) {
-    // Minfiies HTML
-    eleventyConfig.addPlugin(eleventyPluginTinyHTML, tinyHTMLOptions);
-  }
+  // Minify HTML if we're running in production
+  if (IS_PRODUCTION) eleventyConfig.addPlugin(eleventyPluginTinyHTML, tinyHTMLOptions);
 
   return {
     dir: {

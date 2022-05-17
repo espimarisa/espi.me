@@ -1,0 +1,186 @@
+// We should NOT use @use, but pnpm sucks
+@use "../../node_modules/modern-normalize/modern-normalize.css";
+
+// Defines Atkinson Hyperlegible
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/atkinson-hyperlegible-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// Latin extensions for Atkinson Hyperlegible
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/atkinson-hyperlegible-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+// Colour variables
+$secondary-colour: #ffb000;
+$primary-colour: #dc267f;
+$primary-colour-darkmode: #648fff;
+$dark: #161616;
+$light: #f4f4f4;
+$black: #000;
+$white: #fff;
+
+// Layout styling
+body {
+  font-size: 100%;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  font-family: "Atkinson Hyperlegible", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  color: $dark;
+  background-color: $light;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1.15rem;
+  margin-top: auto;
+  padding: 14px;
+  background-color: white;
+}
+
+li {
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: auto;
+  max-width: 70rem;
+  align-items: center;
+  justify-content: center;
+}
+
+// Text styling
+a {
+  color: $primary-colour;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-colour;
+    border-bottom: 2px solid $secondary-colour;
+  }
+
+  &:visited {
+    color: $primary-colour;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.text-content {
+  font-size: 1.25rem;
+}
+
+.tagline {
+  padding-left: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.header-links {
+  font-size: 1.15rem;
+  padding-top: 0.25rem;
+  padding-bottom: 1rem;
+  word-spacing: 0.15rem;
+}
+
+// Tablet padding support
+@media only screen and (max-width: 950px) {
+  .container {
+    padding-left: 2rem;
+  }
+}
+
+// Phone padding support
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 1rem;
+  }
+}
+
+// Small phone padding support
+@media (max-width: 382px) {
+  .container {
+    padding-left: 0.5rem;
+  }
+}
+
+// High contrast stuff
+@media (prefers-contrast: more) {
+  body {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+// Dark mode theming
+@media (prefers-color-scheme: dark) {
+  // Flips text and background colours
+  body {
+    color: $light;
+    background-color: $dark;
+  }
+
+  // Footer colour
+  footer {
+    color: $light;
+    background-color: $black;
+  }
+
+  // Switches links to a softer colour
+  a {
+    color: $primary-colour-darkmode;
+
+    &:hover {
+      color: $primary-colour-darkmode;
+    }
+
+    &:visited {
+      color: $primary-colour-darkmode;
+    }
+  }
+
+  // High contrast support
+  @media (prefers-contrast: more) {
+    body {
+      color: $white;
+      background-color: $black;
+    }
+  }
+}
+
+// Reduced motion stuff
+@media (prefers-reduced-motion: reduce) {
+  a {
+    border-bottom: 2px solid $secondary-colour;
+  }
+}

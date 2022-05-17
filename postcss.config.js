@@ -17,7 +17,7 @@ const purgeCSSConfig = {
 module.exports = {
   plugins: [
     // Enables imports from node_modules/
-    postcssImport({ from: "./src/assets/css" }),
+    postcssImport({ from: "./src/scss", extensions: [".css", ".scss", ".sass"] }),
 
     // Vendor-specific prefixes
     autoprefixer(),
