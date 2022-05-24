@@ -37,7 +37,7 @@ module.exports = (eleventyConfig) => {
     extensions: [".liquid", ".html"],
   });
 
-  // Copy `img/` to `_site/assets/img` and webfonts
+  // Copy static assets
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/fonts");
 
