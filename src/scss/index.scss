@@ -26,8 +26,8 @@
 $secondary-colour: #ffb000;
 $primary-colour: #dc267f;
 $primary-colour-darkmode: #648fff;
-$dark: #161616;
-$light: #f4f4f4;
+$dark: #111;
+$light: #f1f1f1;
 $black: #000;
 $white: #fff;
 
@@ -47,20 +47,24 @@ body {
   flex-direction: column;
 }
 
-footer {
-  bottom: 0;
-  position: relative;
-  width: 100%;
-  text-align: center;
-  line-height: 1.5rem;
-  font-size: 1.15rem;
-  margin-top: auto;
-  padding: 14px;
-  background-color: white;
+li {
+  margin: auto;
+  padding-bottom: 0.25rem;
 }
 
-li {
-  padding-bottom: 0.5rem;
+ul {
+  font-size: 1.15rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Selector for spans in a header link
+#header-links > ul > li > a > span {
+  padding-right: 0.25rem;
+  filter: brightness(120%);
+  &:hover {
+    border-bottom: 2px solid $primary-colour-darkmode;
+  }
 }
 
 .container {
@@ -90,11 +94,12 @@ a {
 
 .title {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  border-bottom: 0.075rem solid $primary-colour;
 }
 
 .text-content {
@@ -103,18 +108,13 @@ a {
 
 .tagline {
   padding-left: 0.25rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-.header-links {
-  font-size: 1.15rem;
-  padding-top: 0.25rem;
-  padding-bottom: 1rem;
+#header-links {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   word-spacing: 0.15rem;
-}
-
-#discrim {
-  font-size: 1rem;
 }
 
 // Tablet padding support
@@ -154,10 +154,8 @@ a {
     background-color: $dark;
   }
 
-  // Footer colour
-  footer {
-    color: $light;
-    background-color: $black;
+  .subtitle {
+    border-bottom: 0.075rem solid $secondary-colour;
   }
 
   // Switches links to a softer colour
@@ -170,6 +168,19 @@ a {
 
     &:visited {
       color: $primary-colour-darkmode;
+    }
+  }
+
+  // Selector for spans in a header link
+  #header-links > ul > li > a > span {
+    padding-right: 0.25rem;
+    filter: brightness(120%);
+    &:hover {
+      border-bottom: 2px solid $primary-colour;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      border-bottom: 2px solid $primary-colour !important;
     }
   }
 
@@ -186,5 +197,9 @@ a {
 @media (prefers-reduced-motion: reduce) {
   a {
     border-bottom: 2px solid $secondary-colour;
+  }
+
+  #header-links > ul > li > a > span {
+    border-bottom: 2px solid $primary-colour-darkmode;
   }
 }
