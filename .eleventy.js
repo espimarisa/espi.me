@@ -38,6 +38,7 @@ module.exports = (eleventyConfig) => {
   });
 
   // Copy static assets
+  eleventyConfig.addPassthroughCopy("./src/.well-known");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/fonts");
 
