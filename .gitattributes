@@ -26,6 +26,8 @@
 *.inc             text
 *.ini             text
 *.js              text
+*.mjs              text
+*.cjs              text
 *.json            text
 *.jsx             text
 *.less            text
@@ -80,6 +82,7 @@ readme            text
 TODO              text
 
 # Templates
+*.astro             text
 *.dot             text
 *.ejs             text
 *.haml            text
