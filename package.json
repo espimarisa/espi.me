@@ -1,59 +1,47 @@
 {
+  "type": "module",
   "private": "true",
-  "name": "@sysdotini/espi.me",
-  "version": "5.0.0",
-  "description": "My personal website, powered by Eleventy.",
+  "name": "@espimarisa/espi.me",
+  "version": "6.0.0",
+  "description": "My personal website and project portfolio.",
   "license": "zlib",
-  "author": "Espi Marisa <espi@riseup.net> (https://espi.me)",
-  "homepage": "https://github.com/sysdotini/espi.me#readme",
+  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
+  "homepage": "https://github.com/espimarisa/espi.me#readme",
+  "packageManager": "pnpm@8.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sysdotini/espi.me.git"
+    "url": "git+https://github.com/espimarisa/espi.me.git"
   },
   "bugs": {
-    "url": "https://github.com/sysdotini/espi.me/issues"
+    "url": "https://github.com/espimarisa/espi.me/issues"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
   },
   "scripts": {
-    "build": "npm run build:eleventy && npm run build:css",
-    "build:eleventy": "cross-env NODE_ENV=production ELEVENTY_ENV=production eleventy",
-    "build:css": "cross-env NODE_ENV=production postcss './_site/css/**/*.css' -d './_site/css'",
-    "dev": "cross-env concurrently \"npm run dev:eleventy\" \"npm run dev:css\"",
-    "dev:css": "cross-env NODE_ENV=development postcss './_site/css/**/*.css' -d './_site/css' -w",
-    "dev:eleventy": "cross-env NODE_ENV=development ELEVENTY_ENV=development eleventy --watch --serve",
-    "format": "cross-env prettier --write './**/**/*.{css,js,json,sass,scss,liquid,md,ts}'",
-    "prebuild": "cross-env rimraf ./_site/",
-    "start": "npm run build && cross-env NODE_ENV=production ELEVENTY_ENV=production eleventy --serve",
-    "test": "eslint . && prettier --c ."
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^2.10.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@fontsource/atkinson-hyperlegible": "^4.5.10",
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
-    "@sysdotini/eslint-config": "^3.1.3",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.1.14",
-    "eleventy-plugin-external-links": "^1.1.2",
-    "eleventy-sass": "^2.1.3",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
+    "@fontsource/atkinson-hyperlegible": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "npm:eslint-plugin-i@2.28.0-2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-unicorn": "^45.0.2",
-    "modern-normalize": "^1.1.0",
-    "postcss": "^8.4.20",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "prettier": "^2.8.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.9.4"
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "modern-normalize": "^2.0.0",
+    "prettier": "^3.0.1",
+    "prettier-plugin-astro": "^0.11.0",
+    "sass": "^1.64.2"
   }
 }

@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Page.astro";
+import Webring from "../components/Webring.astro";
+import HeaderLinks from "../components/HeaderLinks.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+
+// Metadata
+const title = "Espi Marisa";
+const description = "Full-stack software engineer and PC hardware enthusiast.";
+const favicon = new URL("/favicon.png", Astro.url);
+const url = "https://espi.me";
+
+// Change in case of 🔥
+const pronouns = "she/her";
+const location = "Huntsville, Alabama";
+
+// Calculates my age because I don't want to do it manually
+const birthday = new Date("07/26/2002");
+const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() - 1970);
+---
+
+<Layout title={title} description={description} favicon={favicon} url={url} />
+
+<section class="container">
+  <h1 id="name">{title}</h1>
+  <span id="pronouns">({pronouns})</span>
+  <HeaderLinks />
+
+  <div id="about" class="has-padding">
+    <p class="title">About me</p>
+    <p>
+      I'm a {age}-year old full-stack software engineer currently located in {location}. I primarily work with TypeScript, Svelte,
+      SvelteKit, Astro, and SCSS, but I also know a variety of other frameworks and libraries.
+    </p>
+    <p>
+      In my spare time I love to get my hands on the latest in enthusiast PC hardware and fine tuning or overclocking it. I enjoy getting my
+      hands dirty with new bleeding-edge and innovative software as well.
+    </p>
+    <p>
+      Outside of tech, I enjoy hanging out with my friends (see below), getting to know new people, interacting with my local queer
+      community, and being a positive influence to everyone in my presence. Feel free to reach out, I don't bite!
+    </p>
+  </div>
+
+  <Projects />
+  <Webring />
+</section>
+
+<Footer />

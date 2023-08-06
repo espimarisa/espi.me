@@ -1,0 +1,21 @@
+---
+import Link from "./Link.astro";
+import { headerLinks } from "../utils/headerlinks.js";
+const finalItem = headerLinks.slice(-1);
+---
+
+<ul id="header-links">
+  {
+    headerLinks.map((link) => {
+      // Final link item
+      let liID = "";
+      if (link.name === finalItem[0].name) liID = "last-header-item";
+
+      return (
+        <li id={liID}>
+          <Link href={link.link} content={link.name} title={link.altText} />
+        </li>
+      );
+    })
+  }
+</ul>

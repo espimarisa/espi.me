@@ -1,7 +1,0 @@
-{
-  "extends": "@sysdotini/eslint-config",
-
-  "rules": {
-    "node/no-unpublished-require": "off"
-  }
-}

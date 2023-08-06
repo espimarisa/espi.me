@@ -1,6 +1,6 @@
 # [espi.me][espi.me]
 
-My personal website, powered by Eleventy.
+My personal website and portfolio, built with Astro.
 
 ## Usage
 
@@ -8,7 +8,7 @@ If you're trying to host this on GitHub pages, you'll probably want to stop and 
 
 1. `pnpm i`
 2. `pnpm build`
-3. `pnpm start` or `pnpm dev`
+3. `pnpm preview` or `pnpm dev`
 
 ## License
 

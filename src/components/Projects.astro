@@ -1,0 +1,23 @@
+---
+import { projects } from "../utils/projects.js";
+import Link from "./Link.astro";
+---
+
+<div id="projects" class="has-padding">
+  <p class="title">Projects</p>
+  {
+    projects.map((link) => {
+      let contributorText = "";
+      if (link.contributor) contributorText = "(contributor)";
+
+      return (
+        <div class="project">
+          <Link cssClass="project-title" href={link.link} content={link.name} title={link.link} />
+          <span class="project-contributor">{contributorText}</span>
+          <p class="project-description">{link.description}</p>
+          <p class="project-technologies">Made with {link.technologies}</p>
+        </div>
+      );
+    })
+  }
+</div>

@@ -1,0 +1,305 @@
+@use "modern-normalize";
+@use "@fontsource/atkinson-hyperlegible";
+
+$white: #ffffff;
+$black: #000000;
+
+// Accents
+$dark: #111111;
+$light: #fafafa;
+$grey: #f5f5f5;
+
+// Colors
+$secondary: #ffaf00;
+$primary: #ff0070;
+
+html {
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $dark;
+  background-color: $light;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100wh;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family:
+    "Atkinson Hyperlegible",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+//////////////////////
+// Main text styling
+//////////////////////
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 90%;
+  }
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  display: block;
+  margin: auto;
+  text-decoration: $secondary 1px solid underline;
+  text-underline-position: under;
+}
+
+//////////////////////
+// Layout styling
+//////////////////////
+
+footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: $grey;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  max-width: 70rem;
+}
+
+.has-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+//////////////////////
+// Element styling
+//////////////////////
+
+#name {
+  font-size: 3rem;
+  display: inline;
+}
+
+#pronouns {
+  display: inline;
+  padding-left: 0.5rem;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+#header-links {
+  font-size: 1.15rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    &:before {
+      content: "";
+    }
+
+    &:after {
+      padding-left: 5px;
+      padding-right: 5px;
+      content: "\2022";
+    }
+
+    &#last-header-item:after {
+      content: "";
+    }
+  }
+}
+
+#about {
+  p {
+    margin-top: auto;
+  }
+}
+
+#webring {
+  max-width: 20rem;
+
+  .webring-image {
+    image-rendering: pixelated;
+  }
+
+  .webring-link {
+    text-decoration: none;
+  }
+}
+
+.project {
+  padding-bottom: 1.5rem;
+
+  .project-description {
+    margin: auto;
+  }
+
+  .project-title {
+    margin: auto;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  .project-contributor {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .project-technologies {
+    margin: auto;
+    font-style: italic;
+  }
+}
+
+//////////////////////
+// Screen scaling
+//////////////////////
+
+// Tablet padding support
+@media only screen and (max-width: 950px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #pronouns {
+    display: block;
+    padding-left: 0rem;
+  }
+
+  #header-links {
+    li {
+      display: block;
+
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+// Phone padding support
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #pronouns {
+    display: block;
+    padding-left: 0rem;
+  }
+
+  #header-links {
+    li {
+      display: block;
+
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+// Small phone padding support
+@media (max-width: 382px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #pronouns {
+    display: block;
+    padding-left: 0rem;
+  }
+
+  #header-links {
+    li {
+      display: block;
+
+      &:before {
+        content: "";
+      }
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+//////////////////////
+// High contrast
+//////////////////////
+
+@media (prefers-contrast: more) {
+  body {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+//////////////////////
+// Dark mode
+//////////////////////
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $light;
+    background-color: $dark;
+
+    @media (prefers-contrast: more) {
+      color: $white;
+      background-color: $black;
+
+      footer {
+        background-color: $dark;
+      }
+    }
+  }
+
+  a {
+    color: $secondary;
+  }
+
+  footer {
+    background-color: $black;
+  }
+
+  #name {
+    text-shadow: 0 0 0.25rem $secondary;
+  }
+
+  .title {
+    text-decoration: $primary 1px solid underline;
+  }
+}

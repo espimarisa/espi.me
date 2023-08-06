@@ -1,6 +1,9 @@
 {
+  "plugins": ["prettier-plugin-astro"],
   "arrowParens": "always",
+  "bracketSameLine": true,
   "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "ignore",
   "proseWrap": "preserve",
   "quoteProps": "consistent",
   "trailingComma": "all",
@@ -11,9 +14,9 @@
   "useTabs": false,
   "overrides": [
     {
-      "files": ["*.liquid"],
+      "files": "*.astro",
       "options": {
-        "parser": "angular"
+        "parser": "astro"
       }
     }
   ]
