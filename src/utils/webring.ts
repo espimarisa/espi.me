@@ -50,6 +50,21 @@ export const webring = [
     image: "kot.png",
   },
   {
+    name: "Palaiologos",
+    link: "https://palaiologos.rocks/",
+    image: "pala.png",
+  },
+  {
+    name: "Lewi",
+    link: "https://lewisakura.moe/",
+    image: "lewi.png",
+  },
+  {
+    name: "Skye",
+    link: "https://skyeweeb.weebly.com/",
+    image: "skye.png",
+  },
+  {
     name: "colepaws",
     link: "https://colepaws.pet",
     image: "colepaws.png",

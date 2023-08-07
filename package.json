@@ -29,7 +29,7 @@
     "astro": "^2.10.1"
   },
   "devDependencies": {
-    "@espimarisa/eslint-config": "^4.0.0",
+    "@espimarisa/eslint-config": "^4.1.0",
     "@fontsource/atkinson-hyperlegible": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
