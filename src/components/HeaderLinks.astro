@@ -8,8 +8,7 @@ const finalItem = headerLinks.slice(-1);
   {
     headerLinks.map((link) => {
       // Final link item
-      let liID = "";
-      if (link.name === finalItem[0].name) liID = "last-header-item";
+      const liID = link.name === finalItem[0].name ? "last-header-item" : undefined;
 
       return (
         <li id={liID}>
