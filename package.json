@@ -26,7 +26,8 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^2.10.1"
+    "astro": "^2.10.1",
+    "astro-compress": "^2.0.6"
   },
   "devDependencies": {
     "@espimarisa/eslint-config": "^4.1.0",
