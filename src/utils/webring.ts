@@ -1,3 +1,9 @@
+interface Webring {
+  name: string;
+  link: string;
+  image: string;
+}
+
 export const webring = [
   {
     name: "Espi Marisa",
@@ -74,4 +80,4 @@ export const webring = [
     link: "https://resolv.moe",
     image: "resolv.png",
   },
-];
+] satisfies Webring[];

@@ -1,3 +1,11 @@
+interface Project {
+  name: string;
+  link: string;
+  description: string;
+  technologies: string;
+  contributor?: boolean;
+}
+
 export const projects = [
   {
     name: "hibiki",
@@ -24,4 +32,4 @@ export const projects = [
     technologies: "JavaScript, CSS",
     contributor: true,
   },
-];
+] satisfies Project[];

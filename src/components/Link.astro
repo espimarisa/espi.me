@@ -1,7 +1,5 @@
 ---
-interface Props {
-  href: string;
-  title?: string;
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   content?: string;
   cssClass?: string;
 }
