@@ -1,3 +1,9 @@
+interface HeaderLink {
+  name: string;
+  link: string;
+  altText: string;
+}
+
 export const headerLinks = [
   {
     name: "GitHub",
@@ -34,4 +40,4 @@ export const headerLinks = [
     link: "mailto:contact@espi.me",
     altText: "A mailto link to email me at contact (at) espi (dot) me.",
   },
-];
+] satisfies HeaderLink[];
