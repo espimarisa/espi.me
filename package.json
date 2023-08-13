@@ -26,14 +26,14 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^2.10.7",
-    "astro-compress": "^2.0.6"
+    "astro": "^2.10.7"
   },
   "devDependencies": {
     "@espimarisa/eslint-config": "^4.1.2",
     "@fontsource/atkinson-hyperlegible": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
+    "astro-compress": "^2.0.6",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.0",
