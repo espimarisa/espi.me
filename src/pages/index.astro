@@ -20,7 +20,7 @@ const birthday = new Date("07/26/2002");
 const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() - 1970);
 ---
 
-<Layout title={title} description={description} favicon={favicon} url={url} />
+<Layout title={title} description={description} favicon={favicon} url={url}>
 
 <section class="container">
   <h1 id="name">{title}</h1>
@@ -48,3 +48,5 @@ const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() 
 </section>
 
 <Footer />
+
+</Layout>
