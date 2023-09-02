@@ -11,7 +11,7 @@ export const projects = [
     name: "hibiki",
     link: "https://github.com/espimarisa/hibiki",
     description: "A Discord bot jam-packed with useful utilities for everyone.",
-    technologies: "TypeScript, React, Next.js, SCSS, Prisma, PostgreSQL",
+    technologies: "TypeScript, Svelte, Sveltekit, SCSS, Prisma, PostgreSQL",
   },
   {
     name: "espi.me",
