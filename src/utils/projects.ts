@@ -26,6 +26,12 @@ export const projects = [
     technologies: "TypeScript, RethinkDB",
   },
   {
+    name: "thinkpad-x270-efi-sonoma",
+    link: "https://github.com/espimarisa/thinkpad-x270-efi-sonoma",
+    description: "OpenCore EFI for the Lenovo ThinkPad X270, supporting macOS Sonoma.",
+    technologies: "OpenCore, ACPI Source Language",
+  },
+  {
     name: "bulmaselect",
     link: "https://github.com/resolvedxd/bulmaselect",
     description: "JavaScript library for creating accessible multiselect elements.",

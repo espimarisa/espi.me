@@ -26,24 +26,24 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^2.10.7"
+    "astro": "^2.10.15"
   },
   "devDependencies": {
-    "@espimarisa/eslint-config": "^4.1.2",
-    "@fontsource/atkinson-hyperlegible": "^5.0.8",
-    "@typescript-eslint/eslint-plugin": "^6.3.0",
-    "@typescript-eslint/parser": "^6.3.0",
-    "astro-compress": "^2.0.6",
-    "eslint": "^8.47.0",
+    "@espimarisa/eslint-config": "^4.1.6",
+    "@fontsource/atkinson-hyperlegible": "^5.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "astro-compress": "^2.0.15",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "npm:eslint-plugin-i@2.28.0-2",
-    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-n": "^16.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "modern-normalize": "^2.0.0",
-    "prettier": "^3.0.1",
-    "prettier-plugin-astro": "^0.11.0",
-    "sass": "^1.65.1"
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.11.1",
+    "sass": "^1.68.0"
   }
 }
