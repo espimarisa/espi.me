@@ -7,7 +7,7 @@
   "license": "zlib",
   "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
   "homepage": "https://github.com/espimarisa/espi.me#readme",
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.9.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/espimarisa/espi.me.git"
@@ -17,7 +17,7 @@
   },
   "engines": {
     "node": ">=20.11.0",
-    "pnpm": ">=8.14.1"
+    "pnpm": ">=8.9.0"
   },
   "scripts": {
     "dev": "astro dev",
