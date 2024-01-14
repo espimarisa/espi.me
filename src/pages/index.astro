@@ -8,13 +8,13 @@ import Link from "../components/Link.astro";
 
 // Metadata
 const title = "Espi Marisa";
-const description = "Full-stack software engineer and PC hardware enthusiast.";
+const description = "Hobbyist developer, PC hardware enthusiast, and Computer Science student.";
 const favicon = new URL("/favicon.png", Astro.url);
 const url = "https://espi.me";
 
 // Change in case of 🔥
-const pronouns = "they/she";
-// const location = "Huntsville, Alabama";
+const pronouns = "she/they";
+// const location = "Birmingham, Alabama";
 
 // Calculates my age because I don't want to do it manually
 const birthday = new Date("07/26/2002");
@@ -30,16 +30,12 @@ const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() 
     <div id="about" class="has-padding">
       <p class="title">About me</p>
       <p>
-        I'm a {age}-year old hobbyist developer, PC hardware enthusiast, and computer science student at
+        I'm a {age}-year old hobbyist developer, PC hardware enthusiast, and Computer Science student at
         <Link href="https://uab.edu" content="UAB" title="The University of Alabama at Birmingham" />.
       </p>
       <p>
         In my spare time I love to get my hands on the latest in enthusiast PC hardware and technology as a whole. I enjoy getting my
-        hands dirty with bleeding-edge software or interesting projects as well.
-      </p>
-      <p>
-        Outside of tech, I enjoy hanging out with my friends, interacting with my local queer
-        community, and being a positive influence to everyone in my presence. Feel free to reach out to me, I don't bite!
+        hands dirty with bleeding-edge software and interesting homelab projects.
       </p>
     </div>
 

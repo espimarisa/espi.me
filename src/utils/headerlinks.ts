@@ -26,16 +26,6 @@ export const headerLinks = [
     altText: "A link to my Twitter profile, (at) espidotme.",
   },
   {
-    name: "Fediverse",
-    link: "https://wetdry.world/@espi",
-    altText: "A link to my Fediverse account, (at) wetdry (dot) world (at) espi.",
-  },
-  {
-    name: "Bluesky",
-    link: "https://bsky.app/profile/espi.me",
-    altText: "A link to my Bluesky profile, (at) espi (dot) me.",
-  },
-  {
     name: "Email",
     link: "mailto:contact@espi.me",
     altText: "A mailto link to email me at contact (at) espi (dot) me.",

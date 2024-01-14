@@ -36,6 +36,11 @@ export const webring = [
     image: "chloe.png",
   },
   {
+    name: "Alyxia",
+    link: "https://alyxia.dev",
+    image: "alyxia.png",
+  },
+  {
     name: "Flleeppyy",
     link: "https://fleepy.tv/",
     image: "fleepy.png",
@@ -49,6 +54,11 @@ export const webring = [
     name: "Erin",
     link: "https://e2.pm",
     image: "erin.png",
+  },
+  {
+    name: "Maia",
+    link: "https://https://maia.crimew.gay",
+    image: "maia.png",
   },
   {
     name: "Kot",
@@ -69,6 +79,11 @@ export const webring = [
     name: "Skye",
     link: "https://skyeweeb.weebly.com/",
     image: "skye.png",
+  },
+  {
+    name: "Ezio",
+    link: "https://reimu.info/",
+    image: "ezio.png",
   },
   {
     name: "colepaws",

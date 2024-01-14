@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
     webring.map((ring) => {
       return (
         <a href={ring.link} title={ring.name} class="webring-link" target="_blank" rel="nofollow noopener noreferrer">
-          <Image src={`webring/${ring.image}`} class="webring-image" alt={ring.name} width={88} height={31} />
+          <Image src={`/webring/${ring.image}`} class="webring-image" alt={ring.name} width={88} height={31} />
         </a>
       );
     })
