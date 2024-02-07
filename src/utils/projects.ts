@@ -22,14 +22,8 @@ export const projects = [
   {
     name: "session-rethinkdb-ts",
     link: "https://github.com/espimarisa/session-rethinkdb-ts",
-    description: "A RethinkDB express-session store.",
+    description: "A modern RethinkDB session store for Express.",
     technologies: "TypeScript, RethinkDB",
-  },
-  {
-    name: "thinkpad-x270-efi-sonoma",
-    link: "https://github.com/espimarisa/thinkpad-x270-efi-sonoma",
-    description: "OpenCore EFI for the Lenovo ThinkPad X270, supporting macOS Sonoma.",
-    technologies: "OpenCore, ACPI Source Language",
   },
   {
     name: "bulmaselect",

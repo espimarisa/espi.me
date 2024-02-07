@@ -107,6 +107,7 @@ footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 1rem;
 
   li {
     display: inline-block;
@@ -127,7 +128,8 @@ footer {
   }
 }
 
-#about {
+#about,
+#projects {
   p {
     margin-top: auto;
   }
@@ -156,11 +158,6 @@ footer {
     margin: auto;
     font-size: 1.15rem;
     text-decoration: none;
-  }
-
-  .project-contributor {
-    padding-left: 5px;
-    padding-right: 5px;
   }
 
   .project-technologies {

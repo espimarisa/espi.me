@@ -26,24 +26,24 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^4.1.2"
+    "astro": "^4.3.3"
   },
   "devDependencies": {
     "@espimarisa/eslint-config": "^4.2.3",
     "@fontsource/atkinson-hyperlegible": "^5.0.18",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "astro-compress": "^2.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "astro-compress": "^2.2.9",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-unicorn": "^50.0.1",
+    "eslint-plugin-unicorn": "^51.0.1",
     "modern-normalize": "^2.0.0",
-    "prettier": "^3.2.2",
-    "prettier-plugin-astro": "^0.12.3",
-    "sass": "^1.69.7"
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "sass": "^1.70.0"
   }
 }

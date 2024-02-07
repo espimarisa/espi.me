@@ -4,17 +4,15 @@ import Webring from "../components/Webring.astro";
 import HeaderLinks from "../components/HeaderLinks.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
-import Link from "../components/Link.astro";
 
 // Metadata
 const title = "Espi Marisa";
-const description = "Hobbyist developer, PC hardware enthusiast, and Computer Science student.";
+const description = "Software developer, tinkerer, and university student based in Birmingham, Alabama.";
 const favicon = new URL("/favicon.png", Astro.url);
 const url = "https://espi.me";
 
 // Change in case of 🔥
-const pronouns = "she/they";
-// const location = "Birmingham, Alabama";
+const pronouns = "they/she";
 
 // Calculates my age because I don't want to do it manually
 const birthday = new Date("07/26/2002");
@@ -30,13 +28,18 @@ const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() 
     <div id="about" class="has-padding">
       <p class="title">About me</p>
       <p>
-        I'm a {age}-year old hobbyist developer, PC hardware enthusiast, and Computer Science student at
-        <Link href="https://uab.edu" content="UAB" title="The University of Alabama at Birmingham" />.
+        I'm a {age}-year old software developer, tinkerer, and university student based in Birmingham, Alabama.
       </p>
+
       <p>
-        In my spare time I love to get my hands on the latest in enthusiast PC hardware and technology as a whole. I enjoy getting my
-        hands dirty with bleeding-edge software and interesting homelab projects.
+        I primarily work with TypeScript and JavaScript, with a preference towards TypeScript. On the frontend side of things, I usually work with Svelte, and I prefer writing custom SCSS instead of using CSS frameworks.
       </p>
+
+      <p>Outside of software development, I enjoy getting my hands on fascinating hardware, usually from the 2000s. I collect and repair laptops, and I enjoy thrifting for niche and obscure electronics.</p>
+
+
+      <p>Personally speaking, I'm a nonbinary dork interested in anime, e-sports, furry art, local politics, manga, music, and video games. I also collect enamel pins/buttons to put on my iconic hat.</p>
+
     </div>
 
     <Projects />

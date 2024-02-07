@@ -2,6 +2,7 @@
 interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   content?: string;
   cssClass?: string;
+  title?: string;
 }
 
 const { href, title, content, cssClass } = Astro.props;
