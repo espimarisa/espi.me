@@ -57,7 +57,7 @@ export const webring = [
   },
   {
     name: "Maia",
-    link: "https://https://maia.crimew.gay",
+    link: "https://maia.crimew.gay",
     image: "maia.png",
   },
   {
@@ -69,6 +69,16 @@ export const webring = [
     name: "Palaiologos",
     link: "https://palaiologos.rocks/",
     image: "pala.png",
+  },
+  {
+    name: "MarioMasta64",
+    link: "https://mariomasta64.me/",
+    image: "mariomasta.png",
+  },
+  {
+    name: "dd",
+    link: "https://dd86k.space/",
+    image: "dd.png",
   },
   {
     name: "Lewi",
