@@ -23,6 +23,7 @@
     "start": "astro dev"
   },
   "dependencies": {
+    "@astrojs/vercel": "^7.5.0",
     "@fontsource/atkinson-hyperlegible": "^5.0.19",
     "astro": "^4.5.12",
     "modern-normalize": "^2.0.0"

@@ -1,3 +1,4 @@
+import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 
@@ -6,4 +7,5 @@ export default defineConfig({
   compressHTML: true,
   site: "https://espi.me",
   integrations: [compress()],
+  adapter: vercel(),
 });
