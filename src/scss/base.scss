@@ -51,6 +51,10 @@ a {
   }
 }
 
+p {
+  margin: auto;
+}
+
 .title {
   font-size: 2.25rem;
   font-weight: bold;
@@ -74,16 +78,25 @@ footer {
 }
 
 .container {
-  margin: 0 auto;
   padding-top: 3rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  max-width: 65rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  // max-width: 60rem;
 }
 
 .has-padding {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.column {
+  flex: 50%;
 }
 
 //////////////////////
@@ -102,11 +115,18 @@ footer {
   font-size: 1.25rem;
 }
 
+#about {
+  padding-bottom: 0.5rem;
+  max-width: 28rem;
+  flex-wrap: wrap;
+}
+
 #header-links {
   font-size: 1.15rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-top: 0rem;
   padding-bottom: 1rem;
 
   li {
@@ -128,15 +148,9 @@ footer {
   }
 }
 
-#about,
-#projects {
-  p {
-    margin-top: auto;
-  }
-}
-
 #webring {
-  max-width: 25rem;
+  margin-left: auto;
+  max-width: 20rem;
 
   .webring-image {
     image-rendering: pixelated;
@@ -177,6 +191,11 @@ footer {
     padding-right: 2rem;
   }
 
+  .row {
+    align-items: revert;
+    display: block;
+  }
+
   #pronouns {
     display: block;
     padding-left: 0rem;
@@ -204,6 +223,11 @@ footer {
     padding-right: 1rem;
   }
 
+  .row {
+    align-items: revert;
+    display: block;
+  }
+
   #pronouns {
     display: block;
     padding-left: 0rem;
@@ -229,6 +253,11 @@ footer {
   .container {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .row {
+    align-items: revert;
+    display: block;
   }
 
   #pronouns {

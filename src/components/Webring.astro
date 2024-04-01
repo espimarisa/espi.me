@@ -1,17 +1,18 @@
 ---
-import { webring } from "../utils/webring.js";
 import { Image } from "astro:assets";
+
+import { webring } from "../utils/webring.js";
 ---
 
 <div id="webring" class="has-padding">
-  <p class="title">Friends</p>
+  <p class="title">Webring</p>
   {
     webring.map((ring) => {
       return (
         <a href={ring.link} title={ring.name} class="webring-link" target="_blank" rel="nofollow noopener noreferrer">
           <Image src={`/webring/${ring.image}`} class="webring-image" alt={ring.name} width={88} height={31} />
         </a>
-      );
+      ) as Element;
     })
   }
 </div>

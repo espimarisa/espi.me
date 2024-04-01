@@ -31,6 +31,11 @@ export const webring = [
     image: "adryd.png",
   },
   {
+    name: "colepaws",
+    link: "https://colepaws.pet",
+    image: "colepaws.png",
+  },
+  {
     name: "Chloe Arciniega",
     link: "https://arciniega.one/",
     image: "chloe.png",
@@ -54,6 +59,11 @@ export const webring = [
     name: "Erin",
     link: "https://e2.pm",
     image: "erin.png",
+  },
+  {
+    name: "Winter",
+    link: "https://winter.cafe",
+    image: "winter.png",
   },
   {
     name: "Maia",
@@ -86,6 +96,11 @@ export const webring = [
     image: "lewi.png",
   },
   {
+    name: "InvoxiPlayGames",
+    link: "https://invoxiplaygames.uk/",
+    image: "ipg.png",
+  },
+  {
     name: "Skye",
     link: "https://skyeweeb.weebly.com/",
     image: "skye.png",
@@ -96,13 +111,18 @@ export const webring = [
     image: "ezio.png",
   },
   {
-    name: "colepaws",
-    link: "https://colepaws.pet",
-    image: "colepaws.png",
+    name: "Pixel",
+    link: "https://pxh.pl/",
+    image: "pixelhir.gif",
   },
   {
     name: "Resolv",
     link: "https://resolv.moe",
     image: "resolv.png",
+  },
+  {
+    name: "ALTRAC",
+    link: "https://altrac.works",
+    image: "altrac.png",
   },
 ] satisfies Webring[];

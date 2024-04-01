@@ -1,50 +1,43 @@
 ---
-import Layout from "../layouts/Page.astro";
-import Webring from "../components/Webring.astro";
+import Footer from "../components/Footer.astro";
 import HeaderLinks from "../components/HeaderLinks.astro";
 import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
+import Webring from "../components/Webring.astro";
+import Page from "../layouts/Page.astro";
 
 // Metadata
 const title = "Espi Marisa";
-const description = "Software developer, tinkerer, and university student based in Birmingham, Alabama.";
 const favicon = new URL("/favicon.png", Astro.url);
 const url = "https://espi.me";
 
-// Change in case of 🔥
 const pronouns = "they/she";
-
-// Calculates my age because I don't want to do it manually
+const location = "Birmingham, Alabama";
 const birthday = new Date("07/26/2002");
 const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() - 1970);
+
+const description = `${age.toString()}-year old software developer, tinkerer, activist, university student, and nerdy catgirl from ${location}`;
 ---
 
-<Layout title={title} description={description} favicon={favicon} url={url}>
+<Page title={title} description={description} favicon={favicon} url={url}>
   <section class="container">
     <h1 id="name">{title}</h1>
     <span id="pronouns">({pronouns})</span>
-    <HeaderLinks />
 
-    <div id="about" class="has-padding">
-      <p class="title">About me</p>
-      <p>
-        I'm a {age}-year old software developer, tinkerer, and university student based in Birmingham, Alabama.
-      </p>
-
-      <p>
-        I primarily work with TypeScript and JavaScript, with a preference towards TypeScript. On the frontend side of things, I usually work with Svelte, and I prefer writing custom SCSS instead of using CSS frameworks.
-      </p>
-
-      <p>Outside of software development, I enjoy getting my hands on fascinating hardware, usually from the 2000s. I collect and repair laptops, and I enjoy thrifting for niche and obscure electronics.</p>
-
-
-      <p>Personally speaking, I'm a nonbinary dork interested in anime, e-sports, furry art, local politics, manga, music, and video games. I also collect enamel pins/buttons to put on my iconic hat.</p>
-
+    <div id="about">
+      <p>{description}.</p>
     </div>
 
-    <Projects />
-    <Webring />
+    <HeaderLinks />
+
+    <div class="row">
+      <div class="column">
+        <Projects />
+      </div>
+      <div class="column">
+        <Webring />
+      </div>
+    </div>
   </section>
 
   <Footer />
-</Layout>
+</Page>

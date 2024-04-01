@@ -1,4 +1,4 @@
-interface HeaderLink {
+export interface HeaderLink {
   name: string;
   link: string;
   altText: string;

@@ -5,7 +5,6 @@ import Link from "./Link.astro";
 
 <div id="projects" class="has-padding">
   <p class="title">Projects</p>
-  <p>I don't make much nowadays, but here are some of my public projects:</p>
   {
     projects.map((link) => {
       return (
@@ -15,7 +14,7 @@ import Link from "./Link.astro";
           <p class="project-description">{link.description}</p>
           <p class="project-technologies">{link.technologies}</p>
         </div>
-      );
+      ) as Element;
     })
   }
 </div>

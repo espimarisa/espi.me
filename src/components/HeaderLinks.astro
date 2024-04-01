@@ -1,7 +1,7 @@
 ---
+import { type HeaderLink, headerLinks } from "../utils/headerlinks.js";
 import Link from "./Link.astro";
-import { headerLinks } from "../utils/headerlinks.js";
-const finalItem = headerLinks.slice(-1);
+const finalItem: HeaderLink[] = headerLinks.slice(-1);
 ---
 
 <ul id="header-links">
@@ -10,6 +10,7 @@ const finalItem = headerLinks.slice(-1);
       // Final link item
       const liID = link.name === finalItem[0].name ? "last-header-item" : undefined;
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       return (
         <li id={liID}>
           <Link href={link.link} content={link.name} title={link.altText} />

@@ -1,8 +1,8 @@
 ---
-import Head from "../components/Head.astro";
-
 import "@fontsource/atkinson-hyperlegible";
 import "modern-normalize";
+
+import Head from "../components/Head.astro";
 
 interface Props {
   title?: string;
@@ -14,9 +14,8 @@ interface Props {
 const { description, title, url, favicon } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <!-- Imports head data -->
   <Head title={title} description={description} favicon={favicon} url={url}>
     <slot name="Head" />
   </Head>
