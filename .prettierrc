@@ -1,7 +1,8 @@
 {
-  "plugins": ["prettier-plugin-astro"],
+  "plugins": ["prettier-plugin-sh", "prettier-plugin-pkg", "prettier-plugin-astro"],
   "arrowParens": "always",
   "bracketSameLine": true,
+  "bracketSpacing": true,
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "ignore",
   "proseWrap": "preserve",
