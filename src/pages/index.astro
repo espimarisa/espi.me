@@ -15,7 +15,7 @@ const location = "Birmingham, Alabama";
 const birthday = new Date("07/26/2002");
 const age = Math.abs(new Date(Date.now() - birthday.getTime()).getUTCFullYear() - 1970);
 
-const description = `${age.toString()}-year old software developer, tinkerer, activist, university student, and nerdy catgirl from ${location}`;
+const description = `${age.toString()}-year old software developer, tinkerer, activist, university student, and nerdy catgirl from ${location}.`;
 ---
 
 <Page title={title} description={description} favicon={favicon} url={url}>
@@ -24,7 +24,7 @@ const description = `${age.toString()}-year old software developer, tinkerer, ac
     <span id="pronouns">({pronouns})</span>
 
     <div id="about">
-      <p>{description}.</p>
+      <p>{description}</p>
     </div>
 
     <HeaderLinks />
