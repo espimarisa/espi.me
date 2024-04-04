@@ -56,7 +56,7 @@ p {
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 0.5rem;
   display: block;
@@ -81,7 +81,6 @@ footer {
   padding-top: 3rem;
   padding-left: 10rem;
   padding-right: 10rem;
-  // max-width: 60rem;
 }
 
 .has-padding {
@@ -115,6 +114,10 @@ footer {
   font-size: 1.25rem;
 }
 
+#description {
+  font-size: 1.05rem;
+}
+
 #about {
   padding-bottom: 0.5rem;
   max-width: 28rem;
@@ -126,26 +129,12 @@ footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-top: 0rem;
   padding-bottom: 1rem;
+}
 
-  li {
-    display: inline-block;
-
-    &:before {
-      content: "";
-    }
-
-    &:after {
-      padding-left: 5px;
-      padding-right: 5px;
-      content: "\2022";
-    }
-
-    &#last-header-item:after {
-      content: "";
-    }
-  }
+#header-link-username {
+  text-decoration: underline dotted;
+  color: $dark;
 }
 
 #webring {
@@ -200,20 +189,6 @@ footer {
     display: block;
     padding-left: 0rem;
   }
-
-  #header-links {
-    li {
-      display: block;
-
-      &:before {
-        content: "";
-      }
-
-      &:after {
-        content: "";
-      }
-    }
-  }
 }
 
 // Phone padding support
@@ -231,20 +206,6 @@ footer {
   #pronouns {
     display: block;
     padding-left: 0rem;
-  }
-
-  #header-links {
-    li {
-      display: block;
-
-      &:before {
-        content: "";
-      }
-
-      &:after {
-        content: "";
-      }
-    }
   }
 }
 
@@ -264,20 +225,6 @@ footer {
     display: block;
     padding-left: 0rem;
   }
-
-  #header-links {
-    li {
-      display: block;
-
-      &:before {
-        content: "";
-      }
-
-      &:after {
-        content: "";
-      }
-    }
-  }
 }
 
 //////////////////////
@@ -288,6 +235,11 @@ footer {
   body {
     color: $black;
     background-color: $white;
+  }
+
+  #header-link-username {
+    text-decoration: underline dotted;
+    color: $black;
   }
 }
 
@@ -307,6 +259,11 @@ footer {
       footer {
         background-color: $dark;
       }
+
+      #header-link-username {
+        text-decoration: underline dotted;
+        color: $white;
+      }
     }
   }
 
@@ -320,6 +277,11 @@ footer {
 
   #name {
     text-shadow: 0 0 0.25rem $secondary;
+  }
+
+  #header-link-username {
+    text-decoration: underline dotted;
+    color: $light;
   }
 
   .title {

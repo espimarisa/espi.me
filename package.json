@@ -23,24 +23,24 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/vercel": "^7.5.0",
+    "@astrojs/vercel": "^7.5.2",
     "@fontsource/atkinson-hyperlegible": "^5.0.19",
-    "astro": "^4.5.12",
+    "astro": "^4.5.15",
     "modern-normalize": "^2.0.0",
     "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@types/bun": "^1.0.12",
-    "astro-compress": "^2.2.20",
+    "astro-compress": "^2.2.21",
     "astro-eslint-parser": "^0.16.3",
     "eslint": "^8.57.0",
-    "eslint-config-ks": "^5.0.3",
+    "eslint-config-ks": "^5.0.4",
     "eslint-plugin-astro": "^0.33.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-pkg": "^0.18.1",
     "prettier-plugin-sh": "^0.14.0",
-    "sass": "^1.72.0"
+    "sass": "^1.74.1"
   }
 }

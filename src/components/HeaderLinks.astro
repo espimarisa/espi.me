@@ -1,21 +1,20 @@
 ---
-import { type HeaderLink, headerLinks } from "../utils/headerlinks.js";
+import { headerLinks } from "../utils/headerlinks.js";
 import Link from "./Link.astro";
-const finalItem: HeaderLink[] = headerLinks.slice(-1);
 ---
 
 <ul id="header-links">
   {
     headerLinks.map((link) => {
-      // Final link item
-      const liID = link.name === finalItem[0].name ? "last-header-item" : undefined;
-
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       return (
-        <li id={liID}>
+        <li>
           <Link href={link.link} content={link.name} title={link.altText} />
+          <span>
+            -
+            <Link href={link.link} content={link.username} title={link.altText} idName="header-link-username" />
+          </span>
         </li>
-      );
+      ) as Element;
     })
   }
 </ul>

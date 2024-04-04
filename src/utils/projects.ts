@@ -10,7 +10,7 @@ export const projects = [
   {
     name: "hibiki",
     link: "https://github.com/espimarisa/hibiki",
-    description: "A Discord bot focused on accessible and information-rich utilities. ",
+    description: "A Discord bot focused on accessible and informational utilities. ",
     technologies: "TypeScript, Svelte, Sveltekit, SCSS, Drizzle ORM, PostgreSQL",
   },
   {
