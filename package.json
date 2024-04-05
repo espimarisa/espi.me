@@ -23,11 +23,9 @@
     "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/vercel": "^7.5.2",
     "@fontsource/atkinson-hyperlegible": "^5.0.19",
-    "astro": "^4.5.15",
-    "modern-normalize": "^2.0.0",
-    "sharp": "^0.33.3"
+    "astro": "^4.5.16",
+    "modern-normalize": "^2.0.0"
   },
   "devDependencies": {
     "@types/bun": "^1.0.12",

@@ -1,4 +1,3 @@
-import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 
@@ -6,9 +5,9 @@ import compress from "astro-compress";
 export default defineConfig({
   compressHTML: true,
   output: "server",
-  site: "https://espi.me",
+  site: "https://espimarisa.github.io",
+  repo: "https://github.com/espimarisa/espi.me",
   integrations: [compress()],
-  adapter: vercel(),
   server: {
     headers: {
       // allows pubkey.asc to be embedded
