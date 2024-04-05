@@ -62,6 +62,8 @@ p {
   display: block;
   margin: auto;
   text-decoration: $secondary 1px solid underline;
+  text-decoration-line: $secondary 1px solid underline;
+  -webkit-text-decoration-line: $secondary 1px solid underline;
   text-underline-position: under;
 }
 

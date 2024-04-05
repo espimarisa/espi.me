@@ -43,7 +43,7 @@ export const headerLinks = [
     username: "@espimarisa",
   },
   {
-    name: "Twitter/X",
+    name: "Twitter",
     link: "https://twitter.com/espidotme",
     altText: "A link to my Twitter profile, (at) espidotme.",
     username: "@espidotme",
