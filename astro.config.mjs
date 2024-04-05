@@ -4,7 +4,6 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
-  output: "server",
   site: "https://espimarisa.github.io",
   repo: "https://github.com/espimarisa/espi.me",
   integrations: [compress()],
