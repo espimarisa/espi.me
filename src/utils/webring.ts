@@ -36,9 +36,9 @@ export const webring = [
     image: "colepaws.png",
   },
   {
-    name: "Chloe Arciniega",
-    link: "https://arciniega.one/",
-    image: "chloe.png",
+    name: "Sapphic Angels",
+    link: "https://sapphic.moe/",
+    image: "sapphic.png",
   },
   {
     name: "Alyxia",
