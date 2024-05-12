@@ -37,16 +37,16 @@ export const headerLinks = [
     username: "@espimarisa",
   },
   {
-    name: "Bluesky",
-    link: "https://bsky.app/profile/espimarisa.bsky.social",
-    altText: "A link to my Bluesky profile, (at) espimarisa (dot) bsky (dot) social.",
-    username: "@espimarisa",
-  },
-  {
     name: "Twitter",
     link: "https://twitter.com/espidotme",
     altText: "A link to my Twitter profile, (at) espidotme.",
     username: "@espidotme",
+  },
+  {
+    name: "Bluesky",
+    link: "https://bsky.app/profile/espimarisa.bsky.social",
+    altText: "A link to my Bluesky profile, (at) espi (dot) me.",
+    username: "@espi.me",
   },
   {
     name: "Signal",
