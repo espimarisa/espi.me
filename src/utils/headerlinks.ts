@@ -44,7 +44,7 @@ export const headerLinks = [
   },
   {
     name: "Bluesky",
-    link: "https://bsky.app/profile/espimarisa.bsky.social",
+    link: "https://bsky.app/profile/espi.me",
     altText: "A link to my Bluesky profile, (at) espi (dot) me.",
     username: "@espi.me",
   },
