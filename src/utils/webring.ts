@@ -125,4 +125,9 @@ export const webring = [
     link: "https://altrac.works",
     image: "altrac.png",
   },
+  {
+    name: "Pihnea",
+    link: "https://botoaca.github.io/",
+    image: "pihnea.png",
+  },
 ] satisfies Webring[];
