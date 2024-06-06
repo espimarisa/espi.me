@@ -25,12 +25,6 @@ export const headerLinks = [
     username: "@espimarisa",
   },
   {
-    name: "Keybase",
-    link: "https://keybase.io/espimarisa",
-    altText: "A link to my Keybase profile, (at) espimarisa.",
-    username: "@espimarisa",
-  },
-  {
     name: "Steam",
     link: "https://steamcommunity.com/id/espimarisa",
     altText: "A link to my Steam profile, (at) espimarisa.",
@@ -41,12 +35,6 @@ export const headerLinks = [
     link: "https://twitter.com/espidotme",
     altText: "A link to my Twitter profile, (at) espidotme.",
     username: "@espidotme",
-  },
-  {
-    name: "Bluesky",
-    link: "https://bsky.app/profile/espi.me",
-    altText: "A link to my Bluesky profile, (at) espi (dot) me.",
-    username: "@espi.me",
   },
   {
     name: "Signal",
