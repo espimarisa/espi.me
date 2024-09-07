@@ -14,7 +14,7 @@ For local development:
   - `bundler exec jekyll serve`
 - Navigate to <http://localhost:4000>
 
-## License1
+## License
 
 [zlib/libpng][license]
 
