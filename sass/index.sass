@@ -28,7 +28,7 @@ body
 
 a
 	color: $primary
-	text-decoration: none
+	text-decoration: underline $primary
 
 	&:hover
 		color: $primary
@@ -74,9 +74,6 @@ footer
 	list-style-type: none
 	margin: auto
 
-	a
-		text-decoration: none
-
 	li
 		margin: auto
 		display: inline-block
@@ -106,6 +103,9 @@ footer
 
 #webring-list
 	min-width: 55rem
+
+	a
+		text-decoration: none
 
 .webring-image
 	image-rendering: pixelated
@@ -145,6 +145,7 @@ footer
 @media (prefers-color-scheme: dark)
 	a
 		color: $secondary
+		text-decoration: underline $secondary
 
 		&:hover
 			color: $secondary
