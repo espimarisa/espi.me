@@ -1,6 +1,7 @@
 title: Espi Marisa
 permalink: /blog/:year/:title/
 logo: /assets/images/favicon.png
+url: https://espi.me
 
 collections:
   - projects

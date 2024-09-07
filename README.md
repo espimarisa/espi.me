@@ -14,10 +14,13 @@ For local development:
   - `bundler exec jekyll serve`
 - Navigate to <http://127.0.0.1:4000>
 
+You'll want to edit [\_config.yml][config.yml] to point to your domain as well.
+
 ## License
 
 [zlib/libpng][license]
 
+[config.yml]: _config.yml "Hyperlink to _config.yml"
 [github-pages]: https://pages.github.com/ "Hyperlink to GitHub pages."
 [jekyll]: https://jekyllrb.com "Hyperlink to Jekyll's website."
 [ruby]: https://www.ruby-lang.org/en/documentation/installation/ "Guide on how to install Ruby."
