@@ -1,18 +1,34 @@
 {% comment %} Compatibility {% endcomment %}
 <meta charset="utf-8" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
-
-{% comment %} Images {% endcomment %}
+<meta content="#ffaf00" name="theme-color" />
+<meta content="#ffaf00" name="msapplication-navbutton-color" />
+<meta content="#ffaf00" name="apple-mobile-web-app-status-bar-style" />
 <meta content="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" property="og:image" />
 <meta content="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" name="twitter:image" />
 
-{% comment %} Metadata {% endcomment %}
-<link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" />
+  {% comment %} Metadata {% endcomment %}
+<link
+  rel="icon"
+  type="image/png"
+  href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" />
 {% seo %}
 
 {% comment %} Styles {% endcomment %}
 <link rel="preconnect" href="https://jsdelivr.net">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css/new.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible/index.min.css" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@exampledev/new.css/new.min.css" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible/index.min.css" />
 <link rel="stylesheet" href=" {{ '/sass/index.css' | absolute_url }}">
