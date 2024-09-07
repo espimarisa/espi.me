@@ -1,0 +1,48 @@
+title: Espi Marisa
+permalink: /blog/:year/:title/
+logo: /assets/images/favicon.png
+
+collections:
+  - projects
+  - webring
+
+twitter:
+  username: espidotme
+  card: summary
+
+social:
+  name: Espi Marisa
+  links:
+    - https://x.com/espidotme
+    - https://github.com/espimarisa
+
+compress_html:
+  comments: all
+
+exclude:
+  - .gitignore
+  - .gitattributes
+  - .prettierrc
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  parse_block_html: false
+  syntax_highlighter: rouge
+  input: GFM
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-target-blank

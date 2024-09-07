@@ -1,24 +1,15 @@
 {
-  "plugins": ["prettier-plugin-sh", "prettier-plugin-pkg", "prettier-plugin-astro"],
-  "arrowParens": "always",
-  "bracketSameLine": true,
-  "bracketSpacing": true,
-  "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "ignore",
-  "proseWrap": "preserve",
-  "quoteProps": "consistent",
-  "trailingComma": "all",
-  "printWidth": 140,
-  "tabWidth": 2,
-  "semi": true,
-  "singleQuote": false,
-  "useTabs": false,
-  "overrides": [
-    {
-      "files": "*.astro",
-      "options": {
-        "parser": "astro"
-      }
-    }
-  ]
+	"arrowParens": "always",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "css",
+	"proseWrap": "always",
+	"quoteProps": "consistent",
+	"trailingComma": "all",
+	"printWidth": 140,
+	"tabWidth": 2,
+	"semi": true,
+	"singleQuote": false,
+	"useTabs": false
 }

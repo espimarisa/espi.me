@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href=" {{ '/sass/syntax.css' | absolute_url }}">
+
+<header>
+  <h1 class="header-title">{{ page.title }}</h1>
+  <p class="header-date">{{ page.date | date: "%B %d, %Y" }} by {{ page.author }}</p>
+  <ul class="header-links">
+    <li>
+      <a
+        href="#"
+        onclick="window.history.back()"
+        title="Back">Back</a>
+    </li>
+    <li>
+      <a href="/blog/" title="All posts">All posts</a>
+    </li>
+    <li id="last-item">
+      <a href="/" title="Go home">Home</a>
+    </li>
+  </ul>
+</header>
+
+<main class="post">
+  {{ content }}
+</main>

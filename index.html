@@ -1,0 +1,108 @@
+---
+layout: default
+title: Espi Marisa
+description: Software developer, tinkerer, activist, and IT student.
+
+pronouns: they/she
+location: Huntsville, Alabama
+
+github: espimarisa
+discord: 647269760782041133
+telegram: espimarisa
+twitter: espidotme
+email: contact@espi.me
+steam: espimarisa
+---
+
+<title>{{ page.title }}</title>
+
+<header>
+  <h1 class="header-title" id="name">{{ page.title }}</h1>
+  <span id="pronouns">({{ page.pronouns }})</span>
+  <p class="header-description">{{ page.description }}</p>
+  <ul class="header-links">
+    <li>
+      <a href="/blog/" title="Blog">Blog</a>
+    </li>
+    <li>
+      <a href="https://github.com/{{ page.github }}" title="GitHub" target="_blank" rel="noreferrer">GitHub</a>
+    </li>
+    <li>
+      <a href="https://discord.com/users/{{ page.discord }}" title="Discord" target="_blank" rel="noreferrer">Discord</a>
+    </li>
+    <li>
+      <a href="https://t.me/{{ page.telegram }}" title="Telegram" target="_blank" rel="noreferrer">Telegram</a>
+    </li>
+    <li>
+      <a href="https://x.com/{{ page.twitter }}" title="X/Twitter" target="_blank" rel="noreferrer">X/Twitter</a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/assets/pubkey.asc" title="PGP Pubkey" target="_blank" rel="noreferrer">PGP Pubkey</a>
+    </li>
+    <li id="last-item">
+      <a href="mailto:{{ page.email }}" title="Email" target="_blank" rel="noreferrer">Email</a>
+    </li>
+  </ul>
+</header>
+
+<main>
+  <!-- List of post -->
+  <h2 class="title">Latest Post</h2>
+  <div id="post-list">
+    {% for post in site.posts limit:1 %}
+    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+    <p class="post-description">{{ post.description }}</p>
+    <p class="post-date">{{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
+    <hr />
+    {% endfor %}
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <h2 class="title">About</h2>
+    <p>
+      I'm a visually impaired nonbinary gal proudly from Northeast Tennessee who now calls North Alabama home. Currently, I'm an IT and
+      Political Science dual-degree student at
+      <a href="https://una.edu" title="UNA" target="_blank" rel="noreferrer">The University of North Alabama</a>.
+    </p>
+
+    <p>
+      I built my first desktop computer before I knew how to speak properly, and that hobby has stuck with me for my entire life. I like
+      messing with enthusiast PC hardware and enjoy overclocking anything that I possibly can.
+    </p>
+
+    <p>
+      In my spare time, I work with
+      <a href="https://altrac.works/" target="_blank" rel="noreferrer">ALTRAC</a>
+      (The Alabama Transgender Rights Action Coalition), fighting against discriminatory legislature introduced by the Alabama state house,
+      and pushing for proper representation.
+    </p>
+
+    <p>
+      Outside of work, I enjoy listening to music,
+      <a href="https://steamcommunity.com/id/{{ page.steam}}" title="Steam" target="_blank" rel="noreferrer">playing video games</a>,
+      reading, thrifting, and watching anime.
+    </p>
+  </div>
+
+  <!-- List of projects -->
+  <h2 class="title">Projects</h2>
+  <div id="post-list">
+    {% for project in site.projects %}
+    <a class="post-title" href="{{ project.link }}">{{ project.name }}</a>
+    <p class="post-description">{{ project.description }}</p>
+    <em class="post-date">{{ project.technologies }}</em>
+    <hr />
+    {% endfor %}
+  </div>
+
+  <!-- List of projects -->
+  <h2 class="title">Webring</h2>
+  <div id="webring-list">
+    {% for ring in site.webring %}
+    <a href="{{ ring.link }}" title="{{ ring.name }}" class="webring-image" target="_blank" rel="noreferrer">
+      <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}" />
+    </a>
+    {% endfor %}
+  </div>
+</main>

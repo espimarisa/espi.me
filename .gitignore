@@ -1,117 +1,61 @@
-# Binaries and archives
-*.jar
-*.exe
-*.db
-*.tgz
-*.tar
-*.gz
-*.zip
-
-# Lockfiles for other package managers
-yarn.lock
-package-lock.json
-pnpm-lock.yaml
-
-# Logs
-logs/
-*.log
-
-# Node.js
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-pids
-*.pid
-*.seed
-*.pid.lock
-.node_repl_history
-
-# Dependencies
+# Modules
+.sass-cache
+dist/
+docs/
 node_modules/
-jspm_packages/
+out/
+rethinkdb_data/
+_site/
+.jekyll-cache
 
-# Caches
+# Logs & lockfiles
 .npm
-.pnpm
-.parcel-cache
-.eslintcache
-.stylelintcache
-*.tsbuildinfo
-
-# Common .env files
-.env
-.env.production
-.env.development
-.env.local
-.env.production.local
-.env.development.local
-
-# yarn
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
-.yarn-integrity
-
-# Map files
-*.*.map
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
-
-# WSL
-*Zone.Identifier
+logs/*
+npm
+npm-debug.log
+npm-error.log
+report.*
+yarn-debug.log
+yarn-error.log
+yarn.lock*
 
 # Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
 *.stackdump
-[Dd]esktop.ini
-$RECYCLE.BIN/
 *.cab
 *.msi
 *.msix
 *.msm
 *.msp
 *.lnk
+[Dd]esktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+Thumbs.db:encryptable
+$RECYCLE.BIN/
 
-# VSCode
-.vscode-test
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-.history/
-*.vsix
+# macOS
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+Icon
+Network Trash Folder
+Temporary Items
 
-# Compiled output
-build/
-dist/
-.turbo/
-.svelte-kit/
+# Linux
+*~
+.directory
+.fuse_hidden*
+.nfs*
+.Trash-*

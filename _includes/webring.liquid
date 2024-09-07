@@ -1,0 +1,13 @@
+<div id="webring-list">
+  {% for ring in site.webring %}
+    <a
+      href="{{ ring.link }}"
+      title="{{ ring.name }}"
+      class="webring-image">
+      <img
+        src="/assets/images/webring/{{ ring.file }}"
+        alt="{{ ring.name }}"
+        title="{{ ring.name }}">
+    </a>
+  {% endfor %}
+</div>

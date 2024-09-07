@@ -1,0 +1,189 @@
+---
+---
+
+$primary: #ff0070
+$secondary: #ffaf00
+$black: #000000
+$white: #ffffff
+
+////////////////
+// Elements
+////////////////
+
+html
+	font-size: 1rem
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+
+body
+	font-family: "Atkinson Hyperlegible", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+	max-width: 55rem
+	min-height: 100vh
+	height: 100vh
+	width: 100wh
+	margin: 0 auto
+	padding: 0 auto
+	display: flex
+	flex-direction: column
+
+a
+	color: $primary
+	text-decoration: none
+
+	&:hover
+		color: $primary
+		opacity: 80%
+
+footer
+	font-size: 1rem
+	padding-top: 2rem
+	padding-bottom: 2rem
+	margin-top: auto
+
+	p
+		margin: auto
+
+////////////////
+// Specific elements
+////////////////
+
+#name
+	display: inline
+
+#pronouns
+	font-size: 1.25rem
+
+.title
+	font-size: 2.5rem
+
+.header-title, #name
+	font-size: 3rem
+	margin: auto
+
+.header-description
+	font-size: 1.2rem
+	margin: auto
+
+.header-date
+	font-size: 1.1rem
+	margin: auto
+
+.header-links
+	padding: 0
+	font-size: 1.1rem
+	list-style-type: none
+	margin: auto
+
+	a
+		text-decoration: none
+
+	li
+		margin: auto
+		display: inline-block
+
+		&:after
+			content: "\2022"
+
+	#last-item:after
+		content: ""
+
+.post-description
+	margin: auto
+	font-size: 1.1rem
+
+.post-title
+	margin: auto
+	font-size: 1.35rem
+
+.post-date
+	margin: auto
+	font-size: 1.1rem
+	margin: auto
+
+.post-page-link
+	margin: auto
+	display: inline
+
+#webring-list
+	min-width: 55rem
+
+.webring-image
+	image-rendering: pixelated
+
+////////////////
+// High contrast
+////////////////
+
+@media (prefers-contrast: more)
+	body
+		color: $black
+		background-color: $white
+
+	footer
+		background-color: $white
+
+	a
+		text-decoration: underline $black
+
+	.header-links
+		a
+			text-decoration: underline $black
+
+////////////////
+// Reduced motion
+////////////////
+
+@media (prefers-reduced-motion: reduce)
+	a
+		&:hover
+			opacity: 95% !important
+
+////////////////
+// Dark mode
+////////////////
+
+@media (prefers-color-scheme: dark)
+	a
+		color: $secondary
+
+		&:hover
+			color: $secondary
+			opacity: 80%
+
+	#name
+		text-shadow: 0 0 0.25rem $secondary
+
+	@media (prefers-contrast: more)
+		body
+			color: $white
+			background-color: $black
+
+		a
+			text-decoration: underline $white
+
+		.header-links
+			a
+				text-decoration: underline $white
+
+		#name
+			text-shadow: none
+
+////////////////
+// Small screens
+////////////////
+
+@media (max-width: 48rem)
+	#pronouns, .header-links
+		display: block
+		margin-top: 1rem
+		margin-bottom: 1rem
+
+	.header-links
+		li
+			display: block
+
+			&:after
+				content: ""
+
+	#webring-list
+		min-width: 0rem
