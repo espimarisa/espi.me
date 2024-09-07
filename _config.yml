@@ -45,4 +45,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-target-blank
