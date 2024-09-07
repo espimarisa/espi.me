@@ -12,7 +12,7 @@ For local development:
   - `gem install bundler`
   - `bundler`
   - `bundler exec jekyll serve`
-- Navigate to <http://localhost:4000>
+- Navigate to <http://127.0.0.1:4000>
 
 ## License
 
