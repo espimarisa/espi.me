@@ -102,7 +102,12 @@ pubkey: espimarisa-pubkey.asc
   <div id="webring-list">
     {% for ring in site.webring %}
     <a href="{{ ring.link }}" title="{{ ring.name }}" class="webring-image" target="_blank" rel="noreferrer">
-      <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}" />
+      <img
+        src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}"
+        alt="{{ ring.name }}"
+        title="{{ ring.name }}"
+        width="88px"
+        height="31px" />
     </a>
     {% endfor %}
   </div>
