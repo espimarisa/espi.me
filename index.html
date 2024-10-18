@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Espi Marisa
-description: Computer witch, activist, and Computer Science student.
-
+description: Silly enby, computer witch, activist, and CS student at Auburn University.
 pronouns: they/she
 location: Huntsville, Alabama
 
 github: espimarisa
 discord: 647269760782041133
 telegram: espimarisa
+bluesky: espi.me
 twitter: espidotme
 email: contact@espi.me
 steam: espimarisa
@@ -34,6 +34,9 @@ pubkey: espimarisa-pubkey.asc
     <li>
       <a href="https://t.me/{{ page.telegram }}" title="Telegram" target="_blank" rel="noreferrer">Telegram</a>
     </li>
+		<li>
+      <a href="https://bsky.app/profile/{{ page.bluesky }}" title="Bluesky" target="_blank" rel="noreferrer">Bluesky</a>
+    </li>
     <li>
       <a href="https://x.com/{{ page.twitter }}" title="X/Twitter" target="_blank" rel="noreferrer">X/Twitter</a>
     </li>
@@ -47,17 +50,6 @@ pubkey: espimarisa-pubkey.asc
 </header>
 
 <main>
-  <!-- List of post -->
-  <h2 class="title">Latest Post</h2>
-  <div id="post-list">
-    {% for post in site.posts limit:1 %}
-    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-    <p class="post-description">{{ post.description }}</p>
-    <p class="post-date">{{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
-    <hr />
-    {% endfor %}
-  </div>
-
   <!-- About -->
   <div id="about">
     <h2 class="title">About</h2>
