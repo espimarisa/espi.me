@@ -4,7 +4,6 @@ logo: /assets/images/favicon.png
 url: https://espi.me
 
 collections:
-  - projects
   - webring
 
 twitter:

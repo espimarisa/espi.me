@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<link rel="stylesheet" href=" {{ '/sass/syntax.css' | absolute_url }}">
+<link rel="stylesheet" href=" {{ "/sass/syntax.css" | absolute_url }}">
 
 <header>
   <h1 class="header-title">{{ page.title }}</h1>
-  <p class="header-date">{{ page.date | date: "%B %d, %Y" }} by {{ page.author }}</p>
+  <p class="header-description">{{ page.description }}</p>
+  <p class="header-date">{{ page.date | date: "%B %d, %Y" }}</p>
   <ul class="header-links">
     <li>
       <a

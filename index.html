@@ -1,104 +1,108 @@
 ---
 layout: default
 title: Espi Marisa
-description: Southern queer activist and Computer Science student at Auburn University.
+description: Silly enby, computer witch, activist, CS student.
+
 pronouns: they/she
 location: Huntsville, Alabama
 
-github: espimarisa
-discord: 647269760782041133
-telegram: espimarisa
 bluesky: espi.me
-twitter: espidotme
-email: contact@espi.me
+github: espimarisa
+telegram: espimarisa
+discordInvite: v5WUBgCpJ6
 steam: espimarisa
-pubkey: espimarisa-pubkey.asc
+
+email: contact@espi.me
 ---
 
 <title>{{ page.title }}</title>
 
 <header>
-  <h1 class="header-title" id="name">{{ page.title }}</h1>
-  <span id="pronouns">({{ page.pronouns }})</span>
-  <p class="header-description">{{ page.description }}</p>
-  <ul class="header-links">
-    <li>
-      <a href="/blog/" title="Blog">Blog</a>
-    </li>
-    <li>
-      <a href="https://github.com/{{ page.github }}" title="GitHub" target="_blank" rel="noreferrer">GitHub</a>
-    </li>
-    <li>
-      <a href="https://discord.com/users/{{ page.discord }}" title="Discord" target="_blank" rel="noreferrer">Discord</a>
-    </li>
-    <li>
-      <a href="https://t.me/{{ page.telegram }}" title="Telegram" target="_blank" rel="noreferrer">Telegram</a>
-    </li>
-		<li>
-      <a href="https://bsky.app/profile/{{ page.bluesky }}" title="Bluesky" target="_blank" rel="noreferrer">Bluesky</a>
-    </li>
-    <li>
-      <a href="https://x.com/{{ page.twitter }}" title="X/Twitter" target="_blank" rel="noreferrer">X/Twitter</a>
-    </li>
-    <li>
-      <a href="{{ site.baseurl }}/assets/{{ page.pubkey }}" title="PGP Pubkey" target="_blank" rel="noreferrer">GPG Pubkey</a>
-    </li>
-    <li id="last-item">
-      <a href="mailto:{{ page.email }}" title="Email" target="_blank" rel="noreferrer">Email</a>
-    </li>
-  </ul>
+  <div class="row">
+    <img class="avatar" type="image/png" src="{{ " /assets/images/favicon.png" | prepend: site.baseurl }}">
+    <div>
+      <h1 class="header-title" id="name">{{ page.title }}</h1>
+      <p class="header-description">{{ page.description }}</p>
+    </div>
+    <ul class="social-icons">
+      <li>
+        <a href="https://bsky.app/profile/{{ page.bluesky }}" target="_blank" rel="noreferrer" title="A link to my Bluesky profile.">
+          <em class="icon icon-bluesky"></em>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/{{ page.github }}" target="_blank" rel="noreferrer" title="A link to my GitHub profile.">
+          <em class="icon icon-github"></em>
+        </a>
+      </li>
+      <li>
+        <a href="https://t.me/{{ page.telegram }}" target="_blank" rel="noreferrer" title="A link to contact me on Telegram.">
+          <em class="icon icon-telegram"></em>
+        </a>
+      </li>
+      <li>
+        <a href="https://discord.gg/{{ page.discordInvite }}" target="_blank" rel="noreferrer" title="A link to my Discord server.">
+          <em class="icon icon-discord"></em>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:{{ page.email }}" target="_blank" rel="noreferrer" title="A mailto link to my email.">
+          <em class="icon icon-email"></em>
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>
 
 <main>
   <!-- About -->
   <div id="about">
-    <h2 class="title">About</h2>
+    <h2 class="title inline">Hi, I'm Espi!</h2>
+    <span id="pronouns">({{ page.pronouns }})</span>
+    <p>I'm a visually impaired nonbinary gal originally from East Tennessee that now calls {{ page.location }} home.</p>
+
+    <p>I'm also a hobbyist developer that occasionally <a href="https://github.com/{{ page.github}}" target="_blank" rel="noreferrer">makes things</a>, but I
+      tend to prefer homelabbing and
+      personal projects.
+      <br />
+      I like to get my hands dirty with hardware and tend to ressurect things that most people would consider e-waste.
+
     <p>
-      I'm a visually impaired nonbinary gal proudly from East Tennessee who now calls North Alabama home. 
-			Currently, I'm a Computer Science student at <a href="https://auburn.edu" title="Auburn University" target="_blank" rel="noreferrer">Auburn University</a>.
+      I volunteer with <a href=" https://altrac.works/" target="_blank" rel="noreferrer">ALTRAC</a>
+      (The Alabama Transgender Rights Action Coalition), fighting to stop discriminatory legislature introduced by the
+      Alabama state government and to help spread awareness of <a href="https://altgo.us" target="_blank" rel="noreferrer">our local LGBTQ+ resources</a>.
     </p>
 
     <p>
-      I built my first desktop computer before I knew how to speak properly, and that hobby has stuck with me for my entire life. I like
-      messing with enthusiast PC hardware and enjoy overclocking anything that I possibly can.
-    </p>
-
-    <p>
-      In my spare time, I work with
-      <a href="https://altrac.works/" target="_blank" rel="noreferrer">ALTRAC</a>
-      (The Alabama Transgender Rights Action Coalition), fighting against discriminatory legislature introduced by the Alabama state government 
-			and lobbying for proper representation.
-    </p>
-
-    <p>
-      Outside of activism and school, I enjoy listening to music,
-      <a href="https://steamcommunity.com/id/{{ page.steam}}" title="Steam" target="_blank" rel="noreferrer">playing video games</a>,
-      reading, thrifting, and watching anime.
+      Outside of school and activism, I explore the deepest parts of the south with <a href="https://colepaws.pet" target="_blank" rel="noreferrer">my
+        fiancé</a>
+      and write about our adventures.
+      <br />
+      I also enjoy thrifting, watching anime,
+      reading, and <a href="https://steamcommunity.com/id/{{ page.steam }}" target="_blank" rel="noreferrer">playing video games</a>. Feel free to reach out, I
+      don't
+      tend to bite! &#x2665
     </p>
   </div>
 
-  <!-- List of projects -->
-  <h2 class="title">Projects</h2>
+  <!-- latest 3 posts -->
+  <h3 id="post-list" class="subtitle inline">Latest Posts</h3>
+  <span>|</span>
+  <a class="inline" href="/blog/">all posts</a>
   <div id="post-list">
-    {% for project in site.projects %}
-    <a class="post-title" href="{{ project.link }}">{{ project.name }}</a>
-    <p class="post-description">{{ project.description }}</p>
-    <em class="post-date">{{ project.technologies }}</em>
+    {% for post in site.posts limit:3 %}
+    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+    <p class="post-description">{{ post.description }}</p>
+    <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
     <hr />
     {% endfor %}
   </div>
 
-  <!-- List of projects -->
-  <h2 class="title">Webring</h2>
+  <!-- Webring -->
   <div id="webring-list">
     {% for ring in site.webring %}
     <a href="{{ ring.link }}" title="{{ ring.name }}" class="webring-image" target="_blank" rel="noreferrer">
-      <img
-        src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}"
-        alt="{{ ring.name }}"
-        title="{{ ring.name }}"
-        width="88px"
-        height="31px" />
+      <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}" width="88px" height="31px" />
     </a>
     {% endfor %}
   </div>

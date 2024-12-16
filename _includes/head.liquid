@@ -1,32 +1,30 @@
 {% comment %} Compatibility {% endcomment %}
 <meta charset="utf-8" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
-<meta content="#ffaf00" name="theme-color" />
-<meta content="#ffaf00" name="msapplication-navbutton-color" />
-<meta content="#ffaf00" name="apple-mobile-web-app-status-bar-style" />
+<meta content="#ff0070" name="theme-color" />
+<meta content="#ff0070" name="msapplication-navbutton-color" />
+<meta content="#ff0070" name="apple-mobile-web-app-status-bar-style" />
 <meta content="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" property="og:image" />
 <meta content="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" name="twitter:image" />
 
-  {% comment %} Metadata {% endcomment %}
+{% seo %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href=" {{ "/sass/new.min.css" | absolute_url }}" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href=" {{ "/sass/index.css" | absolute_url }}" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href=" {{ "/sass/fontello.css" | absolute_url }}" />
+
 <link
   rel="icon"
   type="image/png"
   href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" />
-{% seo %}
-
-{% comment %} Styles {% endcomment %}
-<link rel="preconnect" href="https://jsdelivr.net">
-
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@exampledev/new.css/new.min.css" />
-
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible/index.min.css"
-  media="print"
-  onload="this.media='all'" />
-
-<link rel="stylesheet" href=" {{ '/sass/index.css' | absolute_url }}" />

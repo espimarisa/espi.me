@@ -6,185 +6,220 @@ $secondary: #ffaf00
 $black: #000000
 $white: #ffffff
 
-////////////////
-// Elements
-////////////////
+@font-face
+  font-family: "Atkinson Hyperlegible"
+  font-style: normal
+  font-weight: 400
+  font-display: swap
+  src: url("../assets/font/atkinson-hyperlegible.woff2") format("woff2")
 
 html
-	font-size: 1rem
-	text-rendering: optimizeLegibility
-	-webkit-font-smoothing: antialiased
+  font-size: 1rem
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
 
 body
-	font-family: "Atkinson Hyperlegible", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-	max-width: 50rem
-	min-height: 100vh
-	height: 100vh
-	width: 100wh
-	margin: 0 auto
-	padding: 0 auto
-	display: flex
-	flex-direction: column
+  font-family: "Atkinson Hyperlegible", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+  max-width: 55rem
+  min-height: 100vh
+  height: 100vh
+  width: 100wh
+  margin: 0 auto
+  padding: 0 auto
+  display: flex
+  flex-direction: column
 
 a
-	color: $primary
-	text-decoration: underline $primary
+  color: $primary
+  text-decoration: underline $primary
 
-	&:hover
-		color: $primary
-		opacity: 80%
+  &:hover
+    color: $primary
+    opacity: 80%
 
 footer
-	font-size: 1rem
-	padding-top: 2rem
-	padding-bottom: 2rem
-	margin-top: auto
+  font-size: 1rem
+  padding-top: 2rem
+  padding-bottom: 2rem
+  margin-top: auto
 
-	p
-		margin: auto
+  p
+    margin: auto
 
-////////////////
-// Specific elements
-////////////////
+.row
+  display: flex
+  align-items: center
 
 #name
-	display: inline
+  display: inline
 
 #pronouns
-	font-size: 1.25rem
+  font-size: 1.25rem
+
+#about
+  padding-bottom: 1rem
+  padding-top: 1rem
+
+.avatar
+  padding: 0
+  margin: 0
+  padding-right: 1rem
+  width: 4.5rem
+  height: 4.5rem
 
 .title
-	font-size: 2.5rem
+  font-size: 2.35rem
 
-.header-title, #name
-	font-size: 3rem
-	margin: auto
-
-.header-description
-	font-size: 1.2rem
-	margin: auto
-
-.header-date
-	font-size: 1.1rem
-	margin: auto
+.subtitle
+  font-size: 2.35rem
 
 .header-links
-	padding: 0
-	font-size: 1.1rem
-	list-style-type: none
-	margin: auto
+  padding: 0
+  font-size: 1.1rem
+  list-style-type: none
+  margin: auto
 
-	li
-		margin: auto
-		display: inline-block
+  li
+    margin: auto
+    display: inline-block
 
-		&:after
-			content: "\2022"
+    &:after
+      content: "|"
 
-	#last-item:after
-		content: ""
+  #last-item:after
+    content: ""
+
+.inline
+  display: inline
+
+.header-title, #name
+  font-size: 3rem
+  margin: auto
+
+.header-description
+  font-size: 1.2rem
+  margin: auto
+
+.header-date
+  font-size: 1.1rem
+  margin: auto
+
+.social-icons
+  font-size: 1.75rem
+  list-style-type: none
+  margin: auto
+  display: flex
 
 .post-description
-	margin: auto
-	font-size: 1.1rem
+  margin: auto
+  font-size: 1rem
 
 .post-title
-	margin: auto
-	font-size: 1.35rem
+  margin: auto
+  font-size: 1.25rem
 
 .post-date
-	margin: auto
-	font-size: 1.1rem
-	margin: auto
+  margin: auto
+  font-size: 1rem
+  margin: auto
 
 .post-page-link
-	margin: auto
-	display: inline
+  margin: auto
+  display: inline
 
 #webring-list
-	min-width: 55rem
+  max-width: 55rem
+  padding-bottom: 1rem
 
-	a
-		text-decoration: none
+  img
+    padding: 0 auto
+    margin: 0 auto
+
+  a
+    text-decoration: none
 
 .webring-image
-	image-rendering: pixelated
+  image-rendering: pixelated
 
 ////////////////
 // High contrast
 ////////////////
 
 @media (prefers-contrast: more)
-	body
-		color: $black
-		background-color: $white
+  body
+    color: $black
+    background-color: $white
 
-	footer
-		background-color: $white
+  footer
+    background-color: $white
 
-	a
-		text-decoration: underline $black
+  a
+    text-decoration: underline $black
 
-	.header-links
-		a
-			text-decoration: underline $black
+  .header-links
+    a
+      text-decoration: underline $black
 
 ////////////////
 // Reduced motion
 ////////////////
 
 @media (prefers-reduced-motion: reduce)
-	a
-		&:hover
-			opacity: 95% !important
+  a
+    &:hover
+      opacity: 95% !important
 
 ////////////////
 // Dark mode
 ////////////////
 
 @media (prefers-color-scheme: dark)
-	a
-		color: $secondary
-		text-decoration: underline $secondary
+  a
+    color: $secondary
+    text-decoration: underline $secondary
 
-		&:hover
-			color: $secondary
-			opacity: 80%
+    &:hover
+      color: $secondary
+      opacity: 80%
 
-	#name
-		text-shadow: 0 0 0.25rem $secondary
+  #name
+    text-shadow: 0 0 0.25rem $secondary
 
-	@media (prefers-contrast: more)
-		body
-			color: $white
-			background-color: $black
+  @media (prefers-contrast: more)
+    body
+      color: $white
+      background-color: $black
 
-		a
-			text-decoration: underline $white
+    a
+      text-decoration: underline $white
 
-		.header-links
-			a
-				text-decoration: underline $white
+    .header-links
+      a
+        text-decoration: underline $white
 
-		#name
-			text-shadow: none
+    #name
+      text-shadow: none
 
 ////////////////
 // Small screens
 ////////////////
 
 @media (max-width: 48rem)
-	#pronouns, .header-links
-		display: block
-		margin-top: 1rem
-		margin-bottom: 1rem
+  #pronouns, .header-links, .social-icons
+    display: block
+    margin-top: 1rem
+    margin-bottom: 1rem
+    padding: 0
 
-	.header-links
-		li
-			display: block
+  .header-links
+    li
+      display: block
 
-			&:after
-				content: ""
+      &:after
+        content: ""
 
-	#webring-list
-		min-width: 0rem
+  .row
+    display: block
+
+  #webring-list
+    max-width: 55rem

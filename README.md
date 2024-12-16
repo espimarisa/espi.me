@@ -1,22 +1,22 @@
 # [espi.me][espi.me]
 
-My personal website and blog, powered by [Jekyll][jekyll].
+my personal website and blog, powered by [jekyll][jekyll].
 
-## Setup
+## setup
 
-If you're going to fork my site and host it yourself, use [GitHub Pages][github-pages].
+if you're going to fork my site and host it yourself, you can use [github pages][github-pages].
 
-For local development:
+local development:
 
-- Be sure you have [Ruby][ruby] installed and configured
+- be sure you have [ruby][ruby] installed and configured
   - `gem install bundler`
   - `bundler`
   - `bundler exec jekyll serve`
-- Navigate to <http://127.0.0.1:4000>
+- navigate to <http://127.0.0.1:4000>
 
-You'll want to edit [\_config.yml][config.yml] to point to your domain as well.
+you'll want to edit [\_config.yml][config.yml] to point to your domain as well.
 
-## License
+## license
 
 [zlib/libpng][license]
 

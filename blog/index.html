@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Espi's Notebook
-description: Posts about programming, technology, politics, and more.
+title: Espi's Journal
+description: Writings from me about anything from computers to politics.
 ---
 
 <header>
@@ -12,7 +12,7 @@ description: Posts about programming, technology, politics, and more.
       <a href="#" onclick="window.history.back()" title="Back">Back</a>
     </li>
     <li>
-      <a href="/feed.xml" title="RSS">RSS</a>
+      <a href="/feed.xml" title="RSS">RSS Feed</a>
     </li>
     <li id="last-item">
       <a href="/" title="Go home">Home</a>
@@ -27,7 +27,7 @@ description: Posts about programming, technology, politics, and more.
     {% for post in paginator.posts %}
     <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
     <p class="post-description">{{ post.description }}</p>
-    <p class="post-date">{{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
+    <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
     <hr />
     {% endfor %}
   </div>
