@@ -90,20 +90,26 @@ email: contact@espi.me
   <span>|</span>
   <a class="inline" href="/blog/">all posts</a>
   <div id="post-list">
+    <br />
     {% for post in site.posts limit:3 %}
     <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
     <p class="post-description">{{ post.description }}</p>
     <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
     <hr />
     {% endfor %}
+    <br />
   </div>
 
   <!-- Webring -->
   <div id="webring-list">
     {% for ring in site.webring %}
+    {% if ring.link %}
     <a href="{{ ring.link }}" title="{{ ring.name }}" class="webring-image" target="_blank" rel="noreferrer">
       <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}" width="88px" height="31px" />
     </a>
+    {% else %}
+    <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}" width="88px" height="31px" />
+    {% endif %}
     {% endfor %}
   </div>
 </main>
