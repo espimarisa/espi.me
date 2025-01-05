@@ -20,7 +20,8 @@ jobs:
       - run: bun run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./_site
+          cname: espi.me
