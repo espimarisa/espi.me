@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.liquid %}
+  </head>
+
+  <body>
+    {% comment %} Header {% endcomment %}
+    <header>
+      <h1 class="has-no-margin">{{ title }}</h1>
+      <h3 class="has-no-margin">{{ description }}</h3>
+      <p class="has-no-margin">{{ page.date | postDate }}</p>
+    </header>
+
+    {% comment %} Content {% endcomment %}
+    <section>
+      {{ content }}
+    </section>
+
+    {% comment %} Footer {% endcomment %}
+    <footer>
+      <ul>
+        <li><a href="/journal/">all journal entries</a></li>
+        <li><a href="/">home</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+---
+layout: default.liquid
+title: Espi {Mari}sa
+description: tinkerer, activist, and computer science student.
+pronouns: they/them
+
+bluesky: espi.me
+blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk
+github: espimarisa
+telegram: espimarisa
+email: contact@espi.me
+---
+
+{% comment %} Header {% endcomment %}
+<header>
+  <h1 class="has-no-margin">{{ title }}</h1>
+  <h3 class="has-no-margin">{{ description }}</h3>
+  <ul>
+    <li>
+      <a href="https://bsky.app/profile/{{ blueskydid }}">bluesky</a>
+      <span>(@{{ bluesky }})</span>
+    </li>
+    <li>
+      <a href="https://github.com/{{ github }}">github</a>
+      <span>({{ github }})</span>
+    </li>
+    <li>
+      <a href="https://t.me/{{ telegram }}">telegram</a>
+      <span>(@{{ telegram }})</span>
+    </li>
+    <li>
+      <a href="mailto:{{ email }}">email</a>
+      <span>({{ email }})</span>
+    </li>
+  </ul>
+</header>
+
+{% comment %} About {% endcomment %}
+<section>
+  <h2 class="has-no-margin is-inline">hi, i'm espi!</h2>
+  <small class="is-inline">({{ pronouns }})</small>
+  <p class="has-no-margin">i'm a nonbinary person from the brighter part of appalachia.</p>
+  <p>currently, i'm a computer science student at
+    <a href="https://auburn.edu">auburn university.</a>
+  </p>
+  <p>i mess with hardware and software both old and new and enjoy getting my hands dirty with any and all electronics, especially older thinkpads and other business laptops.</p>
+  <p>in my spare time, i volunteer for
+    <a href="https://altrac.works">the alabama transgender rights action coalition</a>, helping fight discriminatory legislature and to spread awareness of
+    <a href="https://altgo.us">local resources</a>.</p>
+</section>
+
+{% comment %} Journal {% endcomment %}
+<section>
+  <h2 class="has-no-margin">journal</h2>
+  <p class="has-no-margin">journal entries about my interests, from tech to travels</p>
+  <ul>
+    {%- for journal in collections.journal %}
+      <li>
+        <a href="{{ journal.url }}">{{ journal.data.title }}</a>
+        <span>({{ journal.date | postDate }})</span>
+      </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+{% comment %} Projects {% endcomment %}
+<section>
+  <h2 class="has-no-margin">projects</h2>
+  <p class="has-no-margin">occasionally i make something useful</p>
+  <ul>
+    {%- for project in collections.projects %}
+      <li>
+        <a href="{{ project.data.url }}">{{ project.data.title }}</a>
+        <p class="has-no-margin">{{ project.data.description }}</p>
+      </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+{% comment %} Webring {% endcomment %}
+<details>
+  <summary>webring</summary>
+  <p class="has-no-margin">hello there, fellow 88x31 traveler</p>
+  <ul>
+    {%- for ring in collections.webring %}
+      {% if ring.data.link %}
+        <a
+          href="{{ ring.data.link }}"
+          title="{{ ring.data.name }}"
+          class="webring-image"
+          target="_blank"
+          rel="noreferrer">
+          <img
+            src="{{ site.baseurl }}/img/webring/{{ ring.data.file }}"
+            alt="{{ ring.data.title }}"
+            title="{{ ring.data.title }}"
+            width="88px"
+            height="31px" />
+        </a>
+      {% else %}
+        <img
+          src="{{ site.baseurl }}/ring/webring/{{ ring.data.file }}"
+          alt="{{ ring.data.title }}"
+          title="{{ ring.data.title }}"
+          width="88px"
+          height="31px" />
+      {% endif %}
+    {%- endfor %}
+  </ul>
+</details>

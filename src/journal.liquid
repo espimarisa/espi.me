@@ -1,0 +1,28 @@
+---
+layout: default.liquid
+title: journal
+description: journal entries about my interests, from tech to travels
+---
+
+{% comment %} Header {% endcomment %}
+<header>
+  <h1 class="has-no-margin">{{ title }}</h1>
+  <h3 class="has-no-margin">{{ description }}</h3>
+</header>
+
+{% comment %} Journal {% endcomment %}
+<ul>
+  {%- for journal in collections.journal %}
+    <li>
+      <a href="{{ journal.url }}">{{ journal.data.title }}</a>
+      <span>({{ journal.date | postDate }})</span>
+    </li>
+  {%- endfor %}
+</ul>
+
+{% comment %} Footer {% endcomment %}
+<footer>
+  <ul>
+    <li><a href="/">home</a></li>
+  </ul>
+</footer>
