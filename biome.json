@@ -2,18 +2,18 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
 
   "files": {
-    "ignore": ["**/node_modules/*", "**/dist/*", "**/drizzle/*"],
+    "ignore": ["**/node_modules/*", "**/_site/*", "**/drizzle/*", "./src/css/syntax.css", "./src/css/normalize.css"],
     "ignoreUnknown": true
   },
   "formatter": {
-    "ignore": ["**/node_modules/*", "**/dist/*", "**/drizzle/*"],
+    "ignore": ["**/node_modules/*", "**/_site/*", "**/drizzle/*", "./src/css/syntax.css", "./src/css/normalize.css"],
     "enabled": true,
     "formatWithErrors": true,
     "lineWidth": 120,
     "indentStyle": "space"
   },
   "linter": {
-    "ignore": ["**/node_modules/*", "**/dist/*", "**/drizzle/*"],
+    "ignore": ["**/node_modules/*", "**/_site/*", "**/drizzle/*", "./src/css/syntax.css", "./src/css/normalize.css"],
     "enabled": true,
     "rules": {
       "complexity": {
@@ -33,7 +33,7 @@
     }
   },
   "organizeImports": {
-    "ignore": ["**/node_modules/*", "**/dist/*"],
+    "ignore": ["**/node_modules/*", "**/_site/*", "**/drizzle/*", "./src/css/syntax.css", "./src/css/normalize.css"],
     "enabled": true
   },
   "javascript": {

@@ -1,7 +1,7 @@
 ---
 layout: default.liquid
 title: Espi {Mari}sa
-description: tinkerer, activist, and computer science student.
+description: tinkerer, activist, computer science student.
 pronouns: they/them
 
 bluesky: espi.me
@@ -14,22 +14,22 @@ email: contact@espi.me
 {% comment %} Header {% endcomment %}
 <header>
   <h1 class="has-no-margin">{{ title }}</h1>
-  <h3 class="has-no-margin">{{ description }}</h3>
+  <h2 class="has-no-margin">{{ description }}</h2>
   <ul>
     <li>
-      <a href="https://bsky.app/profile/{{ blueskydid }}">bluesky</a>
+      <a href="https://bsky.app/profile/{{ blueskydid }}" title="bluesky" target="_blank">bluesky</a>
       <span>(@{{ bluesky }})</span>
     </li>
     <li>
-      <a href="https://github.com/{{ github }}">github</a>
+      <a href="https://github.com/{{ github }}" title="github" target="_blank">github</a>
       <span>({{ github }})</span>
     </li>
     <li>
-      <a href="https://t.me/{{ telegram }}">telegram</a>
+      <a href="https://t.me/{{ telegram }}" title="telegram" target="_blank">telegram</a>
       <span>(@{{ telegram }})</span>
     </li>
     <li>
-      <a href="mailto:{{ email }}">email</a>
+      <a href="mailto:{{ email }}" title="email" target="_blank">email</a>
       <span>({{ email }})</span>
     </li>
   </ul>
@@ -41,12 +41,15 @@ email: contact@espi.me
   <small class="is-inline">({{ pronouns }})</small>
   <p class="has-no-margin">i'm a nonbinary person from the brighter part of appalachia.</p>
   <p>currently, i'm a computer science student at
-    <a href="https://auburn.edu">auburn university.</a>
+    <a href="https://auburn.edu" title="auburn university" target="_blank">auburn university.</a>
   </p>
-  <p>i mess with hardware and software both old and new and enjoy getting my hands dirty with any and all electronics, especially older thinkpads and other business laptops.</p>
+  <p>i tinker with hardware and software and enjoy messing around with often forgotten pieces of technology, especially older thinkpads,
+    laptops, and other oddities.
+  </p>
   <p>in my spare time, i volunteer for
-    <a href="https://altrac.works">the alabama transgender rights action coalition</a>, helping fight discriminatory legislature and to spread awareness of
-    <a href="https://altgo.us">local resources</a>.</p>
+    <a href="https://altrac.works" title="altrac.works" target="_blank">the alabama transgender rights action coalition</a>, helping fight discriminatory legislature and to spread awareness of
+    <a href="https://altgo.us" title="altgo.us" target="_blank">local resources</a>.
+  </p>
 </section>
 
 {% comment %} Journal {% endcomment %}
@@ -70,7 +73,7 @@ email: contact@espi.me
   <ul>
     {%- for project in collections.projects %}
       <li>
-        <a href="{{ project.data.url }}">{{ project.data.title }}</a>
+        <a href="{{ project.data.url }}" title="{{ project.data.title }}" target="_blank">{{ project.data.title }}</a>
         <p class="has-no-margin">{{ project.data.description }}</p>
       </li>
     {%- endfor %}
@@ -84,14 +87,9 @@ email: contact@espi.me
   <ul>
     {%- for ring in collections.webring %}
       {% if ring.data.link %}
-        <a
-          href="{{ ring.data.link }}"
-          title="{{ ring.data.name }}"
-          class="webring-image"
-          target="_blank"
-          rel="noreferrer">
+        <a href="{{ ring.data.link }}" title="{{ ring.data.name }}" class="webring-image" target="_blank">
           <img
-            src="{{ site.baseurl }}/img/webring/{{ ring.data.file }}"
+            src="/img/webring/{{ ring.data.file | url }}"
             alt="{{ ring.data.title }}"
             title="{{ ring.data.title }}"
             width="88px"
@@ -99,7 +97,7 @@ email: contact@espi.me
         </a>
       {% else %}
         <img
-          src="{{ site.baseurl }}/ring/webring/{{ ring.data.file }}"
+          src="/img/webring/{{ ring.data.file | url }}"
           alt="{{ ring.data.title }}"
           title="{{ ring.data.title }}"
           width="88px"

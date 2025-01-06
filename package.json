@@ -14,10 +14,14 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
+    "clean-css": "^5.3.3",
+    "eleventy-plugin-automatic-noopener": "^2.0.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4"
+    "@biomejs/biome": "^1.9.4",
+    "bun-types": "^1.1.42"
   },
   "trustedDependencies": ["@biomejs/biome"]
 }
