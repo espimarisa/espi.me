@@ -17,7 +17,7 @@ jobs:
           bun-version: latest
 
       - run: bun i
-      - run: bun run build
+      - run: NODE_ENV=production bun run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
