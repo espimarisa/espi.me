@@ -8,13 +8,15 @@ bluesky: espi.me
 blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk
 github: espimarisa
 telegram: espimarisa
+signal: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN
+signalUsername: espimarisa.01
 email: contact@espi.me
 ---
 
 {% comment %} Header {% endcomment %}
 <header>
   <h1 class="has-no-margin">{{ title }}</h1>
-  <h2 class="has-no-margin">{{ description }}</h2>
+  <h2 class="has-no-margin">(or sometimes Mari!)</h2>
   <ul>
     <li>
       <a href="https://bsky.app/profile/{{ blueskydid }}" title="bluesky" target="_blank">bluesky</a>
@@ -29,6 +31,10 @@ email: contact@espi.me
       <span>(@{{ telegram }})</span>
     </li>
     <li>
+      <a href="{{ signal }}" title="signal" target="_blank">signal</a>
+      <span>(@{{ signalUsername }})</span>
+    </li>
+    <li>
       <a href="mailto:{{ email }}" title="email" target="_blank">email</a>
       <span>({{ email }})</span>
     </li>
@@ -37,9 +43,9 @@ email: contact@espi.me
 
 {% comment %} About {% endcomment %}
 <section>
-  <h2 class="has-no-margin is-inline">hi, i'm espi, aka mari!</h2>
+  <h2 class="has-no-margin is-inline">hi, i'm espi</h2>
   <small class="is-inline">({{ pronouns }})</small>
-  <p class="has-no-margin">i'm a genderfluid person from the brighter part of appalachia.</p>
+  <p class="has-no-margin">i'm a dork currently calling <a href="https://en.wikipedia.org/wiki/Huntsville,_Alabama" title="huntsville, ala" target="_blank> home.</p>
   <p>currently, i'm a computer science student at
     <a href="https://auburn.edu" title="auburn university" target="_blank">auburn university.</a>
   </p>
@@ -71,7 +77,7 @@ email: contact@espi.me
 {% comment %} Projects {% endcomment %}
 <section>
   <h2 class="has-no-margin">projects</h2>
-  <p class="has-no-margin">occasionally i make something useful</p>
+  <p class="has-no-margin">sometimes i make things here and there</p>
   <ul>
     {%- for project in collections.projects %}
       <li>
