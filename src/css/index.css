@@ -1,9 +1,9 @@
 body {
   color: black;
-  font-family: "Jetbrains Mono", monospace;
+  font-family: "Atkinson Hyperlegible Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  max-width: 55rem;
+  max-width: 60rem;
   min-height: 100vh;
   height: 100vh;
   width: 100;
@@ -52,7 +52,11 @@ details {
 
 summary {
   font-weight: bold;
-  font-size: 2.15rem;
+  font-size: 1.35rem;
+}
+
+summary::marker {
+  font-size: 1rem;
 }
 
 pre code {
@@ -72,8 +76,12 @@ pre code {
   margin: auto;
 }
 
-.journal-caption {
+.post-caption {
   display: block;
+}
+
+.webring-list {
+  padding: 0;
 }
 
 .webring-image {
@@ -87,7 +95,7 @@ pre code {
   opacity: 90%;
 }
 
-.journal-title {
+.post-title {
   font-size: 2.5rem;
 }
 

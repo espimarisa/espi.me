@@ -2,9 +2,9 @@
   "name": "@espimarisa/espi.me",
   "version": "0.0.0",
   "type": "module",
-  "description": "my personal website, blog, and portfolio.",
+  "description": "my personal website, blog, and portfolio",
   "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
-  "license": "zlib",
+  "license": "zlib/libpng",
   "private": true,
   "packageManager": "bun@1.1.42",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "bun-types": "^1.1.42"
+    "bun-types": "^1.2.4"
   },
   "trustedDependencies": ["@biomejs/biome"]
 }

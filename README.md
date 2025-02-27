@@ -1,7 +1,6 @@
 # [espi.me][espi.me]
 
-my personal website, blog, and portfolio.
-
+my personal website, blog, and portfolio
 
 ## setup
 - `bun i`
