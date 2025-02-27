@@ -1,7 +1,5 @@
-import fs from "node:fs";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
-import CleanCSS from "clean-css";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
@@ -60,24 +58,6 @@ export default async function (eleventyConfig) {
       sortClassName: true,
       trimCustomFragments: true,
       useShortDoctype: true,
-    });
-  }
-
-  // CSS minification in production
-  if (IS_PRODUCTION) {
-    eleventyConfig.on("afterBuild", () => {
-      const inputFile = "./src/css/index.css";
-      const input = fs.readFileSync(inputFile, "utf8");
-      const output = new CleanCSS().minify(input);
-
-      // Minifies the CSS file
-      fs.writeFile("./_site/css/index.css", output.styles, (error) => {
-        if (error) {
-          // biome-ignore lint/suspicious/noConsole: We don't need a custom logger for this CLI
-          console.error(`Error minifying index.css: ${error}`);
-          return;
-        }
-      });
     });
   }
 }
