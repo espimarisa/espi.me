@@ -1,7 +1,7 @@
 ---
 layout: default.liquid
-title: Espi Marisa
-description: computer science student, tinkerer, and activist
+title: espi marisa!
+description: cs student, tinkerer, activist
 pronouns: any/all
 
 bluesky: espi.me # Bluesky handle
@@ -19,7 +19,7 @@ email: contact@espi.me # Public email
 {% comment %} Header {% endcomment %}
 <header>
   <h1 class="has-no-margin">{{ title }}</h1>
-  <h2 class="has-no-margin">i made you a cookie, but i eated it</h2>
+  <h2 class="has-no-margin">{{ description }}</h2>
   <ul>
     <li>
       <a href="https://bsky.app/profile/{{ blueskydid }}" title="bluesky" target="_blank">bluesky</a>
@@ -64,23 +64,23 @@ email: contact@espi.me # Public email
 
   <br/>
 
-  <p class="has-no-margin">i toy around with software, electronics, and anything that intrigues me.</p>
+  <p class="has-no-margin">i mess with software, electronics, and anything that i get my hands on.</p>
   <p class="has-no-margin">occasionally, i
     <a href="/blog/">write about</a>
-    my adventures in tinkering and other interests.</p>
+    those adventures and other interests of mine.</p>
 
   <p>i volunteer with
     <a href="https://altrac.works" title="altrac.works" target="_blank">the alabama transgender rights action coalition</a>
-    to help defeat discriminatory legislature and to spread awareness of
+    to help defeat discriminatory legislature and to bring awareness to
     <a href="https://altgo.us" title="altgo.us" target="_blank">our local lgbtq+ resources</a>.
   </p>
 
-  <p>outside of college and activism, i enjoy watching anime, (badly) playing the guitar, hobbyist meteorology research, thrifting, and
-    exploring my home of southern appalachia.
+  <p>outside of busywork, i enjoy watching anime, going thrifting, playing the guitar, documenting severe weather, and exploring my home of
+    appalachia and the deep south.
   </p>
 
   <p>
-    messages and inquiries are always welcome. feel free to reach out, i don't tend to bite!
+    all messages and inquiries are welcome via the contact methods linked. i won't bite!
   </p>
 </section>
 
@@ -90,7 +90,6 @@ email: contact@espi.me # Public email
 {% comment %} Projects {% endcomment %}
 <section>
   <h2 class="has-no-margin">projects</h2>
-  <p class="has-no-margin">possibly useful things that i've made</p>
   <ul>
     {%- for project in collections.projects %}
       <li>

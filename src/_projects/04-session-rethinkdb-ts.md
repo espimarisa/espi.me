@@ -1,6 +1,6 @@
 ---
 title: session-rethinkdb-ts
-description: a modern rethinkdb session store for express
+description: modern express-session middleware to store session data to rethinkdb
 url: https://github.com/espimarisa/session-rethinkdb-ts
 tags: projects
 ---
