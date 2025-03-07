@@ -2,17 +2,21 @@
 layout: default.liquid
 title: espi marisa!
 description: i made you a cookie but i eated it
-pronouns: any/all
+pronouns: any pronouns
 
 bluesky: espi.me # Bluesky handle
 blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk # Bluesky DiD for hyperlinking to
 github: espimarisa # GitHub handle
+keybase: espimarisa # Keybase handle
 discord: espimarisa # Discord username
-discordInviteCode: v5WUBgCpJ6 # Discord server invite
+discordID: 647269760782041133 # Discord user ID
 telegram: espimarisa # Telegram handle
 signal: espimarisa.01 # Signal handle
-signalLink: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN # Signal URL
-email: contact@espi.me # Public email
+signalURL: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN # Signal URL
+fediverseURL: wetdry.world/@espi # Fediverse URL for verification
+fediverseHandle: "@espi@wetdry.world" # Fediverse handle
+email: contact at espi dot me # Spelled out email
+emailURL: contact@espi.me # Email URL
 ---
 
 {% comment %} Header {% endcomment %}
@@ -29,7 +33,11 @@ email: contact@espi.me # Public email
       <span>[@{{ github }}]</span>
     </li>
     <li>
-      <a href="https://discord.gg/{{ discordInviteCode }}" title="discord" target="_blank">discord</a>
+      <a href="https://keybase.io/{{ keybase }}" title="keybase" target="_blank">keybase</a>
+      <span>[@{{ keybase }}]</span>
+    </li>
+    <li>
+      <a href="https://discord.com/users/{{ discordID }}" title="discord" target="_blank">discord</a>
       <span>[@{{ discord }}]</span>
     </li>
     <li>
@@ -37,11 +45,15 @@ email: contact@espi.me # Public email
       <span>[@{{ telegram }}]</span>
     </li>
     <li>
-      <a href="{{ signalLink }}" title="signal" target="_blank">signal</a>
+      <a href="{{ signalURL }}" title="signal" target="_blank">signal</a>
       <span>[@{{ signal }}]</span>
     </li>
     <li>
-      <a href="mailto:{{ email }}" title="email" target="_blank">email</a>
+      <a href="https://{{ fediverseURL }}" title="fediverse" target="_blank" rel="me">fediverse</a>
+      <span>[{{ fediverseHandle }}]</span>
+    </li>
+    <li>
+      <a href="mailto:{{ emailURL }}" title="email" target="_blank">email</a>
       <span>[{{ email }}]</span>
     </li>
   </ul>
@@ -75,13 +87,11 @@ email: contact@espi.me # Public email
   </p>
 
   <p>
-    all messages and inquiries are welcome via the contact methods linked. i won't bite!
+    come say hi to me, i don't tend to bite!
   </p>
 </section>
 
-<!--
-{% comment %} Blog {% endcomment %}<section>  <h2 class="has-no-margin">blog</h2>  <p class="has-no-margin">blog posts about my interests, from tech to travels</p>  <ul>    {%- for post in collections.posts %}      <li>        <a href="{{ post.url }}">{{ post.data.title }}</a>        <span>({{ post.date | postDate }})</span>      </li>    {%- endfor %}  </ul></section>
--->
+
 {% comment %} Projects {% endcomment %}
 <section>
   <h2 class="has-no-margin">projects</h2>
