@@ -1,26 +1,30 @@
 {
-  "name": "@espimarisa/espi.me",
-  "version": "0.0.0",
-  "type": "module",
-  "description": "my personal website, blog, and portfolio",
-  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
-  "license": "zlib/libpng",
-  "private": true,
-  "packageManager": "bun@1.1.42",
-  "scripts": {
-    "build": "NODE_env=production bunx @11ty/eleventy",
-    "dev": "NODE_env=development bunx @11ty/eleventy --serve --watch",
-    "start": "NODE_ENV=production bunx @11ty/eleventy --serve --quiet"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
-    "eleventy-plugin-automatic-noopener": "^2.0.2"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "bun-types": "^1.2.4"
-  },
-  "trustedDependencies": ["@biomejs/biome"]
+	"name": "@espimarisa/espi.me",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "my personal website, blog, and portfolio",
+	"author": "Espi Marisa <contact@espi.me> (https://espi.me)",
+	"license": "zlib/libpng",
+	"private": true,
+	"packageManager": "bun@1.2.4",
+	"scripts": {
+		"build": "NODE_env=production bunx @11ty/eleventy",
+		"dev": "NODE_env=development bunx @11ty/eleventy --serve --watch",
+		"lint": "biome check .",
+		"lint:fix": "biome check --apply .",
+		"format": "biome format --write .",
+		"start": "NODE_ENV=production bunx @11ty/eleventy --serve --quiet",
+		"test": "bun run lint"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
+		"eleventy-plugin-automatic-noopener": "^2.0.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"bun-types": "^1.2.4"
+	},
+	"trustedDependencies": ["@biomejs/biome"]
 }

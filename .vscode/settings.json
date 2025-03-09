@@ -1,0 +1,5 @@
+{
+  "biome.enabled": true,
+  "eslint.enable": false,
+  "prettier.enable": false
+}
