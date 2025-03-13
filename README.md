@@ -3,6 +3,7 @@
 my personal website, blog, and portfolio
 
 ## setup
+
 - `bun i`
 - `bun run dev`
 
@@ -10,5 +11,5 @@ my personal website, blog, and portfolio
 
 [zlib/libpng][license]
 
-[espi.me]: https://espi.me "Hyperlink to espi (dot) me."
-[license]: LICENSE.md "A link to the zlib/libpng license."
+[espi.me]: https://espi.me "link to espi (dot) me"
+[license]: LICENSE.md "link to the zlib/libpng license"

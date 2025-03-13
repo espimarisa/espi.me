@@ -3,133 +3,172 @@ layout: default.liquid
 title: espi marisa!
 description: i made you a cookie but i eated it
 pronouns: any pronouns
-
-bluesky: espi.me # Bluesky handle
-blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk # Bluesky DiD for hyperlinking to
-github: espimarisa # GitHub handle
-keybase: espimarisa # Keybase handle
-discord: espimarisa # Discord username
-discordID: 647269760782041133 # Discord user ID
-telegram: espimarisa # Telegram handle
-signal: espimarisa.01 # Signal handle
-signalURL: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN # Signal URL
-fediverseURL: wetdry.world/@espi # Fediverse URL for verification
-fediverseHandle: "@espi@wetdry.world" # Fediverse handle
-email: contact at espi dot me # Spelled out email
-emailURL: contact@espi.me # Email URL
+bluesky: espi.me
+blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk
+github: espimarisa
+keybase: espimarisa
+discord: espimarisa
+discordID: 647269760782041133
+telegram: espimarisa
+signal: espimarisa.01
+signalURL: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN
+email: contact@espi.me
 ---
 
 {% comment %} Header {% endcomment %}
 <header>
-	<h1 class="has-no-margin">{{ title }}</h1>
-	<h2 class="has-no-margin">{{ description }}</h2>
-	<ul>
-		<li>
-			<a href="https://bsky.app/profile/{{ blueskydid }}" title="bluesky" target="_blank">bluesky</a>
-			<span>[@{{ bluesky }}]</span>
-		</li>
-		<li>
-			<a href="https://github.com/{{ github }}" title="github" target="_blank">github</a>
-			<span>[@{{ github }}]</span>
-		</li>
-		<li>
-			<a href="https://keybase.io/{{ keybase }}" title="keybase" target="_blank">keybase</a>
-			<span>[@{{ keybase }}]</span>
-		</li>
-		<li>
-			<a href="https://discord.com/users/{{ discordID }}" title="discord" target="_blank">discord</a>
-			<span>[@{{ discord }}]</span>
-		</li>
-		<li>
-			<a href="https://t.me/{{ telegram }}" title="telegram" target="_blank">telegram</a>
-			<span>[@{{ telegram }}]</span>
-		</li>
-		<li>
-			<a href="{{ signalURL }}" title="signal" target="_blank">signal</a>
-			<span>[@{{ signal }}]</span>
-		</li>
-		<li>
-			<a href="https://{{ fediverseURL }}" title="fediverse" target="_blank" rel="me">mastodon</a>
-			<span>[{{ fediverseHandle }}]</span>
-		</li>
-		<li>
-			<a href="mailto:{{ emailURL }}" title="email" target="_blank">email</a>
-			<span>[{{ email }}]</span>
-		</li>
-	</ul>
+  <h1>{{ title }}</h1>
+  <h4>{{ description }}</h4>
+  {% comment %} Links {% endcomment %}
+  <ul>
+    <li>
+      <a href="/journal/" title="journal">journal</a>
+    </li>
+    <li>
+      <a
+        href="https://bsky.app/profile/{{ blueskydid }}"
+        title="bluesky"
+        target="_blank">bluesky</a>
+
+      <span>[{{ bluesky }}]</span>
+    </li>
+    <li>
+      <a
+        href="https://github.com/{{ github }}"
+        title="github"
+        target="_blank">github</a>
+
+      <span>[@{{ github }}]</span>
+    </li>
+    <li>
+      <a
+        href="https://keybase.io/{{ keybase }}"
+        title="keybase"
+        target="_blank">keybase</a>
+
+      <span>[@{{ keybase }}]</span>
+    </li>
+    <li>
+      <a
+        href="https://discord.com/users/{{ discordID }}"
+        title="discord"
+        target="_blank">discord</a>
+
+      <span>[@{{ discord }}]</span>
+    </li>
+    <li>
+      <a
+        href="https://t.me/{{ telegram }}"
+        title="telegram"
+        target="_blank">telegram</a>
+
+      <span>[@{{ telegram }}]</span>
+    </li>
+    <li>
+      <a
+        href="{{ signalURL }}"
+        title="signal"
+        target="_blank">signal</a>
+
+      <span>[@{{ signal }}]</span>
+    </li>
+    <li>
+      <a
+        href="mailto:{{ email }}"
+        title="email"
+        target="_blank">email</a>
+
+      <span>[{{ email }}]</span>
+    </li>
+  </ul>
 </header>
 
-{% comment %} about {% endcomment %}
-<section>
-	{% comment %} intro {% endcomment %}
-	<h2 class="has-no-margin is-inline">hi, i'm espi, aka mari!</h2>
-	<small class="is-inline">({{ pronouns }})</small>
+{% comment %} About {% endcomment %}
+<section id="about">
+  <h2 class="no-margin inline-flex">hi, i'm espi, aka mari!</h2>
+  <span>
+    <small>({{ pronouns }})</small>
+  </span>
 
-	<p class="has-no-margin">i'm a visually impaired computer science student at
-		<a href="https://auburn.edu" title="auburn university" target="_blank">auburn university</a>.
-	</p>
+  <p class="no-margin">i'm a visually impaired computer science student at
+    <a
+      href="https://auburn.edu"
+      title="auburn university"
+      target="_blank">auburn university</a>.
+  </p>
 
-	<br/>
+  <p>i volunteer for
+    <a
+      href="https://altrac.works"
+      title="altrac.works"
+      target="_blank">the alabama transgender rights action coalition</a>, defending trans rights throughout our state. i also document
+    <a
+      href="https://altgo.us"
+      title="altgo.us"
+      target="_blank">our local queer resources</a>.
+  </p>
 
-	<p class="has-no-margin">i mess with software, electronics, and anything that i get my hands on.</p>
-	<p class="has-no-margin">occasionally, i
-		<a href="/blog/">write about</a>
-		those adventures and other interests of mine.</p>
+  <p class="no-margin">
+    in my spare time, i tinker around with hardware, software, and electronics.
+  </p>
 
-	<p>i volunteer with
-		<a href="https://altrac.works" title="altrac.works" target="_blank">the alabama transgender rights action coalition</a>
-		to help defeat discriminatory legislature and to bring awareness to
-		<a href="https://altgo.us" title="altgo.us" target="_blank">our local lgbtq+ resources</a>.
-	</p>
+  <p class="no-margin">
+    occasionally, i
+    <a href="/journal/" title="my journal">write about my findings</a>
+    and various other interests of mine.
+  </p>
 
-	<p>outside of busywork, i enjoy watching anime, going thrifting, playing the guitar, documenting severe weather, and exploring my home of
-		appalachia and the deep south.
-	</p>
-
-	<p>
-		come say hi to me, i don't tend to bite!
-	</p>
+  <p>outside of busywork, i enjoy watching anime, thrifting, (poorly) playing the guitar, and exploring my home region of appalachia and the further deep south.
+  </p>
 </section>
 
 
-{% comment %} Projects {% endcomment %}
-<section>
-	<h2 class="has-no-margin">projects</h2>
-	<ul>
-		{%- for project in collections.projects %}
-			<li>
-				<a href="{{ project.data.url }}" title="{{ project.data.title }}" target="_blank">{{ project.data.title }}</a>
-				<p class="has-no-margin">{{ project.data.description }}</p>
-			</li>
-		{%- endfor %}
-	</ul>
+{% comment %} Projects list {% endcomment %}
+<section id="projects">
+  <h2>projects</h2>
+  <p>nifty things that i've made</p>
+  <ul>
+    {% for project in collections.projects reversed %}
+      <li>
+        <a
+          href="{{ project.data.url }}"
+          title="{{ project.data.title }}"
+          target="_blank">{{ project.data.title }}</a>
+        <p>{{ project.data.description }}</p>
+        <i>
+          <small>{{ project.data.technologies }}</small>
+        </i>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
-{% comment %} Webring {% endcomment %}
-<details>
-	<summary>
-		<span class="has-no-margin">webring</span>
-	</summary>
-	<p class="has-no-margin">why hello there, 88x31 traveller!</p>
-	<ul class="webring-list">
-		{%- for ring in collections.webring %}
-			{% if ring.data.link %}
-				<a href="{{ ring.data.link }}" title="{{ ring.data.name }}" class="webring-image" target="_blank">
-					<img
-						src="/img/webring/{{ ring.data.file | url }}"
-						alt="{{ ring.data.title }}"
-						title="{{ ring.data.title }}"
-						width="88px"
-						height="31px" />
-				</a>
-			{% else %}
-				<img
-					src="/img/webring/{{ ring.data.file | url }}"
-					alt="{{ ring.data.title }}"
-					title="{{ ring.data.title }}"
-					width="88px"
-					height="31px" />
-			{% endif %}
-		{%- endfor %}
-	</ul>
-</details>
+{% comment %} Webring list {% endcomment %}
+<section id="webring">
+  <h2>webring</h2>
+  <p>super cool friends of mine</p>
+  <ul>
+    {% for ring in collections.webring %}
+
+      {% comment %} only append a to buttons with links {% endcomment %}
+      {% if ring.data.link %}
+        <a
+          href="{{ ring.data.link }}"
+          title="{{ ring.data.name }}"
+          target="_blank">
+      {% endif %}
+
+      <img
+        src="/img/webring/{{ ring.data.file | url }}"
+        alt="{{ ring.data.title }}"
+        title="{{ ring.data.title }}"
+        width="88px"
+        height="31px" />
+
+      {% comment %} nasty inline trick to avoid duplication {% endcomment %}
+      {% if ring.data.link %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,99 @@
+
+//
+// Layout
+//
+
+body
+	color: black
+	font-family: "Atkinson Hyperlegible Mono", monospace
+	font-optical-sizing: auto
+	font-style: normal
+	max-width: 60rem
+	min-height: 100vh
+	height: 100vh
+	font-size: 1.125rem
+	width: 100
+	margin: 0 auto
+	padding: 2rem
+	display: flex
+	flex-direction: column
+
+footer
+	margin-top: auto
+
+section
+	padding-top: 2rem
+
+li
+	padding-bottom: 0.75rem
+
+	&:last-child
+		padding-bottom: 0rem
+
+header, #projects, #webring, #journal-list, #journal-header
+	h1, h2, h3, h4, h5, h6, p
+		margin: 0
+
+#webring
+	ul, li, img, a
+		padding: 0
+
+	img, a
+		text-decoration: none
+		image-rendering: pixelated
+
+		&:hover
+			opacity: 90%
+
+//
+// Text
+//
+
+h1
+	font-size: 2.65rem
+
+h2
+	font-size: 1.65rem
+
+h3
+	font-size: 1.45rem
+
+h4
+	font-size: 1.35rem
+
+a
+	color: blue
+
+	&:visited
+		color: blue
+
+	&:hover
+		color: blueviolet
+
+//
+// Utilities
+//
+
+.no-margin
+	margin: 0
+
+.inline-flex
+	display: inline-flex
+
+//
+// Dark mode
+//
+
+@media (prefers-color-scheme: dark)
+	body
+		background-color: black
+		color: white
+
+	a
+		color: orange
+
+		&:visited
+			color: orange
+
+		&:hover
+			color: orangered

@@ -1,36 +1,53 @@
-{% comment %} Metadata {% endcomment %}
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="{{ description }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <meta name="theme-color" content="#ffa500" />
 <meta name="msapplication-navbutton-color" content="#ffa500" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#ffa500" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ title }}" />
-<meta name="twitter:description" content="{{ description }}" />
-<meta name="twitter:image" content="/img/favicon.png">
-<meta name="twitter:image:alt" content="{{ title }}" />
+
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ url }}" />
 <meta property="og:description" content="{{ description }}" />
-<meta property="og:image" content="/img/favicon.png" />
+<meta property="og:image" content="{{ "/img/favicon.png" | url }}" />
 
-{% comment %} Atkinson Hyperlegible Mono {% endcomment %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image" content="{{ "/img/favicon.png" | url }}">
+<meta name="twitter:image:alt" content="{{ title }}" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap">
-<link rel="stylesheet" type="text/css" href="{{ "/css/normalize.css" | url }}" />
-<link rel="stylesheet" type="text/css" href="{{ "/css/index.css" | url }}" />
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
 
-{% comment %} Syntax highlighting {% endcomment %}
-{% if syntaxRequired == true %}
-	<link rel="stylesheet" type="text/css" href="{{ "/css/syntax.css" | url }}" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap">
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ "/sass/modern-normalize.css" | url }}" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ "/sass/style.css" | url }}" />
+
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ "/img/favicon.png" | url }}" />
+
+{% comment %} append title to stuff {% endcomment %}
+{% if page.url != "/" %}
+  <title>{{ title }} :: espi marisa!</title>
+{% else %}
+  <title>{{ title }}</title>
 {% endif %}
-
-{% comment %} Favicon {% endcomment %}
-<link rel="icon" type="image/x-icon" href="{{ "/img/favicon.png" | url }}" />
-
-{% comment %} Title {% endcomment %}
-<title>{{ title }}</title>
