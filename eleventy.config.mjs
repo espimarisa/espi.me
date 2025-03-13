@@ -1,4 +1,3 @@
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
 import eleventySass from "eleventy-sass";
@@ -38,8 +37,6 @@ export default async function (eleventyConfig) {
 		},
 	});
 
-	// Syntax highlighting support
-	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(automaticNoopener);
 
 	// Minification
