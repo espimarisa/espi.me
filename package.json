@@ -8,12 +8,12 @@
 	"private": true,
 	"packageManager": "bun@1.2.5",
 	"scripts": {
-		"build": "NODE_env=production bunx @11ty/eleventy",
-		"dev": "NODE_env=development bunx @11ty/eleventy --serve --watch",
+		"build": "NODE_env=production bunx --node-options='--experimental-require-module' @11ty/eleventy",
+		"dev": "NODE_env=development bunx --node-options='--experimental-require-module' @11ty/eleventy --serve --watch",
 		"lint": "biome check .",
 		"lint:fix": "biome check --apply .",
 		"format": "biome format --write .",
-		"start": "NODE_ENV=production bunx @11ty/eleventy --serve --quiet",
+		"start": "NODE_ENV=production bunx --node-options='--experimental-require-module' @11ty/eleventy --serve --quiet",
 		"test": "bun run lint"
 	},
 	"dependencies": {
