@@ -8,13 +8,15 @@
 	"private": true,
 	"packageManager": "bun@1.2.5",
 	"scripts": {
-		"build": "NODE_env=production bunx --node-options='--experimental-require-module' @11ty/eleventy",
-		"dev": "NODE_env=development bunx --node-options='--experimental-require-module' @11ty/eleventy --serve --watch",
+		"build": "NODE_env=production concurrently \"bun run build:sass\" \"bunx @11ty/eleventy\"",
+		"build:sass": "sass ./src/sass:_site/css",
+		"dev": "concurrently \"bun run watch:sass\" \"NODE_env=development bunx @11ty/eleventy --serve --watch\"",
 		"lint": "biome check .",
 		"lint:fix": "biome check --apply .",
 		"format": "biome format --write .",
-		"start": "NODE_ENV=production bunx --node-options='--experimental-require-module' @11ty/eleventy --serve --quiet",
-		"test": "bun run lint"
+		"start": "concurrently \"bun run build:sass\" \"NODE_ENV=production bunx @11ty/eleventy --serve --quiet\"",
+		"test": "bun run lint",
+		"watch:sass": "sass --watch ./src/sass:_site/css"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
@@ -24,6 +26,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"bun-types": "^1.2.5"
+		"bun-types": "^1.2.5",
+		"concurrently": "^9.1.2",
+		"sass": "^1.85.1"
 	}
 }

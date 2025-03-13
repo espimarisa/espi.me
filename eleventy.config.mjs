@@ -1,6 +1,5 @@
 import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
-import eleventySass from "eleventy-sass";
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
@@ -27,14 +26,6 @@ export default async function (eleventyConfig) {
 			month: "numeric",
 			day: "numeric",
 		});
-	});
-
-	// SASS support
-	eleventyConfig.addPlugin(eleventySass, {
-		sass: {
-			style: "compressed",
-			sourceMap: false,
-		},
 	});
 
 	eleventyConfig.addPlugin(automaticNoopener);
