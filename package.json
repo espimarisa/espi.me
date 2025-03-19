@@ -29,5 +29,9 @@
 		"bun-types": "^1.2.5",
 		"concurrently": "^9.1.2",
 		"sass": "^1.86.0"
-	}
+	},
+	"trustedDependencies": [
+		"@biomejs/biome",
+		"@parcel/watcher"
+	]
 }

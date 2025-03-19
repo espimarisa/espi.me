@@ -5,6 +5,15 @@ $pink: #ff0070;
 $white: #ffffff;
 $white-contrast: #efefef;
 
+html {
+	font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, Roboto, Helvetica,
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	line-height: 1.15;
+	tab-size: 4;
+	text-wrap: balance;
+	-webkit-text-size-adjust: 100%;
+}
+
 //
 // Generic elements
 //
@@ -14,8 +23,6 @@ body {
 	color: $black;
 	display: flex;
 	flex-direction: column;
-	font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, Roboto, Helvetica,
-		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	font-optical-sizing: auto;
 	font-size: 1.25rem;
 	font-style: normal;
@@ -24,7 +31,6 @@ body {
 	max-width: 70rem;
 	margin: 0 auto;
 	padding: 2rem;
-	text-wrap: balance;
 	width: 100;
 }
 
@@ -34,6 +40,12 @@ box {
 	&:hover {
 		border: 1px solid $pink;
 	}
+}
+
+code {
+	font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+		monospace;
+	font-size: 1.125rem;
 }
 
 header,
@@ -66,7 +78,12 @@ section {
 	padding: 1rem 0rem 1rem 0rem;
 }
 
+small {
+	font-size: 80%;
+}
+
 summary {
+	display: list-item;
 	font-size: 2rem;
 	font-weight: bold;
 
@@ -179,6 +196,8 @@ h6 {
 }
 
 #webring {
+	text-wrap: wrap;
+
 	ul,
 	li,
 	img {
