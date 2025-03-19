@@ -69,11 +69,11 @@ summary {
 summary:hover {
   cursor: pointer;
 }
-summary::marker {
+summary::marker, summary::-webkit-details-marker {
   color: #ff0070;
   font-size: 75%;
 }
-summary::marker :hover {
+summary::marker :hover, summary::-webkit-details-marker :hover {
   cursor: pointer;
 }
 
@@ -180,7 +180,7 @@ h6 {
     color: #ffffff;
     background-color: #000000;
   }
-  summary::marker {
+  summary::marker, summary::-webkit-details-marker {
     color: #ffa500;
   }
   a,
