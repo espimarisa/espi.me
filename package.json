@@ -16,7 +16,7 @@
 		"format": "biome format --write .",
 		"start": "concurrently \"bun run build:sass\" \"NODE_ENV=production bunx @11ty/eleventy --serve --quiet\"",
 		"test": "bun run lint",
-		"watch:sass": "sass --watch ./src/sass:_site/css"
+		"watch:sass": "sass --watch ./src/scss:_site/css"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
@@ -28,6 +28,6 @@
 		"@biomejs/biome": "^1.9.4",
 		"bun-types": "^1.2.5",
 		"concurrently": "^9.1.2",
-		"sass": "^1.85.1"
+		"sass": "^1.86.0"
 	}
 }

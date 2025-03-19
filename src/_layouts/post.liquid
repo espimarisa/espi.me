@@ -9,7 +9,7 @@
     <header id="journal-header">
       <h1>{{ title }}</h1>
       <h4>{{ description }}</h4>
-      <h5>{{ date }}</h5>
+      <small>{{ page.date | postDate }}</small>
     </header>
 
     {% comment %} Content {% endcomment %}

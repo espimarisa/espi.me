@@ -1,8 +1,8 @@
 ---
-tags: projects
 title: altgo-us
-description: documenting queer resources in alabama
-technologies: python, pelican, html, scss
+description: website documenting queer resources in alabama
+technologies: python, html, scss, pelican
 url: https://altgo.us
-date: 2025-03-15
+date: 2025-03-16
+tags: projects
 ---

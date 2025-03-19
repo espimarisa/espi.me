@@ -1,7 +1,7 @@
 ---
 layout: default.liquid
-title: journal
-description: occasional writings and ramblings
+title: mari's journal!
+description: various writings and nonsensical ramblings
 ---
 
 <header>
@@ -10,7 +10,7 @@ description: occasional writings and ramblings
 </header>
 
 {% comment %} Posts {% endcomment %}
-<div id="journal-list">
+<nav id="journal-list">
   <ul>
     {% for post in collections.post %}
       <li>
@@ -24,7 +24,7 @@ description: occasional writings and ramblings
       </li>
     {% endfor %}
   </ul>
-</div>
+</nav>
 
 {% comment %} Footer {% endcomment %}
 <footer>
