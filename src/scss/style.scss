@@ -74,7 +74,8 @@ summary {
 		cursor: pointer;
 	}
 
-	&::marker {
+	&::marker,
+	&::-webkit-details-marker {
 		color: $pink;
 
 		:hover {
@@ -211,7 +212,8 @@ h6 {
 	}
 
 	summary {
-		&::marker {
+		&::marker,
+		&::-webkit-details-marker {
 			color: $orange;
 		}
 	}
