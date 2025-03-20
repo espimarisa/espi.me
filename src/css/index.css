@@ -195,21 +195,16 @@ h6 {
 #webring {
 	white-space: wrap;
 
-	ul,
-	li,
 	img {
 		padding: 0;
-	}
-
-	img {
 		height: 31px;
 		width: 88px;
-	}
-
-	img,
-	a {
 		text-decoration: none;
 		image-rendering: pixelated;
+	}
+
+	a {
+		text-decoration: none;
 
 		&:hover {
 			opacity: 90%;

@@ -102,27 +102,27 @@ telegram: espimarisa
       </summary>
 
       <p class="no-margin">say hi to my awesome friends:</p>
-      <ul>
-        {% for ring in collections.webring %}
-          {% comment %} only append a to buttons with links {% endcomment %}
-          {% if ring.data.link %}
-            <a
-              href="{{ ring.data.link }}"
-              title="{{ ring.data.name }}"
-              target="_blank">
-          {% endif %}
+      <br/>
 
-          <img
-            src="/img/webring/{{ ring.data.file | url }}"
-            alt="{{ ring.data.title }}"
-            title="{{ ring.data.title }}" />
+      {% for ring in collections.webring %}
+        {% comment %} only append a to buttons with links {% endcomment %}
+        {% if ring.data.link %}
+          <a
+            href="{{ ring.data.link }}"
+            title="{{ ring.data.name }}"
+            target="_blank">
+        {% endif %}
 
-          {% comment %} nasty inline trick to avoid duplication {% endcomment %}
-          {% if ring.data.link %}
-            </a>
-          {% endif %}
-        {% endfor %}
-      </ul>
+        <img
+          src="/img/webring/{{ ring.data.file | url }}"
+          alt="{{ ring.data.title }}"
+          title="{{ ring.data.title }}" />
+
+        {% comment %} nasty inline trick to avoid duplication {% endcomment %}
+        {% if ring.data.link %}
+          </a>
+        {% endif %}
+      {% endfor %}
     </details>
   </section>
 </main>
