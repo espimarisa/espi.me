@@ -14,8 +14,7 @@
 /* Generic elements */
 
 html {
-	font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, Roboto, Helvetica,
-		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-family: "Atkinson Hyperlegible", sans-serif;
 	line-height: 1.15;
 	tab-size: 4;
 }
@@ -45,8 +44,7 @@ box {
 }
 
 code {
-	font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-		monospace;
+	font-family: "monospace", ui-monospace;
 	font-size: 1.125rem;
 }
 
@@ -185,10 +183,8 @@ h6 {
 	a {
 		color: inherit;
 		display: block;
-		height: 100%;
 		padding: 0.5rem;
 		text-decoration: none;
-		width: 100%;
 
 		&:hover {
 			opacity: 90%;
