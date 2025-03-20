@@ -11,7 +11,7 @@ telegram: espimarisa
 
 {% comment %} Header {% endcomment %}
 <header>
-  <h1>{{ title }}</h1>
+  <h1 class="no-margin">{{ title }}</h1>
   <h4>{{ description }}</h4>
 
   <nav>
@@ -33,29 +33,34 @@ telegram: espimarisa
         <span>hi, i'm espi, aka mari!</span>
       </summary>
 
-      <p>i'm a visually impaired computer science student currently attending
+      <p class="no-margin">i'm a visually impaired computer science student currently attending
         <a
           href="https://auburn.edu"
           title="auburn university"
           target="_blank">auburn university</a>.
       </p>
 
-      <p class="has-top-margin">in my spare time, i mess around with random bits of hardware, software, and electronics.</p>
-      <p>additionally, i'm a hobbyist software developer that occasionally makes something useful.</p>
+      <p class="no-margin">in my spare time, i mess around with random bits of hardware, software, and electronics.</p>
+      <p class="no-margin">additionally, i'm a hobbyist software developer that occasionally makes something useful.</p>
+      <p></p>
 
-      <p class="has-top-margin">i volunteer for
+      <p class="no-margin">i volunteer for
         <a
           href="https://altrac.works"
           title="altrac"
           target="_blank">the alabama transgender rights action coalition</a>
-        to defend queer and trans rights in alabama. i also document
+        to defend queer and trans rights.</p>
+
+      <p class="no-margin">i also help document
         <a
           href="https://altgo.us"
           title="altgo"
           target="_blank">local resources and legal guides</a>
-        for the trans alabamian community.</p>
+        for queer and trans people living in alabama.</p>
 
-      <p class="has-top-margin">outside of busywork, i enjoy watching anime, going thrifting, poorly playing the guitar, meteorological research, anything pok&eacute;mon related, and exploring my home region of appalachia and the deep south.</p>
+      <br/>
+
+      <p class="no-margin">outside of busywork, i enjoy watching anime, going thrifting, poorly playing the guitar, meteorological research, anything pok&eacute;mon related, and exploring my home region of appalachia and the deep south.</p>
     </details>
   </section>
 
@@ -66,7 +71,7 @@ telegram: espimarisa
         <span>projects</span>
       </summary>
 
-      <p>some nifty things that i've made or contributed to:</p>
+      <p class="no-margin">some nifty things that i've made or contributed to:</p>
       <div class="row">
         {% for project in collections.projects reversed %}
           <box class="column">
@@ -75,9 +80,9 @@ telegram: espimarisa
               title="{{ project.data.title }}"
               target="_blank">
 
-              <p class="title">{{ project.data.title }}</p>
-              <p>{{ project.data.description }}</p>
-              <p>
+              <p class="title no-margin">{{ project.data.title }}</p>
+              <p class="no-margin">{{ project.data.description }}</p>
+              <p class="no-margin">
                 <small class="italics">
                   {{ project.data.technologies }}
                 </small>
@@ -96,7 +101,7 @@ telegram: espimarisa
         <span>webring</span>
       </summary>
 
-      <p>say hi to my awesome friends:</p>
+      <p class="no-margin">say hi to my awesome friends:</p>
       <ul>
         {% for ring in collections.webring %}
           {% comment %} only append a to buttons with links {% endcomment %}

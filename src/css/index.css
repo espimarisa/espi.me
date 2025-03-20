@@ -1,26 +1,28 @@
-$black: #000000;
-$black-contrast: #101010;
-$orange: #ffa500;
-$pink: #ff0070;
-$white: #ffffff;
-$white-contrast: #efefef;
+@import "@fontsource/atkinson-hyperlegible";
+
+/* Variables */
+
+:root {
+	--black: #000000;
+	--black-contrast: #101010;
+	--orange: #ffa500;
+	--pink: #ff0070;
+	--white: #ffffff;
+	--white-contrast: #efefef;
+}
+
+/* Generic elements */
 
 html {
 	font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, Roboto, Helvetica,
 		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 	line-height: 1.15;
 	tab-size: 4;
-	text-wrap: balance;
-	-webkit-text-size-adjust: 100%;
 }
 
-//
-// Generic elements
-//
-
 body {
-	background: $white;
-	color: $black;
+	background: var(--white);
+	color: var(--black);
 	display: flex;
 	flex-direction: column;
 	font-optical-sizing: auto;
@@ -35,10 +37,10 @@ body {
 }
 
 box {
-	border: 1px solid $black;
+	border: 1px solid var(--black);
 
 	&:hover {
-		border: 1px solid $pink;
+		border: 1px solid var(--pink);
 	}
 }
 
@@ -49,7 +51,6 @@ code {
 }
 
 header,
-details,
 #journal-list {
 	h1,
 	h2,
@@ -93,9 +94,9 @@ summary {
 
 	&::marker,
 	&::-webkit-details-marker {
-		color: $pink;
+		color: var(--pink);
 
-		:hover {
+		&:hover {
 			cursor: pointer;
 		}
 
@@ -103,15 +104,13 @@ summary {
 	}
 }
 
-//
-// Text
-//
+/* Text */
 
 a {
-	color: $pink;
+	color: var(--pink);
 
 	&:visited {
-		color: $pink;
+		color: var(--pink);
 	}
 
 	&:hover {
@@ -146,14 +145,12 @@ h6 {
 	font-size: 1.25rem;
 }
 
-//
-// Utilities
-//
+/* Utilities */
 
 .column {
 	box-sizing: border-box;
 	flex: 0 1 calc(50% - 1rem);
-	background-color: $white-contrast;
+	background-color: var(--white-contrast);
 }
 
 .inline {
@@ -164,8 +161,8 @@ h6 {
 	font-style: italic;
 }
 
-.has-top-margin {
-	margin: 1rem 0rem 0rem 0rem;
+.no-margin {
+	margin: 0;
 }
 
 .row {
@@ -176,8 +173,12 @@ h6 {
 }
 
 .title {
-	color: $pink;
+	color: var(--pink);
 	text-decoration: underline;
+}
+
+#about {
+	max-width: 85%;
 }
 
 #projects {
@@ -196,7 +197,7 @@ h6 {
 }
 
 #webring {
-	text-wrap: wrap;
+	white-space: wrap;
 
 	ul,
 	li,
@@ -220,45 +221,40 @@ h6 {
 	}
 }
 
-//
-// Dark theme
-//
+/* Dark theme */
 
 @media (prefers-color-scheme: dark) {
 	body {
-		color: $white;
-		background-color: $black;
+		color: var(--white);
+		background-color: var(--black);
 	}
 
 	summary {
 		&::marker,
 		&::-webkit-details-marker {
-			color: $orange;
+			color: var(--orange);
 		}
 	}
 
 	a,
 	a:visited,
 	.title {
-		color: $orange;
+		color: var(--orange);
 	}
 
 	.column {
-		background-color: $black-contrast;
+		background-color: var(--black-contrast);
 	}
 
 	box {
-		border: 1px solid $white;
-	}
-
-	box:hover {
-		border: 1px solid $orange;
+		border: 1px solid var(--white);
+		&:hover {
+			border: 1px solid var(--orange);
+		}
 	}
 }
 
-//
-// Responsiveness
-//
+/* Responsiveness */
 
 @media screen and (max-width: 1000px) {
 	.row {
