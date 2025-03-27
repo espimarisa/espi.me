@@ -33,6 +33,20 @@ export default async function (eleventyConfig) {
 		});
 	});
 
+	// Alphabetically sort webring
+	eleventyConfig.addCollection("webring", (collection) =>
+		collection.getFilteredByGlob("./src/_webring/*.md").sort((a, b) => {
+			if (a.data.title > b.data.title) {
+				return 1;
+			}
+
+			if (a.data.title < b.data.title) {
+				return -1;
+			}
+
+			return 0;
+		}),
+	);
 	// PostCSS support
 	eleventyConfig.addPlugin(postcssPlugin);
 

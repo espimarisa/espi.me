@@ -113,10 +113,18 @@ telegram: espimarisa
             target="_blank">
         {% endif %}
 
-        <img
-          src="/img/webring/{{ ring.data.file | url }}"
-          alt="{{ ring.data.title }}"
-          title="{{ ring.data.title }}" />
+        {% comment %} Nasty hotlink support {% endcomment %}
+        {% if ring.data.hotlink %}
+          <img
+            src="{{ ring.data.hotlink }}"
+            alt="{{ ring.data.title }}"
+            title="{{ ring.data.title }}" />
+        {% else %}
+          <img
+            src="/img/webring/{{ ring.data.file | url }}"
+            alt="{{ ring.data.title }}"
+            title="{{ ring.data.title }}" />
+        {% endif %}
 
         {% comment %} nasty inline trick to avoid duplication {% endcomment %}
         {% if ring.data.link %}
