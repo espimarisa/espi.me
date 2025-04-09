@@ -1,6 +1,6 @@
 # [espi.me][espi.me]
 
-my personal website, blog, and portfolio
+my personal website, blog, and portfolio.
 
 ## setup
 
@@ -9,7 +9,7 @@ my personal website, blog, and portfolio
 
 ## license
 
-[zlib/libpng][license]
+[zlib][license]
 
-[espi.me]: https://espi.me "link to espi (dot) me"
-[license]: LICENSE.md "link to the zlib/libpng license"
+[espi.me]: https://espi.me "Link to espi (dot) me."
+[license]: LICENSE.md "Link to the zlib/libpng license."

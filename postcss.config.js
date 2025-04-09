@@ -1,9 +1,9 @@
 export default {
-	plugins: {
-		"postcss-import": {},
-		"autoprefixer": {},
-		"cssnano": {},
-		"postcss-css-variables": {},
-		"postcss-nesting": {},
-	},
+  plugins: {
+    "postcss-import": {},
+    "autoprefixer": {},
+    "cssnano": {},
+    "postcss-css-variables": {},
+    "postcss-nesting": {},
+  },
 };

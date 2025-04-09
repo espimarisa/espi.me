@@ -8,129 +8,176 @@ bluesky: espi.me
 blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk
 telegram: espimarisa
 ---
-
 {% comment %} Header {% endcomment %}
 <header>
-  <h1 class="no-margin">{{ title }}</h1>
-  <h2>{{ description }}</h2>
+	<h1 class="no-margin">{{ title }}</h1>
+	<h2>{{ description }}</h2>
 
-  <nav>
-    <ul>
-      <li><a href="/journal/" title="journal">journal entries</a></li>
-      <li><a href="mailto:{{ email }}" title="email" target="_blank">{{ email }}</a></li>
-      <li><a href="https://github.com/{{ github }}" title="github" target="_blank">github.com/{{ github }}</a></li>
-      <li><a href="https://telegram.me/{{ telegram }}" title="telegram" target="_blank">telegram.me/{{ telegram }}</a></li>
-      <li><a href="https://bsky.app/profile/{{ blueskydid }}" title="bluesky" target="_blank">bsky.app/profile/{{ bluesky }}</a></li>
-    </ul>
-  </nav>
+	<nav>
+		<ul>
+			<li><a href="/journal/" title="journal">journal entries</a></li>
+			<li>
+				<a href="mailto:{{ email }}" title="email" target="_blank">
+					{{- email -}}
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/{{ github }}" title="github" target="_blank"
+					>github.com/{{ github -}}
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://telegram.me/{{ telegram }}"
+					title="telegram"
+					target="_blank"
+					>telegram.me/{{ telegram -}}
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://bsky.app/profile/{{ blueskydid }}"
+					title="bluesky"
+					target="_blank"
+					>bsky.app/profile/{{ bluesky -}}
+				</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 <main>
-  {% comment %} About {% endcomment %}
-  <section id="about">
-    <details open>
-      <summary>
-        <span>hi, i'm espi, aka mari!</span>
-      </summary>
+	{% comment %} About {% endcomment %}
+	<section id="about">
+		<details open>
+			<summary>
+				<span>hi, i'm espi, aka mari!</span>
+			</summary>
 
-      <p class="no-margin">i'm a visually impaired computer science student currently attending
-        <a
-          href="https://auburn.edu"
-          title="auburn university"
-          target="_blank">auburn university</a>.
-      </p>
+			<p class="no-margin">
+				i'm a visually impaired computer science student currently attending
+				<a
+					href="https://auburn.edu"
+					title="auburn university"
+					target="_blank"
+					>auburn university</a
+				>.
+			</p>
 
-      <p class="no-margin">in my spare time, i mess around with random bits of hardware, software, and electronics.</p>
-      <p class="no-margin">additionally, i'm a hobbyist software developer that occasionally makes something useful.</p>
-      <p></p>
+			<p class="no-margin">
+				in my spare time, i mess around with random bits of hardware, software,
+				and electronics.
+			</p>
+			<p class="no-margin">
+				additionally, i'm a hobbyist software developer that occasionally makes
+				something useful.
+			</p>
+			<p></p>
 
-      <p class="no-margin">i volunteer for
-        <a
-          href="https://altrac.works"
-          title="altrac"
-          target="_blank">the alabama transgender rights action coalition</a>
-        to defend queer and trans rights.</p>
+			<p class="no-margin">
+				i volunteer for
+				<a
+					href="https://altrac.works"
+					title="altrac"
+					target="_blank"
+					>the alabama transgender rights action coalition</a
+				>
+				to defend queer and trans rights.
+			</p>
 
-      <p class="no-margin">i also help document
-        <a
-          href="https://altgo.us"
-          title="altgo"
-          target="_blank">local resources and legal guides</a>
-        for queer and trans people living in alabama.</p>
+			<p class="no-margin">
+				i also help document
+				<a
+					href="https://altgo.us"
+					title="altgo"
+					target="_blank"
+					>local resources and legal guides</a
+				>
+				for queer and trans people living in alabama.
+			</p>
 
-      <br/>
+			<br>
 
-      <p class="no-margin">outside of busywork, i enjoy watching anime, going thrifting, poorly playing the guitar, meteorological research, anything pok&eacute;mon related, and exploring my home region of appalachia and the deep south.</p>
-    </details>
-  </section>
+			<p class="no-margin">
+				outside of busywork, i enjoy watching anime, going thrifting, poorly
+				playing the guitar, meteorological research, anything pok&eacute;mon
+				related, and exploring my home region of appalachia and the deep south.
+			</p>
+		</details>
+	</section>
 
-  {% comment %} Projects {% endcomment %}
-  <section id="projects">
-    <details open>
-      <summary>
-        <span>projects</span>
-      </summary>
+	{% comment %} Projects {% endcomment %}
+	<section id="projects">
+		<details open>
+			<summary>
+				<span>projects</span>
+			</summary>
 
-      <p class="no-margin">some nifty things that i've made or contributed to:</p>
-      <div class="row">
-        {% for project in collections.projects reversed %}
-          <box class="column">
-            <a
-              href="{{ project.data.url }}"
-              title="{{ project.data.title }}"
-              target="_blank">
+			<p class="no-margin">
+				some nifty things that i've made or contributed to:
+			</p>
+			<div class="row">
+				{% for project in collections.projects reversed %}
+					<box class="column">
+						<a
+							href="{{ project.data.url }}"
+							title="{{ project.data.title }}"
+							target="_blank">
+							<p class="title no-margin">{{ project.data.title }}</p>
+							<p class="no-margin">{{ project.data.description }}</p>
+							<p class="no-margin">
+								<small class="italics">
+									{{ project.data.technologies }}
+								</small>
+							</p>
+						</a>
+					</box>
+				{% endfor %}
+			</div>
+		</details>
+	</section>
 
-              <p class="title no-margin">{{ project.data.title }}</p>
-              <p class="no-margin">{{ project.data.description }}</p>
-              <p class="no-margin">
-                <small class="italics">
-                  {{ project.data.technologies }}
-                </small>
-              </p>
-            </a>
-          </box>
-        {% endfor %}
-      </div>
-    </details>
-  </section>
+	{% comment %} Webring {% endcomment %}
+	<section id="webring">
+		<details open>
+			<summary>
+				<span>webring</span>
+			</summary>
 
-  {% comment %} Webring {% endcomment %}
-  <section id="webring">
-    <details open>
-      <summary>
-        <span>webring</span>
-      </summary>
+			<p class="no-margin">say hi to my awesome friends!</p>
+			<br>
 
-      <p class="no-margin">say hi to my awesome friends:</p>
-      <br/>
+			{% for ring in collections.webring %}
+				{% comment %} only append a to buttons with links {% endcomment %}
+				{% if ring.data.link %}
+					<a
+						href="{{ ring.data.link }}"
+						title="{{ ring.data.name }}"
+						target="_blank">
+				{% endif %}
 
-      {% for ring in collections.webring %}
-        {% comment %} only append a to buttons with links {% endcomment %}
-        {% if ring.data.link %}
-          <a
-            href="{{ ring.data.link }}"
-            title="{{ ring.data.name }}"
-            target="_blank">
-        {% endif %}
+				{% comment %} Nasty hotlink support {% endcomment %}
+				{% if ring.data.hotlink %}
+					<img
+						src="{{ ring.data.hotlink }}"
+						alt="{{ ring.data.title }}"
+						title="{{ ring.data.title }}"
+						width="88px"
+						height="31px">
+				{% else %}
+					<img
+						src="/img/webring/{{ ring.data.file | url }}"
+						alt="{{ ring.data.title }}"
+						title="{{ ring.data.title }}"
+						width="88px"
+						height="31px">
+				{% endif %}
 
-        {% comment %} Nasty hotlink support {% endcomment %}
-        {% if ring.data.hotlink %}
-          <img
-            src="{{ ring.data.hotlink }}"
-            alt="{{ ring.data.title }}"
-            title="{{ ring.data.title }}" />
-        {% else %}
-          <img
-            src="/img/webring/{{ ring.data.file | url }}"
-            alt="{{ ring.data.title }}"
-            title="{{ ring.data.title }}" />
-        {% endif %}
-
-        {% comment %} nasty inline trick to avoid duplication {% endcomment %}
-        {% if ring.data.link %}
-          </a>
-        {% endif %}
-      {% endfor %}
-    </details>
-  </section>
+				{% comment %} nasty inline trick to avoid duplication {% endcomment %}
+				{% if ring.data.link %}
+					</a>
+				{% endif %}
+			{% endfor %}
+		</details>
+	</section>
 </main>
