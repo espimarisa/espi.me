@@ -1,7 +1,7 @@
 ---
-title: altrac-works
-description: website for the alabama trans rights action coalition
-technologies: html, css, jinja, soupault
+title: altrac.works
+description: The Alabama Transgender Rights Action Coalition's website.
+technologies: HTML, CSS, Jinja, Soupault
 url: https://altrac.works
 date: 2025-03-15
 tags: projects

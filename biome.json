@@ -31,7 +31,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["src/**/*.{liquid,css,js,json,ts}", "*.{js,mjs,json}"]
+    "includes": ["src/**/*.{css,js,json,ts}", "*.{js,mjs,json}"]
   },
   "formatter": {
     "attributePosition": "multiline",

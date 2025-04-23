@@ -1,7 +1,6 @@
-@import "@fontsource/atkinson-hyperlegible";
+@import "@fontsource/atkinson-hyperlegible-next";
 
 /* Variables */
-
 :root {
   --black: #000000;
   --black-contrast: #101010;
@@ -11,26 +10,21 @@
   --white-contrast: #efefef;
 }
 
-/* Generic elements */
-
-html {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  line-height: 1.15;
-  tab-size: 4;
-}
+/* Layout */
 
 body {
   background: var(--white);
   color: var(--black);
   display: flex;
   flex-direction: column;
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
   font-optical-sizing: auto;
   font-size: 1.25rem;
   font-style: normal;
   height: 100vh;
-  min-height: 100vh;
-  max-width: 70rem;
   margin: 0 auto;
+  max-width: 70rem;
+  min-height: 100vh;
   padding: 2rem;
   width: 100;
 }
@@ -43,28 +37,6 @@ box {
   }
 }
 
-code {
-  font-family: "monospace", ui-monospace;
-  font-size: 1.125rem;
-}
-
-header,
-#journal-list {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: auto;
-  }
-}
-
-footer {
-  margin-top: auto;
-}
-
 li {
   padding-bottom: 0.5rem;
 
@@ -74,31 +46,38 @@ li {
 }
 
 section {
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1.5rem 0rem 1.5rem 0rem;
 }
 
-small {
-  font-size: 80%;
+#about {
+  max-width: 80%;
 }
 
-summary {
-  display: list-item;
-  font-size: 2rem;
-  font-weight: bold;
+#projects {
+  a {
+    color: inherit;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:hover {
+      opacity: 90%;
+    }
+  }
+}
 
-  &:hover {
-    cursor: pointer;
+#webring {
+  padding-top: 3rem;
+
+  img {
+    height: 31px;
+    image-rendering: pixelated;
+    padding: 0.25rem 0rem 0.25rem 0rem;
+    text-decoration: none;
+    width: 88px;
   }
 
-  &::marker,
-  &::-webkit-details-marker {
-    color: var(--pink);
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    font-size: 75%;
+  a {
+    text-decoration: none;
   }
 }
 
@@ -112,55 +91,30 @@ a {
   }
 
   &:hover {
-    text-decoration: none;
+    opacity: 90%;
   }
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 1.85rem;
-}
-
-h3 {
-  font-size: 1.65rem;
-}
-
-h4 {
-  font-weight: normal;
-  font-size: 1.45rem;
-}
-
-h5 {
-  font-weight: normal;
-  font-size: 1.35rem;
-}
-
-h6 {
-  font-weight: bold;
-  font-size: 1.25rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: auto;
 }
 
 /* Utilities */
 
 .column {
+  background-color: var(--white-contrast);
   box-sizing: border-box;
   flex: 0 1 calc(50% - 1rem);
-  background-color: var(--white-contrast);
 }
 
 .inline {
   display: inline;
-}
-
-.italics {
-  font-style: italic;
-}
-
-.no-margin {
-  margin: 0;
 }
 
 .row {
@@ -175,56 +129,12 @@ h6 {
   text-decoration: underline;
 }
 
-#about {
-  max-width: 85%;
-}
-
-#projects {
-  a {
-    color: inherit;
-    display: block;
-    padding: 0.5rem;
-    text-decoration: none;
-
-    &:hover {
-      opacity: 90%;
-    }
-  }
-}
-
-#webring {
-  white-space: wrap;
-
-  img {
-    padding: 0;
-    height: 31px;
-    width: 88px;
-    text-decoration: none;
-    image-rendering: pixelated;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      opacity: 90%;
-    }
-  }
-}
-
 /* Dark theme */
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: var(--white);
     background-color: var(--black);
-  }
-
-  summary {
-    &::marker,
-    &::-webkit-details-marker {
-      color: var(--orange);
-    }
+    color: var(--white);
   }
 
   a,
@@ -239,6 +149,7 @@ h6 {
 
   box {
     border: 1px solid var(--white);
+
     &:hover {
       border: 1px solid var(--orange);
     }

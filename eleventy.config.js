@@ -1,3 +1,9 @@
+/**
+ * @file Eleventy configuration file.
+ * @author Espi Marisa <contact@espi.me>
+ * @license zlib
+ */
+
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
@@ -15,7 +21,7 @@ export default async function (eleventyConfig) {
 
   // nasty fix for fonts
   eleventyConfig.addPassthroughCopy({
-    "./node_modules/@fontsource/atkinson-hyperlegible/files/*.woff2":
+    "./node_modules/@fontsource/atkinson-hyperlegible-next/files/*.woff2":
       "css/files",
   });
 
@@ -37,17 +43,18 @@ export default async function (eleventyConfig) {
   // Alphabetically sort webring
   eleventyConfig.addCollection("webring", (collection) =>
     collection.getFilteredByGlob("./src/_webring/*.md").sort((a, b) => {
-      if (a.data.title > b.data.title) {
+      if (a.data.title.toLowerCase() > b.data.title.toLowerCase()) {
         return 1;
       }
 
-      if (a.data.title < b.data.title) {
+      if (a.data.title.toLowerCase() < b.data.title.toLowerCase()) {
         return -1;
       }
 
       return 0;
     }),
   );
+
   // PostCSS support
   eleventyConfig.addPlugin(postcssPlugin);
 

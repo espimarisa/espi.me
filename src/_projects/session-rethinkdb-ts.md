@@ -1,7 +1,7 @@
 ---
 title: session-rethinkdb-ts
-description: middleware to use rethinkdb as a session store
-technologies: typescript, express, rethinkdb
+description: A RethinkDB session store for express-session.
+technologies: TypeScript, Express, RethinkDB
 url: https://github.com/espimarisa/session-rethinkdb-ts
 date: 2021-01-11
 tags: projects

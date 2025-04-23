@@ -1,13 +1,13 @@
 # [espi.me][espi.me]
 
-my personal website, blog, and portfolio.
+My personal website and portfolio.
 
-## setup
+## Setup
 
 - `bun i`
 - `bun run dev`
 
-## license
+## License
 
 [zlib][license]
 
