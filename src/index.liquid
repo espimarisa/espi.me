@@ -1,18 +1,19 @@
 ---
 layout: default.liquid
 title: Espi Marisa
-description: Silly enby, blind developer, queer activist.
-bluesky: espi.me
-blueskydid: did:plc:tuihqhadazqooxe5fhw6dhzk
-github: espimarisa
-keybase: espimarisa
-discord: espimarisa
-discordID: 647269760782041133
-telegram: espimarisa
-twitterx: espidotme
-signal: espimarisa.01
-signalURL: https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN
-email: contact@espi.me
+description: Blind developer and activist.
+bluesky: "espi.me"
+blueskydid: "did:plc:tuihqhadazqooxe5fhw6dhzk"
+discordHandle: "espimarisa"
+discordID: "647269760782041133"
+email: "contact@thisdomain"
+emailURL: "contact@espi.me"
+github: "espimarisa"
+keybase: "espimarisa"
+signalHandle: "espimarisa.01"
+signalURL: "https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN"
+telegram: "espimarisa"
+twitterx: "espidotme"
 ---
 
 {% comment %} Header {% endcomment %}
@@ -25,67 +26,75 @@ email: contact@espi.me
     <ul>
       <li>
         <a
+          aria-label="Bluesky: {{ bluesky }}"
           href="https://bsky.app/profile/{{ blueskydid }}"
-          title="Bluesky"
-          target="_blank">Bluesky</a>
+          target="_blank"
+          title="Bluesky: {{ bluesky }}">Bluesky</a>
 
-        <span>(@{{ bluesky }})</span>
+        <span>&rightarrow; {{ bluesky }}</span>
       </li>
       <li>
         <a
+          aria-label="GitHub: {{ github }}"
           href="https://github.com/{{ github }}"
-          title="GitHub"
-          target="_blank">GitHub</a>
+          target="_blank"
+          title="GitHub: {{ github }}">GitHub</a>
 
-        <span>(@{{ github }})</span>
+        <span>&rightarrow; {{ github }}</span>
       </li>
       <li>
         <a
+          aria-label="Discord: {{ discordHandle }}"
           href="https://discord.com/users/{{ discordID }}"
-          title="discord"
-          target="_blank">Discord</a>
+          target="_blank"
+          title="Discord: {{ discordHandle }}">Discord</a>
 
-        <span>(@{{ discord }})</span>
+        <span>&rightarrow; {{ discordHandle }}</span>
       </li>
       <li>
         <a
-          href="https://t.me/{{ telegram }}"
-          title="telegram"
-          target="_blank">Telegram</a>
-
-        <span>(@{{ telegram }})</span>
-      </li>
-      <li>
-        <a
-          href="https://x.com/{{ twitterx }}"
-          title="Twitter/X"
-          target="_blank">Twitter/X</a>
-
-        <span>(@{{ twitterx }})</span>
-      </li>
-      <li>
-        <a
+          aria-label="Keybase: {{ keybase }}"
           href="https://keybase.io/{{ keybase }}"
-          title="keybase"
-          target="_blank">Keybase</a>
+          target="_blank"
+          title="Keybase: {{ keybase }}">Keybase</a>
 
-        <span>(@{{ keybase }})</span>
+        <span>&rightarrow; {{ keybase }}</span>
       </li>
       <li>
         <a
+          aria-label="Twitter/X: {{ twitterx }}"
+          href="https://x.com/{{ twitterx }}"
+          target="_blank"
+          title="Twitter/X: {{ twitterx }}">Twitter/X</a>
+
+        <span>&rightarrow; {{ twitterx }}</span>
+      </li>
+      <li>
+        <a
+          aria-label="Telegram: {{ telegram }}"
+          href="https://t.me/{{ telegram }}"
+          target="_blank"
+          title="Telegram: {{ telegram }}">Telegram</a>
+
+        <span>&rightarrow; {{ telegram }}</span>
+      </li>
+      <li>
+        <a
+          aria-label="Signal: {{ signalHandle }}"
           href="{{ signalURL }}"
-          title="signal"
-          target="_blank">Signal</a>
+          target="_blank"
+          title="Signal: {{ signalHandle }}">Signal</a>
 
-        <span>(@{{ signal }})</span>
+        <span>&rightarrow; {{ signalHandle }}</span>
       </li>
       <li>
         <a
-          href="mailto:{{ email }}"
-          title="email"
-          target="_blank">Email</a>
+          aria-label="Email: {{ email }}"
+          href="mailto:{{ emailURL }}"
+          target="_blank"
+          title="Email: {{ email }}">Email</a>
 
-        <span>({{ email }})</span>
+        <span>&rightarrow; {{ email }}</span>
       </li>
     </ul>
   </nav>
@@ -98,8 +107,7 @@ email: contact@espi.me
     <p>
       I'm a blind developer, tinkerer, and activist from Huntsville, Alabama.
     </p>
-    <p>Currently, I'm a final year Computer Science student at Auburn University.
-    </p>
+    <p>Currently, I'm a final year Computer Science student at Auburn University.</p>
 
     <br/>
 
@@ -121,7 +129,8 @@ email: contact@espi.me
     </p>
 
     <br/>
-    <p>In my spare time, I enjoy watching anime, researching severe weather, playing the acoustic guitar, anything Pokémon related, and exploring my home region of Appalachia and the further deep south.</p>
+    <p>In my spare time, I enjoy watching anime, researching severe weather, playing the guitar (poorly), anything 
+      Pokémon related, and exploring my home region of Appalachia and the further deep south.</p>
   </section>
 
   {% comment %} Projects {% endcomment %}

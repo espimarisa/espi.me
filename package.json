@@ -1,20 +1,30 @@
 {
-  "private": true,
   "name": "@espimarisa/espi.me",
   "version": "0.0.0",
+  "private": true,
   "description": "My personal website and portfolio.",
-  "license": "zlib",
-  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
   "homepage": "https://github.com/espimarisa/espi.me",
-  "repository": "git@github.com:espimarisa/espi.me.git",
-  "bugs": "https://github.com/espimarisa/espi.me/issues",
+  "bugs": {
+    "url": "https://github.com/espimarisa/espi.me/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:espimarisa/espi.me.git"
+  },
+  "license": "zlib",
+  "author": {
+    "name": "Espi Marisa",
+    "email": "contact@espi.me",
+    "url": "https://espi.me"
+  },
   "type": "module",
+  "main": "./dist/src/index.js",
   "scripts": {
-    "build": "NODE_env=production rm -rf _site && bunx @11ty/eleventy",
+    "build": "NODE_ENV=production rm -rf _site && bunx @11ty/eleventy",
     "dev": "NODE_env=development bunx @11ty/eleventy --serve --watch",
-    "format": "biome format --write .",
+    "format": "biome format --fix .",
     "lint": "biome check .",
-    "lint:fix": "biome check --apply .",
+    "lint:fix": "biome lint --fix .",
     "start": "NODE_ENV=production bunx @11ty/eleventy --serve --quiet",
     "test": "bun run lint"
   },
@@ -35,6 +45,12 @@
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.1"
   },
-  "packageManager": "bun@1.2.8",
-  "trustedDependencies": ["@biomejs/biome", "@parcel/watcher"]
+  "packageManager": "bun@1.2.10",
+  "engines": {
+    "bun": ">=1.2.10"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "esbuild"
+  ]
 }

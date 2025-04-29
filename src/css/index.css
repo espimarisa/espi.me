@@ -1,6 +1,4 @@
 @import "@fontsource/atkinson-hyperlegible-next";
-
-/* Variables */
 :root {
   --black: #000000;
   --black-contrast: #101010;
@@ -9,8 +7,6 @@
   --white: #ffffff;
   --white-contrast: #efefef;
 }
-
-/* Layout */
 
 body {
   background: var(--white);
@@ -59,6 +55,7 @@ section {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
+
     &:hover {
       opacity: 90%;
     }
@@ -81,8 +78,6 @@ section {
   }
 }
 
-/* Text */
-
 a {
   color: var(--pink);
 
@@ -104,8 +99,6 @@ h6,
 p {
   margin: auto;
 }
-
-/* Utilities */
 
 .column {
   background-color: var(--white-contrast);
@@ -130,7 +123,6 @@ p {
 }
 
 /* Dark theme */
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--black);
@@ -157,7 +149,6 @@ p {
 }
 
 /* Responsiveness */
-
 @media screen and (max-width: 1000px) {
   .row {
     flex-flow: column wrap;

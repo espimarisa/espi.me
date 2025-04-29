@@ -4,12 +4,13 @@
  * @license zlib
  */
 
+/** biome-ignore-all lint/style/noDefaultExport: Eleventy requires a default export. */
+
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-// biome-ignore lint/style/noDefaultExport: Eleventy requires a default export.
 export default async function (eleventyConfig) {
   // Directories
   eleventyConfig.setInputDirectory("./src");
@@ -34,9 +35,9 @@ export default async function (eleventyConfig) {
   // Date formatter filter
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return dateObj.toLocaleString(undefined, {
-      year: "numeric",
-      month: "numeric",
       day: "numeric",
+      month: "numeric",
+      year: "numeric",
     });
   });
 
@@ -55,13 +56,11 @@ export default async function (eleventyConfig) {
     }),
   );
 
-  // PostCSS support
+  // Plugins
   eleventyConfig.addPlugin(postcssPlugin);
-
-  // Automatically append nooopeners
   eleventyConfig.addPlugin(automaticNoopener);
 
-  // Minify HTTML
+  // Minifies HTTML
   eleventyConfig.addPlugin(eleventyPluginTinyHTML, {
     collapseBooleanAttributes: true,
     collapseInlineTagWhitespace: true,

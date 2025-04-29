@@ -1,5 +1,5 @@
 ---
 title: April
-hotlink: https://libadwaita.neocities.org/amw.png
-link: https://libadwaita.neocities.org/
+hotlink: https://april.nekoweb.org/buttons/amw.png
+link: https://april.nekoweb.org/
 ---
