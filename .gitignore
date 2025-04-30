@@ -2,6 +2,7 @@
 # Cache & Temporary Files
 #
 
+_site/
 .cache-loader/
 .cache/
 .eslintcache
