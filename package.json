@@ -37,7 +37,7 @@
     "@jgarber/eleventy-plugin-postcss": "^3.0.1",
     "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
     "autoprefixer": "^10.4.21",
-    "bun-types": "^1.2.10",
+    "bun-types": "^1.2.11",
     "cssnano": "^7.0.6",
     "eleventy-plugin-automatic-noopener": "^2.0.2",
     "postcss": "^8.5.3",
@@ -45,7 +45,7 @@
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.1"
   },
-  "packageManager": "bun@1.2.10",
+  "packageManager": "bun@1.2.11",
   "engines": {
     "bun": ">=1.2.10"
   },
