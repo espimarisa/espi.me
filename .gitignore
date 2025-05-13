@@ -90,3 +90,9 @@ Thumbs.db:encryptable
 
 .env
 .env.*
+
+#
+# Bun lockfile
+#
+
+!bun.lock
