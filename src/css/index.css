@@ -25,14 +25,6 @@ body {
   width: 100;
 }
 
-box {
-  border: 1px solid var(--black);
-
-  &:hover {
-    border: 1px solid var(--pink);
-  }
-}
-
 li {
   padding-bottom: 0.5rem;
 
@@ -45,37 +37,14 @@ section {
   padding: 1.5rem 0rem 1.5rem 0rem;
 }
 
-#about {
-  max-width: 80%;
-}
-
-#projects {
-  a {
-    color: inherit;
-    display: block;
-    padding: 0.5rem;
-    text-decoration: none;
-
-    &:hover {
-      opacity: 90%;
-    }
-  }
-}
-
-#webring {
-  padding-top: 3rem;
-
-  img {
-    height: 31px;
-    image-rendering: pixelated;
-    padding: 0.25rem 0rem 0.25rem 0rem;
-    text-decoration: none;
-    width: 88px;
-  }
-
-  a {
-    text-decoration: none;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: auto;
 }
 
 a {
@@ -90,20 +59,34 @@ a {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: auto;
+#about {
+  max-width: 80%;
 }
 
-.column {
-  background-color: var(--white-contrast);
-  box-sizing: border-box;
-  flex: 0 1 calc(50% - 1rem);
+#projects {
+  a {
+    color: inherit;
+    display: block;
+    padding: 0.5rem;
+    &:hover {
+      opacity: 90%;
+    }
+  }
+}
+
+#webring {
+  padding-top: 3rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    height: 31px;
+    image-rendering: pixelated;
+    padding: 0.25rem 0rem 0.25rem 0rem;
+    width: 88px;
+  }
 }
 
 .inline {
@@ -117,9 +100,35 @@ p {
   padding: 1rem 0rem 0rem 0rem;
 }
 
+.column {
+  background-color: var(--white-contrast);
+  box-sizing: border-box;
+  flex: 0 1 calc(50% - 1rem);
+}
+
 .title {
   color: var(--pink);
   text-decoration: underline;
+}
+
+.box {
+  border: 1px solid var(--black);
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    color: var(--black);
+  }
+
+  .title {
+    color: var(--pink);
+  }
+
+  &:hover {
+    border: 1px solid var(--pink);
+  }
 }
 
 /* Dark theme */
@@ -130,7 +139,17 @@ p {
   }
 
   a,
-  a:visited,
+  a:visited {
+    color: var(--orange);
+  }
+
+  #projects {
+    a,
+    a:visited {
+      color: var(--orange);
+    }
+  }
+
   .title {
     color: var(--orange);
   }
@@ -139,8 +158,16 @@ p {
     background-color: var(--black-contrast);
   }
 
-  box {
+  .box {
     border: 1px solid var(--white);
+
+    p {
+      color: var(--white);
+    }
+
+    .title {
+      color: var(--orange);
+    }
 
     &:hover {
       border: 1px solid var(--orange);

@@ -12,4 +12,4 @@ My personal website and portfolio.
 [zlib][license]
 
 [espi.me]: https://espi.me "Link to espi (dot) me."
-[license]: LICENSE.md "Link to the zlib/libpng license."
+[license]: LICENSE.md "Link to the zlib license."

@@ -1,14 +1,18 @@
 ---
 layout: default.liquid
-title: Espi Marisa
-description: Silly enby, blind developer queer activist.
+title: "Espi Marisa"
+description: "Silly enby. Blind developer and activist."
 bluesky: "espi.me"
 blueskydid: "did:plc:tuihqhadazqooxe5fhw6dhzk"
 discordHandle: "espimarisa"
 discordID: "647269760782041133"
-email: "contact@espi.me"
-emailURL: "contact@espi.me"
+email: "contact [at] domain [dot] tld"
+emailURL: "contact@espi.me?subject=espi.me"
 github: "espimarisa"
+fediHandle: "@espi@uwu.social"
+fediURL: "https://uwu.social/@espi"
+pronouns: "they/she"
+matrixHandle: "@espimarisa:matrix.org"
 signalHandle: "espimarisa.01"
 signalURL: "https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN"
 telegram: "espimarisa"
@@ -30,7 +34,7 @@ twitterx: "espidotme"
           target="_blank"
           title="Bluesky: {{ bluesky }}">Bluesky</a>
 
-        <span>&rightarrow; {{ bluesky }}</span>
+        <span>@{{ bluesky }}</span>
       </li>
       <li>
         <a
@@ -39,7 +43,7 @@ twitterx: "espidotme"
           target="_blank"
           title="GitHub: {{ github }}">GitHub</a>
 
-        <span>&rightarrow; {{ github }}</span>
+        <span>@{{ github }}</span>
       </li>
       <li>
         <a
@@ -48,16 +52,16 @@ twitterx: "espidotme"
           target="_blank"
           title="Discord: {{ discordHandle }}">Discord</a>
 
-        <span>&rightarrow; {{ discordHandle }}</span>
+        <span>@{{ discordHandle }}</span>
       </li>
       <li>
         <a
-          aria-label="Twitter/X: {{ twitterx }}"
+          aria-label="X: {{ twitterx }}"
           href="https://x.com/{{ twitterx }}"
           target="_blank"
           title="Twitter/X: {{ twitterx }}">Twitter/X</a>
 
-        <span>&rightarrow; {{ twitterx }}</span>
+        <span>@{{ twitterx }}</span>
       </li>
       <li>
         <a
@@ -66,7 +70,7 @@ twitterx: "espidotme"
           target="_blank"
           title="Telegram: {{ telegram }}">Telegram</a>
 
-        <span>&rightarrow; {{ telegram }}</span>
+        <span>@{{ telegram }}</span>
       </li>
       <li>
         <a
@@ -75,7 +79,25 @@ twitterx: "espidotme"
           target="_blank"
           title="Signal: {{ signalHandle }}">Signal</a>
 
-        <span>&rightarrow; {{ signalHandle }}</span>
+        <span>@{{ signalHandle }}</span>
+      </li>
+      <li>
+        <a
+          aria-label="Fediverse: {{ fediHandle }}"
+          href="{{ fediURL }}"
+          target="_blank"
+          title="Fediverse: {{ fediHandle }}">Fediverse</a>
+
+        <span>{{ fediHandle }}</span>
+      </li>
+      <li>
+        <a
+          aria-label="Matrix: {{ matrixHandle }}"
+          href="https://matrix.to/#/{{ matrixHandle }}"
+          target="_blank"
+          title="Matrix: {{ matrixHandle }}">Matrix</a>
+
+        <span>{{ matrixHandle }}</span>
       </li>
       <li>
         <a
@@ -84,7 +106,7 @@ twitterx: "espidotme"
           target="_blank"
           title="Email: {{ email }}">Email</a>
 
-        <span>&rightarrow; {{ email }}</span>
+        <span>{{ email }}</span>
       </li>
     </ul>
   </nav>
@@ -93,34 +115,39 @@ twitterx: "espidotme"
 <main>
   {% comment %} About {% endcomment %}
   <section id="about">
-    <h2>Hi, my name's Espi!</h2>
+    <h2 class="inline">Hi, my name's Espi!</h2>
+    <small>({{ pronouns }})</small>
     <p>
-      I'm a blind developer, tinkerer, and activist from Huntsville, Alabama.
+      I'm a blind developer, tinkerer, and activist living in Huntsville, Alabama.
     </p>
-    <p>Currently, I'm a final year Computer Science student at Auburn University.</p>
+
+    <p>I primarily work with Bun, Svelte, TypeScript, and various web frameworks.</p>
+    <p>Currently, I'm a Computer Science student attending Auburn University online.</p>
 
     <br/>
 
-    <p>I work with the
+    <p>In my spare time, I enjoy watching anime, researching severe weather, messing with electronics, playing the guitar, all things 
+      Pokémon, and exploring my home of Appalachia and the deep south.</p>
+
+    <br/>
+
+    <p>I volunteer for the
       <a
         href="https://altrac.works"
         title="ALTRAC"
         target="_blank">Alabama Transgender Rights Action Coalition</a>
-      to fight discriminatory legislature.
+      to fight discriminatory legislation.
     </p>
 
     <p>
-      In addition, I help maintain a collection of
+      I also help maintain a collection of
       <a
         href="https://altgo.us"
         title="ALTGO"
-        target="_blank">local resources</a>
-      for queer and transgender Alabamians.
+        target="_blank">local resources and legal guides</a>
+      for queer and trans Alabamians.
     </p>
 
-    <br/>
-    <p>In my spare time, I enjoy watching anime, researching severe weather, playing the guitar (poorly), anything 
-      Pokémon related, and exploring my home region of Appalachia and the further deep south.</p>
   </section>
 
   {% comment %} Projects {% endcomment %}
@@ -131,7 +158,7 @@ twitterx: "espidotme"
     </p>
     <div class="row">
       {% for project in collections.projects reversed %}
-        <box class="column">
+        <div class="box column">
           <a
             href="{{ project.data.url }}"
             title="{{ project.data.title }}"
@@ -146,7 +173,7 @@ twitterx: "espidotme"
               </small>
             </p>
           </a>
-        </box>
+        </div>
       {% endfor %}
     </div>
   </section>

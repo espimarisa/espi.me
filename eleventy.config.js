@@ -1,7 +1,6 @@
 /**
- * @file Eleventy configuration file.
- * @author Espi Marisa <contact@espi.me>
- * @license zlib
+ * @file Configuration file for Eleventy.
+ * @license Zlib
  */
 
 /** biome-ignore-all lint/style/noDefaultExport: Eleventy requires a default export. */
@@ -11,7 +10,7 @@ import eleventyPluginTinyHTML from "@sardine/eleventy-plugin-tinyhtml";
 import automaticNoopener from "eleventy-plugin-automatic-noopener";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Directories
   eleventyConfig.setInputDirectory("./src");
   eleventyConfig.setOutputDirectory("./_site");
