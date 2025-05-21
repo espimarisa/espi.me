@@ -1,23 +1,24 @@
 ---
 layout: default.liquid
 title: "Espi Marisa"
-description: "Silly enby. Blind developer and activist."
+description: "computer witch • wx nerd • blind enby"
 bluesky: "espi.me"
 blueskydid: "did:plc:tuihqhadazqooxe5fhw6dhzk"
 discordHandle: "espimarisa"
 discordID: "647269760782041133"
-email: "contact [at] domain [dot] tld"
+email: "contact@espi.me"
 emailURL: "contact@espi.me?subject=espi.me"
 github: "espimarisa"
-fediHandle: "@espi@uwu.social"
 fediURL: "https://uwu.social/@espi"
 pronouns: "they/she"
-matrixHandle: "@espimarisa:matrix.org"
 signalHandle: "espimarisa.01"
 signalURL: "https://signal.me/#eu/0rRdxJjNEyP9MRGqdRo7p0iiMR2dO0tsTKMskW2_YeO5aBb5FVpOKKCBDcfwIfhN"
 telegram: "espimarisa"
 twitterx: "espidotme"
 ---
+
+{% comment %} Fediverse verification, hi there! {% endcomment %}
+<link rel="me" href="{{ fediURL }}" />
 
 {% comment %} Header {% endcomment %}
 <header>
@@ -56,7 +57,7 @@ twitterx: "espidotme"
       </li>
       <li>
         <a
-          aria-label="X: {{ twitterx }}"
+          aria-label="Twitter/X: {{ twitterx }}"
           href="https://x.com/{{ twitterx }}"
           target="_blank"
           title="Twitter/X: {{ twitterx }}">Twitter/X</a>
@@ -83,24 +84,6 @@ twitterx: "espidotme"
       </li>
       <li>
         <a
-          aria-label="Fediverse: {{ fediHandle }}"
-          href="{{ fediURL }}"
-          target="_blank"
-          title="Fediverse: {{ fediHandle }}">Fediverse</a>
-
-        <span>{{ fediHandle }}</span>
-      </li>
-      <li>
-        <a
-          aria-label="Matrix: {{ matrixHandle }}"
-          href="https://matrix.to/#/{{ matrixHandle }}"
-          target="_blank"
-          title="Matrix: {{ matrixHandle }}">Matrix</a>
-
-        <span>{{ matrixHandle }}</span>
-      </li>
-      <li>
-        <a
           aria-label="Email: {{ email }}"
           href="mailto:{{ emailURL }}"
           target="_blank"
@@ -111,7 +94,6 @@ twitterx: "espidotme"
     </ul>
   </nav>
 </header>
-
 <main>
   {% comment %} About {% endcomment %}
   <section id="about">
@@ -122,12 +104,7 @@ twitterx: "espidotme"
     </p>
 
     <p>I primarily work with Bun, Svelte, TypeScript, and various web frameworks.</p>
-    <p>Currently, I'm a Computer Science student attending Auburn University online.</p>
-
-    <br/>
-
-    <p>In my spare time, I enjoy watching anime, researching severe weather, messing with electronics, playing the guitar, all things 
-      Pokémon, and exploring my home of Appalachia and the deep south.</p>
+    <p>Currently, I'm a final-year Computer Science student attending Auburn University.</p>
 
     <br/>
 
@@ -147,6 +124,11 @@ twitterx: "espidotme"
         target="_blank">local resources and legal guides</a>
       for queer and trans Alabamians.
     </p>
+
+    <br/>
+
+    <p>In my spare time, I enjoy watching anime, researching severe weather, messing with electronics, playing the guitar, all things 
+      Pokémon, and exploring my home of Appalachia and the deep south.</p>
 
   </section>
 

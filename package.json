@@ -20,19 +20,19 @@
   "type": "module",
   "main": "./dist/src/index.js",
   "scripts": {
-    "build": "NODE_ENV=production rm -rf _site && bunx @11ty/eleventy",
-    "dev": "NODE_env=development bunx @11ty/eleventy --serve --watch",
+    "build": "NODE_ENV=PRODUCTION rm -rf _site && bunx @11ty/eleventy",
+    "dev": "NODE_env=DEVELOPMENT bunx @11ty/eleventy --serve --watch",
     "format": "biome format --fix .",
     "lint": "biome check .",
     "lint:fix": "biome lint --fix .",
-    "start": "NODE_ENV=production bunx @11ty/eleventy --serve --quiet",
+    "start": "NODE_ENV=PROUCTION bunx @11ty/eleventy --serve --quiet",
     "test": "bun run lint"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.0-beta.3",
+    "@biomejs/biome": "2.0.0-beta.4",
     "@fontsource/atkinson-hyperlegible-next": "^5.2.3",
     "@jgarber/eleventy-plugin-postcss": "^3.0.1",
     "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
@@ -47,7 +47,7 @@
   },
   "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.10"
+    "bun": ">=1.2.13"
   },
   "trustedDependencies": [
     "@biomejs/biome",
