@@ -13,7 +13,17 @@ import icon from "astro-icon";
 export default defineConfig({
   compressHTML: true,
   site: "https://espi.me",
-  integrations: [favicons(), mdx(), sitemap(), icon(), compress()],
+  integrations: [
+    favicons({
+      name: "Espi Marisa",
+      short_name: "Espi Marisa",
+      themes: ["#421970", "#ffd7f3"],
+    }),
+    mdx(),
+    sitemap(),
+    icon(),
+    compress(),
+  ],
   experimental: {
     fonts: [
       {
