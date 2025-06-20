@@ -1,0 +1,35 @@
+---
+import About from "@/components/About.astro";
+import Intro from "@/components/Intro.astro";
+import Projects from "@/components/Projects.astro";
+import Webring from "@/components/Webring.astro";
+import Page from "@/layouts/Page.astro";
+
+const title = "Espi Marisa";
+const description =
+  "Blind developer, tinkerer, and activist from Huntsville, Alabama.";
+---
+
+<Page title={title} description={description}>
+  <main>
+    <!-- Intro -->
+    <header id="intro">
+      <Intro />
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <About />
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <Projects />
+    </section>
+  </main>
+
+  <!-- Webring -->
+  <footer>
+    <Webring />
+  </footer>
+</Page>

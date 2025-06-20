@@ -1,0 +1,43 @@
+/**
+ * @file Quote data and utilities.
+ * @license zlib
+ */
+
+export const quotes = [
+  "[menhera bored]",
+  "[pokemon rby hyper beam sound effect]",
+  "#1 snekfetch fan",
+  "asexual action now!",
+  "based... waow",
+  "dickweedle",
+  "dinglebop",
+  "fucktoberfest",
+  "gaslight gatekeep girlboss",
+  "Green Is My Pepper",
+  "goddamn it gary, don't burp on the mic",
+  "guhhhh",
+  "h",
+  "hahalol",
+  "hehe owo",
+  "hop on gen 1 rby ou",
+  "i am NOT autist",
+  "i be meowing on the internet",
+  "i miss you draeth",
+  "im apparently a cult leader?",
+  "imma write node-fetch all over my walls",
+  "jawad agadir 2020",
+  "jebac pis",
+  "jikpizza",
+  "jiktim lives forever",
+  "love baba",
+  "meowfie",
+  "miaow",
+  "nonbinary nonconfirming noncaring",
+  "Q33 NY in Wingdings",
+  "read if cute",
+  "read if h",
+  "shrubmuncher",
+  "sink rate! woop woop! pull up! bank angle!",
+  "trans your gender",
+  "you should visit diyhrt.market",
+];

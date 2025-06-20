@@ -1,0 +1,148 @@
+---
+import { Icon } from "astro-icon/components";
+import { accounts } from "@/utils/accounts.ts";
+---
+
+<header>
+  <div class="header-top-row">
+    <h1>Espi Marisa</h1>
+
+    <a
+      id="refresh-icon"
+      href="#refresh-icon"
+      title="New quote"
+      aria-label="New quote">
+      <Icon class="refresh-icon" name="mdi:refresh" />
+    </a>
+  </div>
+
+  <p id="quote-text">hi what is a javascript</p>
+</header>
+
+<ul class="account-list">
+  {
+    Object.values(accounts).map((account) => {
+      return (
+        <li class="account-list-item">
+          <a
+            class="account-link"
+            href={account.href}
+            title={account.platform + ": " + account.username}
+            target="_blank">
+            <Icon class="account-icon" name={account.icon} />
+            <span>{account.username}</span>
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style lang="scss">
+  @use "@/styles/variables";
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .header-top-row {
+      align-items: flex-end;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    #refresh-icon {
+      display: flex;
+      font-size: 1.5rem;
+      margin-top: auto;
+    }
+
+    #quote-text {
+      font-style: italic;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .account-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .account-list-item {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  .account-link {
+    align-items: center;
+    color: variables.$color-black;
+    display: flex;
+    text-decoration: none;
+
+    &:visited,
+    &:hover {
+      color: variables.$color-black;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: variables.$color-white;
+
+      &:visited,
+      &:hover {
+        color: variables.$color-white;
+      }
+    }
+  }
+
+  .account-icon {
+    color: variables.$color-purple;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    width: 1.25rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: variables.$color-pink;
+    }
+  }
+</style>
+
+<script>
+  import { quotes } from "@/utils/quotes.ts";
+  const fallback = "what is a javascript";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Gets the quote element and refresh button.
+    const quoteElement = document.getElementById("quote-text");
+    const refreshButton = document.getElementById("refresh-icon");
+
+    // Function to get a random quote.
+    function getQuote() {
+      return quotes[Math.floor(Math.random() * quotes.length)];
+    }
+
+    // Sets the initial quote if it exists.
+    if (quoteElement) {
+      quoteElement.textContent = getQuote() ?? fallback;
+    }
+
+    // Changes the quote on refresh button click.
+    if (refreshButton) {
+      refreshButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (quoteElement) {
+          quoteElement.textContent = getQuote() ?? fallback;
+        }
+      });
+    }
+  });
+</script>

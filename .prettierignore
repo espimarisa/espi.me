@@ -1,0 +1,4 @@
+.astro/
+bun.lock
+dist/
+node_modules/

@@ -1,0 +1,25 @@
+---
+import { accounts } from "@/utils/accounts.ts";
+
+const { ...props } = Astro.props;
+---
+
+<head>
+  <!-- Layout -->
+  <meta charset="utf8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Metadata -->
+  <link rel="me" href={accounts.fediverse.href} />
+  <meta name="description" content={props.description} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content={props.description} />
+  <meta name="twitter:image:alt" content={props.title} />
+  <meta name="twitter:site" content={accounts.twitter.username} />
+  <meta name="twitter:title" content={props.title} />
+  <meta property="og:description" content={props.description} />
+  <meta property="og:title" content={props.title} />
+  <meta property="og:type" content="website" />
+  <title>{props.title}</title>
+  <slot />
+</head>

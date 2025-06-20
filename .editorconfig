@@ -1,7 +1,5 @@
-# Top-most EditorConfig file indicator. Stops searching in parent directories.
 root = true
 
-# Default settings for all files unless overridden below.
 [*]
 charset = utf-8
 end_of_line = lf
@@ -10,10 +8,10 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# Do not remove trailing whitespace (important for hard breaks).
+# Do not remove trailing whitespace from markdown.
 [*.md]
 trim_trailing_whitespace = false
 
-# Use 2 spaces for indentation (common YAML convention).
+# YAML standard.
 [*.{yaml,yml}]
 indent_size = 2

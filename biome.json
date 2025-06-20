@@ -5,17 +5,7 @@
       "source": {
         "organizeImports": {
           "level": "on",
-          "options": {
-            "groups": [
-              ":ALIAS:",
-              ":BUN:",
-              ":NODE:",
-              ":PACKAGE:",
-              ":PACKAGE_WITH_PROTOCOL:",
-              ":PATH:",
-              ":URL:"
-            ]
-          }
+          "options": {}
         },
         "useSortedAttributes": "on",
         "useSortedKeys": "off",
@@ -23,29 +13,14 @@
       }
     }
   },
-  "css": {},
   "files": {
     "includes": [
-      "src/**/*.{css, js}",
-      "biome.json",
-      "eleventy.config.js",
-      "postcss.config.js",
-      "package.json"
+      "**/*.{astro,js,json,ts}",
+      "!.astro/**",
+      "!dist/**",
+      "!node_modules/**",
+      "!bun.lock"
     ]
-  },
-  "formatter": {
-    "attributePosition": "multiline",
-    "bracketSameLine": true,
-    "indentStyle": "space"
-  },
-  "html": {},
-  "javascript": {
-    "globals": ["Bun"]
-  },
-  "json": {
-    "parser": {
-      "allowComments": true
-    }
   },
   "linter": {
     "rules": {
@@ -59,6 +34,8 @@
         "useWhile": "error"
       },
       "correctness": {
+        "noUnusedImports": "off",
+        "noUnusedVariables": "off",
         "noPrivateImports": "error",
         "noRenderReturnValue": "error",
         "noUndeclaredDependencies": "error",
@@ -69,7 +46,6 @@
         "useJsxKeyInIterable": "error"
       },
       "nursery": {
-        "noAwaitInLoop": "error",
         "noBitwiseOperators": "error",
         "noConstantBinaryExpression": "error",
         "noDestructuredProps": "error",
@@ -78,7 +54,6 @@
         "noImportCycles": "error",
         "noNoninteractiveElementInteractions": "error",
         "noProcessGlobal": "error",
-        "noSecrets": "error",
         "noShadow": "error",
         "noUnwantedPolyfillio": "error",
         "noUselessBackrefInRegex": "error",
@@ -86,7 +61,6 @@
         "noUselessUndefined": "error",
         "useConsistentObjectDefinition": "error",
         "useExhaustiveSwitchCases": "error",
-        "useExportsLast": "error",
         "useForComponent": "error",
         "useGoogleFontPreconnect": "error",
         "useIterableCallbackReturn": "error",
@@ -100,6 +74,7 @@
         "noBarrelFile": "error",
         "noDelete": "error",
         "noImgElement": "error",
+        "noNamespaceImport": "error",
         "noReExportAll": "error",
         "recommended": true,
         "useTopLevelRegex": "error"
@@ -110,14 +85,12 @@
       },
       "style": {
         "noCommonJs": "error",
-        "noDefaultExport": "error",
         "noDoneCallback": "error",
         "noExportedImports": "error",
         "noHeadElement": "error",
         "noImplicitBoolean": "error",
         "noInferrableTypes": "error",
         "noNamespace": "error",
-        "noNamespaceImport": "error",
         "noNegationElse": "error",
         "noNestedTernary": "error",
         "noNonNullAssertion": "error",

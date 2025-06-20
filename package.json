@@ -1,56 +1,39 @@
 {
   "name": "@espimarisa/espi.me",
-  "version": "0.0.0",
+  "version": "develop",
   "private": true,
-  "description": "My personal website and portfolio.",
-  "homepage": "https://github.com/espimarisa/espi.me",
-  "bugs": {
-    "url": "https://github.com/espimarisa/espi.me/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:espimarisa/espi.me.git"
-  },
-  "license": "zlib",
-  "author": {
-    "name": "Espi Marisa",
-    "email": "contact@espi.me",
-    "url": "https://espi.me"
-  },
+  "license": "Zlib",
+  "author": "Espi Marisa <hi@espi.me>",
   "type": "module",
-  "main": "./dist/src/index.js",
   "scripts": {
-    "build": "NODE_ENV=PRODUCTION rm -rf _site && bunx @11ty/eleventy",
-    "dev": "NODE_env=DEVELOPMENT bunx @11ty/eleventy --serve --watch",
-    "format": "biome format --fix .",
-    "lint": "biome check .",
+    "build": "bun run check && astro build",
+    "check": "astro check",
+    "dev": "astro dev",
+    "format": "prettier --write .",
+    "lint": "biome lint .",
     "lint:fix": "biome lint --fix .",
-    "start": "NODE_ENV=PROUCTION bunx @11ty/eleventy --serve --quiet",
-    "test": "bun run lint"
+    "preview": "astro preview",
+    "start": "astro dev",
+    "test": "bun run check && bun run lint"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "@espimarisa/espi.me": ".",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.39",
+    "astro": "^5.10.0",
+    "astro-compress": "^2.3.8",
+    "astro-favicons": "^3.1.5",
+    "astro-icon": "^1.1.5",
+    "modern-normalize": "^3.0.1",
+    "sass": "^1.89.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.0-beta.4",
-    "@fontsource/atkinson-hyperlegible-next": "^5.2.3",
-    "@jgarber/eleventy-plugin-postcss": "^3.0.1",
-    "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
-    "autoprefixer": "^10.4.21",
-    "bun-types": "^1.2.13",
-    "cssnano": "^7.0.7",
-    "eleventy-plugin-automatic-noopener": "^2.0.2",
-    "postcss": "^8.5.3",
-    "postcss-css-variables": "^0.19.0",
-    "postcss-import": "^16.1.0",
-    "postcss-nesting": "^13.0.1"
-  },
-  "packageManager": "bun@1.2.13",
-  "engines": {
-    "bun": ">=1.2.13"
-  },
-  "trustedDependencies": [
-    "@biomejs/biome",
-    "esbuild"
-  ]
+    "@biomejs/biome": "^2.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+
+  "bracketSameLine": true,
+  "experimentalTernaries": true,
+  "quoteProps": "consistent",
+  "singleAttributePerLine": false,
+  "trailingComma": "all",
+  "vueIndentScriptAndStyle": true
+}
