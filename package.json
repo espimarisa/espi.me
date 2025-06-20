@@ -21,7 +21,6 @@
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
-    "@espimarisa/espi.me": ".",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.39",
     "astro": "^5.10.0",
@@ -35,5 +34,8 @@
     "@biomejs/biome": "^2.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }

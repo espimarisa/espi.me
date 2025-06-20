@@ -13,7 +13,11 @@ import { webring } from "@/utils/webring.ts";
         const entry = webring[key as keyof typeof webring];
         return (
           <li>
-            <a href={entry.href} title={entry.alt} target="_blank">
+            <a
+              href={entry.href}
+              title={entry.alt}
+              target="_blank"
+              rel="noreferrer noopener">
               <Image
                 src={entry.image}
                 alt={entry.alt}
