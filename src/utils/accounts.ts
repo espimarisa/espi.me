@@ -19,10 +19,10 @@ export const accounts = {
     platform: "GitHub",
     username: "espimarisa",
   },
-  twitter: {
+  x: {
     href: "https://x.com/espimarisa_",
-    icon: "simple-icons:twitter",
-    platform: "Twitter",
+    icon: "simple-icons:x",
+    platform: "X",
     username: "espimarisa_",
   },
   bluesky: {
@@ -48,12 +48,6 @@ export const accounts = {
     icon: "simple-icons:signal",
     platform: "Signal",
     username: "espimarisa.01",
-  },
-  fediverse: {
-    href: "https://uwu.social/@espi",
-    icon: "simple-icons:mastodon",
-    platform: "Fediverse",
-    username: "@espi@uwu.social",
   },
   xmpp: {
     href: "xmpp:espi@a3.pm",
