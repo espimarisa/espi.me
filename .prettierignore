@@ -1,4 +1,15 @@
-.astro/
+# Ignore artifacts and binaries.
+*.log
+*.map
+**/.cache
+**/.git
+**/node_modules
+
+# Ignore lockfiles.
 bun.lock
-dist/
-node_modules/
+
+# Ignore files that Biome supports.
+*.css
+*.js
+*.json
+*.ts

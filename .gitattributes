@@ -1,6 +1,15 @@
-* text=auto eol=lf
+* text=auto
 
-*.lock -diff -merge
-*.md text eol=lf diff=markdown
-*.sh text eol=lf executable
+# Batchfiles require CRLF.
+*.{bat,[bB][aA][tT]} text eol=crlf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+
+# Shell files require LF.
+*.bash text eol=lf
+*.sh text eol=lf
+
+# Specific diff viewer options.
 tsconfig.json linguist-language=JSON-with-Comments
+
+# Hide lockfiles in diff viewers.
+bun.lock text -diff

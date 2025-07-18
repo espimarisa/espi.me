@@ -1,158 +1,80 @@
 {
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": {
-          "level": "on",
-          "options": {}
-        },
-        "useSortedAttributes": "on",
-        "useSortedKeys": "off",
-        "useSortedProperties": "on"
-      }
-    }
-  },
-  "files": {
-    "includes": [
-      "**/*.{astro,js,json,ts}",
-      "!.astro/**",
-      "!dist/**",
-      "!node_modules/**",
-      "!bun.lock"
-    ]
-  },
-  "linter": {
-    "rules": {
-      "complexity": {
-        "noForEach": "error",
-        "noUselessStringConcat": "error",
-        "noVoid": "error",
-        "recommended": true,
-        "useDateNow": "error",
-        "useSimplifiedLogicExpression": "error",
-        "useWhile": "error"
-      },
-      "correctness": {
-        "noUnusedImports": "off",
-        "noUnusedVariables": "off",
-        "noPrivateImports": "error",
-        "noRenderReturnValue": "error",
-        "noUndeclaredDependencies": "error",
-        "noUndeclaredVariables": "error",
-        "recommended": true,
-        "useHookAtTopLevel": "error",
-        "useImportExtensions": "error",
-        "useJsxKeyInIterable": "error"
-      },
-      "nursery": {
-        "noBitwiseOperators": "error",
-        "noConstantBinaryExpression": "error",
-        "noDestructuredProps": "error",
-        "noFloatingPromises": "error",
-        "noGlobalDirnameFilename": "error",
-        "noImportCycles": "error",
-        "noNoninteractiveElementInteractions": "error",
-        "noProcessGlobal": "error",
-        "noShadow": "error",
-        "noUnwantedPolyfillio": "error",
-        "noUselessBackrefInRegex": "error",
-        "noUselessEscapeInString": "error",
-        "noUselessUndefined": "error",
-        "useConsistentObjectDefinition": "error",
-        "useExhaustiveSwitchCases": "error",
-        "useForComponent": "error",
-        "useGoogleFontPreconnect": "error",
-        "useIterableCallbackReturn": "error",
-        "useNumericSeparators": "error",
-        "useParseIntRadix": "error",
-        "useSingleJsDocAsterisk": "error",
-        "useSortedClasses": "error",
-        "useSymbolDescription": "error"
-      },
-      "performance": {
-        "noBarrelFile": "error",
-        "noDelete": "error",
-        "noImgElement": "error",
-        "noNamespaceImport": "error",
-        "noReExportAll": "error",
-        "recommended": true,
-        "useTopLevelRegex": "error"
-      },
-      "recommended": true,
-      "security": {
-        "recommended": true
-      },
-      "style": {
-        "noCommonJs": "error",
-        "noDoneCallback": "error",
-        "noExportedImports": "error",
-        "noHeadElement": "error",
-        "noImplicitBoolean": "error",
-        "noInferrableTypes": "error",
-        "noNamespace": "error",
-        "noNegationElse": "error",
-        "noNestedTernary": "error",
-        "noNonNullAssertion": "error",
-        "noParameterAssign": "error",
-        "noParameterProperties": "error",
-        "noProcessEnv": "info",
-        "noRestrictedGlobals": "error",
-        "noShoutyConstants": "error",
-        "noSubstr": "error",
-        "noUnusedTemplateLiteral": "error",
-        "noUselessElse": "error",
-        "noYodaExpression": "error",
-        "recommended": true,
-        "useAsConstAssertion": "error",
-        "useAtIndex": "error",
-        "useBlockStatements": "error",
-        "useCollapsedElseIf": "error",
-        "useCollapsedIf": "error",
-        "useComponentExportOnlyModules": "error",
-        "useConsistentArrayType": "error",
-        "useConsistentBuiltinInstantiation": "error",
-        "useConsistentCurlyBraces": "error",
-        "useConst": "error",
-        "useDefaultParameterLast": "error",
-        "useDefaultSwitchClause": "error",
-        "useEnumInitializers": "error",
-        "useExplicitLengthCheck": "error",
-        "useForOf": "error",
-        "useFragmentSyntax": "error",
-        "useImportType": {
-          "level": "error",
-          "options": {
-            "style": "separatedType"
-          }
-        },
-        "useNodeAssertStrict": "error",
-        "useNumberNamespace": "error",
-        "useSelfClosingElements": "error",
-        "useShorthandAssign": "error",
-        "useSingleVarDeclarator": "error",
-        "useThrowNewError": "error",
-        "useThrowOnlyError": "error",
-        "useTrimStartEnd": "error"
-      },
-      "suspicious": {
-        "noConsole": "info",
-        "noDocumentImportInPage": "error",
-        "noDuplicateTestHooks": "error",
-        "noEmptyBlockStatements": "error",
-        "noEvolvingTypes": "error",
-        "noExportsInTest": "error",
-        "noFocusedTests": "error",
-        "noHeadImportInDocument": "error",
-        "noMisplacedAssertion": "error",
-        "noSkippedTests": "warn",
-        "noVar": "error",
-        "useAwait": "error",
-        "useErrorMessage": "error",
-        "useGuardForIn": "error",
-        "useNumberToFixedDigitsArgument": "error",
-        "useStrictMode": "error"
-      }
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {}
+				},
+				"useSortedAttributes": "on",
+				"useSortedKeys": "off",
+				"useSortedProperties": "on"
+			}
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true,
+			"quoteStyle": "double"
+		},
+		"linter": {
+			"enabled": true
+		}
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"./**/*.{css,js,json,ts}",
+			"!**/node_modules/"
+		]
+	},
+	"formatter": {
+		"attributePosition": "auto",
+		"bracketSameLine": true,
+		"bracketSpacing": true,
+		"enabled": true,
+		"expand": "auto",
+		"includes": [
+			"./**/*.{css,js,json,ts}",
+			"!**/node_modules"
+		],
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 80,
+		"useEditorconfig": true
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"enabled": true,
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "preserve",
+			"quoteStyle": "double",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"a11y": "error",
+			"complexity": "error",
+			"correctness": "error",
+			"performance": "error",
+			"recommended": true,
+			"security": "error",
+			"style": {
+				"recommended": true,
+				"useNamingConvention": "off"
+			},
+			"suspicious": "error"
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
 }
