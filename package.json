@@ -2,20 +2,39 @@
 	"name": "@espimarisa/espi.me",
 	"version": "develop",
 	"private": true,
+	"description": "My personal website, blog, and portfolio, powered by Eleventy.",
+	"homepage": "https://espi.me",
+	"bugs": {
+		"url": "https://github.com/espimarisa/espi.me/issues",
+		"email": "hi@espi.me"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:espimarisa/espi.me.git"
+	},
 	"license": "zlib",
-	"author": "Espi Marisa <hi@espi.me) (https://espi.me)",
+	"author": {
+		"name": "Espi Marisa",
+		"email": "hi@espi.me",
+		"url": "https://espi.me"
+	},
 	"type": "module",
 	"scripts": {
+		"build": "NODE_ENV=PRODUCTION bunx @11ty/eleventy",
+		"dev": "NODE_ENV=DEVELOPMENT bunx @11ty/eleventy --serve --watch",
 		"format": "biome format --verbose --write . && prettier --write .",
-		"lint:fix": "biome lint --verbose --fix .",
 		"lint": "biome lint .",
+		"lint:fix": "biome lint --verbose --fix .",
+		"start": "NODE_ENV=PRODUCTION bunx @11ty/eleventy --serve --quiet",
 		"test": "bun run check && bun run lint"
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.1.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.1.1",
+		"@biomejs/biome": "^2.1.2",
 		"prettier": "^3.6.2"
-	}
+	},
+	"packageManager": "bun@1.2.18",
+	"trustedDependencies": ["@biomejs/biome"]
 }

@@ -7,9 +7,7 @@
 					"level": "on",
 					"options": {}
 				},
-				"useSortedAttributes": "on",
-				"useSortedKeys": "off",
-				"useSortedProperties": "on"
+				"recommended": true
 			}
 		}
 	},
@@ -24,10 +22,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": [
-			"./**/*.{css,js,json,ts}",
-			"!**/node_modules/"
-		]
+		"includes": ["./**/*.{css,js,json,ts}", "!**/node_modules/"]
 	},
 	"formatter": {
 		"attributePosition": "auto",
@@ -35,15 +30,19 @@
 		"bracketSpacing": true,
 		"enabled": true,
 		"expand": "auto",
-		"includes": [
-			"./**/*.{css,js,json,ts}",
-			"!**/node_modules"
-		],
+		"includes": ["./**/*.{css,js,json,ts}", "!**/node_modules"],
 		"indentStyle": "tab",
 		"indentWidth": 2,
 		"lineEnding": "lf",
 		"lineWidth": 80,
 		"useEditorconfig": true
+	},
+	"html": {
+		"formatter": {
+			"enabled": true,
+			"selfCloseVoidElements": "always",
+			"whitespaceSensitivity": "css"
+		}
 	},
 	"javascript": {
 		"formatter": {
@@ -56,22 +55,49 @@
 			"trailingCommas": "all"
 		}
 	},
+	"json": {
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		},
+		"parser": {
+			"allowComments": true
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"a11y": "error",
-			"complexity": "error",
-			"correctness": "error",
-			"performance": "error",
+			"a11y": {
+				"recommended": true
+			},
+			"complexity": {
+				"recommended": true
+			},
+			"correctness": {
+				"recommended": true
+			},
+			"nursery": {
+				"recommended": true
+			},
+			"performance": {
+				"recommended": true
+			},
 			"recommended": true,
-			"security": "error",
+			"security": {
+				"recommended": true
+			},
 			"style": {
 				"recommended": true,
 				"useNamingConvention": "off"
 			},
-			"suspicious": "error"
+			"suspicious": {
+				"recommended": true
+			}
 		}
 	},
+	"root": true,
 	"vcs": {
 		"clientKind": "git",
 		"enabled": true,

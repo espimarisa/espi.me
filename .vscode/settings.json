@@ -1,0 +1,25 @@
+{
+	"[javascript][json][jsonc][typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"biome.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"eslint.enable": false,
+	"javascript.preferences.importModuleSpecifier": "relative",
+	"javascript.preferences.importModuleSpecifierEnding": "auto",
+	"javascript.suggest.paths": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnPaste.enabled": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"typescript.preferences.importModuleSpecifierEnding": "auto",
+	"typescript.preferences.useAliasesForRenames": false,
+	"typescript.suggest.paths": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnPaste.enabled": true
+}

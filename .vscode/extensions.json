@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"biomejs.biome",
+		"christian-kohler.path-intellisense",
+		"EditorConfig.EditorConfig",
+		"Shopify.theme-check-vscode",
+		"yzhang.markdown-all-in-one",
+		"DavidAnson.vscode-markdownlint"
+	]
+}
