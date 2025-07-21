@@ -1,12 +1,11 @@
 /**
- * @file Eleventy configuration file.
+ * @file Configuration file for Eleventy.
  * @license zlib
  */
 
 // @ts-check
 
 import path from "node:path";
-import webc from "@11ty/eleventy-plugin-webc";
 import externalLinks from "@aloskutov/eleventy-plugin-external-links";
 import browserslist from "browserslist";
 import { compress } from "eleventy-plugin-compress";
@@ -16,13 +15,11 @@ import { browserslistToTargets, bundle } from "lightningcss";
 // Configures browserslist targets.
 const targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
 
-// Globally used site metadata.
-const siteData = {
-	color: "#ffaa00",
-	description: "Blind developer, tinkerer, and activist from North Alabama.",
-	title: "Espi Marisa",
-	url: "https://espi.me",
-};
+/**
+ * Configures Eleventy.
+ * @param {(import("@11ty/eleventy/UserConfig").default)} eleventyConfig
+ * @see https://www.11ty.dev/docs/config/
+ */
 
 export default async function (eleventyConfig) {
 	// Configures data, input, and output directories.
@@ -35,13 +32,8 @@ export default async function (eleventyConfig) {
 	// Copy static files in /public to the root output directory.
 	eleventyConfig.addPassthroughCopy({ "./public": "/" });
 
-	// Enables WebC support.
-	eleventyConfig.addPlugin(webc);
-
 	// Automatically append target=_blank and rel attributes to external links.
-	eleventyConfig.addPlugin(externalLinks, {
-		excludedDomains: siteData.url,
-	});
+	eleventyConfig.addPlugin(externalLinks);
 
 	// Automatically compress contents with brotli.
 	eleventyConfig.addPlugin(compress, {
@@ -49,8 +41,13 @@ export default async function (eleventyConfig) {
 		enabled: true,
 	});
 
+	// Configures the Nunjucks engine.
+	eleventyConfig.setNunjucksEnvironmentOptions({
+		throwOnUndefined: true,
+	});
+
 	// Process CSS with LightningCSS.
-	eleventyConfig.addTemplateFormats(["css", "webc"]);
+	eleventyConfig.addTemplateFormats(["css"]);
 	eleventyConfig.addExtension("css", {
 		outputFileExtension: "css",
 

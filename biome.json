@@ -1,100 +1,26 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["./**/*.{css,js,json}", "!**/node_modules", "!**/_site"]
+	},
 	"assist": {
 		"actions": {
 			"source": {
 				"organizeImports": {
 					"level": "on",
 					"options": {}
-				},
-				"recommended": true
+				}
 			}
 		}
 	},
-	"css": {
-		"formatter": {
-			"enabled": true,
-			"quoteStyle": "double"
-		},
-		"linter": {
-			"enabled": true
-		}
-	},
-	"files": {
-		"ignoreUnknown": true,
-		"includes": ["./**/*.{css,js,json}", "!**/node_modules/"]
-	},
 	"formatter": {
-		"attributePosition": "auto",
-		"bracketSameLine": true,
-		"bracketSpacing": true,
-		"enabled": true,
-		"expand": "auto",
-		"includes": ["./**/*.{css,js,json}", "!**/node_modules"],
-		"indentStyle": "tab",
-		"indentWidth": 2,
-		"lineEnding": "lf",
-		"lineWidth": 80,
-		"useEditorconfig": true
-	},
-	"html": {
-		"formatter": {
-			"enabled": true,
-			"selfCloseVoidElements": "always",
-			"whitespaceSensitivity": "css"
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"arrowParentheses": "always",
-			"enabled": true,
-			"jsxQuoteStyle": "double",
-			"quoteProperties": "asNeeded",
-			"quoteStyle": "double",
-			"semicolons": "always",
-			"trailingCommas": "all"
-		}
-	},
-	"json": {
-		"formatter": {
-			"enabled": true
-		},
-		"linter": {
-			"enabled": true
-		},
-		"parser": {
-			"allowComments": true
-		}
+		"enabled": false
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"a11y": {
-				"recommended": true
-			},
-			"complexity": {
-				"recommended": true
-			},
-			"correctness": {
-				"recommended": true
-			},
-			"nursery": {
-				"recommended": true
-			},
-			"performance": {
-				"recommended": true
-			},
-			"recommended": true,
-			"security": {
-				"recommended": true
-			},
-			"style": {
-				"recommended": true,
-				"useNamingConvention": "off"
-			},
-			"suspicious": {
-				"recommended": true
-			}
+			"recommended": true
 		}
 	},
 	"root": true,

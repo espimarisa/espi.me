@@ -1,11 +1,13 @@
 {
-	"[css][javascript][json][jsonc]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"[liquid]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"biome.enabled": true,
+	"cSpell.checkOnlyEnabledFileTypes": true,
+	"cSpell.enabledFileTypes": {
+		"*": false,
+		"markdown": true,
+		"md": true,
+		"mdx": true
+	},
+	"cSpell.userWords": ["Espi", "espimarisa"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll.biome": "explicit",
 		"source.organizeImports.biome": "explicit"
@@ -13,10 +15,14 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
+	"emmet.includeLanguages": {
+		"nunjucks": "html"
+	},
 	"eslint.enable": false,
 	"javascript.preferences.importModuleSpecifier": "relative",
 	"javascript.preferences.importModuleSpecifierEnding": "auto",
 	"javascript.suggest.paths": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	"javascript.updateImportsOnPaste.enabled": true
+	"javascript.updateImportsOnPaste.enabled": true,
+	"prettier.enable": true
 }

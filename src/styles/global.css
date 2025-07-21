@@ -5,48 +5,54 @@
 // configures all globally used element styles used on every page.  //
 //------------------------------------------------------------------*/
 
-@import url("./variables.css");
+:root {
+	/* Colors */
+	--color-black: #000000;
+	--color-blue: #0000ff;
+	--color-white: #ffffff;
+
+	/* Default font stack */
+	--font-stack: sans-serif;
+}
 
 *,
 *::before,
 *::after {
+	/* Use a better box-sizing method. */
 	box-sizing: border-box;
 }
 
 * {
+	/* Remove the default margin and padding from elements. */
 	margin: 0;
 	padding: 0;
 }
 
-html {
-	font-family: var(--font-stack);
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
+body {
+	/* Configures the body colors. */
 	background-color: var(--color-white);
 	color: var(--color-black);
-	font-size: 1rem;
-	line-height: 1.5;
-	text-size-adjust: none;
 
-	@media (prefers-color-scheme: dark) {
-		background-color: var(--color-black);
-		color: var(--color-white);
-	}
-}
-
-body {
+	/* Configures the body layout. */
 	display: flex;
 	flex-direction: column;
-	font-size: 1.125rem;
 	height: 100vh;
 	margin: 0 auto;
 	max-width: 70rem;
 	min-height: 100vh;
 	padding: 3rem;
-	width: 100%;
+
+	/* Use a more accessible line-height and font-size. */
+	line-height: 1.5;
+	font-family: var(--font-stack);
+	font-size: 1.125rem;
+
+	/* Prevents text from inflating. */
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
-main,
 section {
 	padding: 2rem 0;
 }
@@ -62,6 +68,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-weight: 600;
 	line-height: 1.25;
 	text-wrap: balance;
 }
@@ -70,8 +77,28 @@ p {
 	text-wrap: pretty;
 }
 
+a,
+a:hover,
+a:visited {
+	color: var(--color-blue);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 img,
 picture {
 	display: block;
 	max-width: 100%;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline;
 }

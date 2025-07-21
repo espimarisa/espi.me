@@ -1,15 +1,10 @@
 # Ignore artifacts and binaries.
 *.log
 *.map
+**/_site
 **/.cache
 **/.git
 **/node_modules
 
 # Ignore lockfiles.
 bun.lock
-
-# Ignore files that Biome supports.
-*.css
-*.js
-*.json
-*.ts

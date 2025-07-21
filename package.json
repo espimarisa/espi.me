@@ -22,7 +22,7 @@
 	"scripts": {
 		"build": "NODE_ENV=PRODUCTION bunx @11ty/eleventy",
 		"dev": "NODE_ENV=DEVELOPMENT bunx @11ty/eleventy --serve --watch",
-		"format": "biome format --verbose --write . && prettier --write .",
+		"format": "prettier --write .",
 		"lint": "biome lint .",
 		"lint:fix": "biome lint --verbose --fix .",
 		"start": "NODE_ENV=PRODUCTION bunx @11ty/eleventy --serve --quiet",
@@ -30,18 +30,20 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy": "^3.1.2",
-		"@11ty/eleventy-plugin-webc": "^0.11.2",
 		"@aloskutov/eleventy-plugin-external-links": "^2.1.1",
 		"browserslist": "^4.25.1",
 		"eleventy-plugin-compress": "^1.0.5",
-		"html-minifier-next": "^1.1.4",
+		"html-minifier-next": "^1.1.5",
 		"lightningcss": "^1.30.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.1.2",
-		"@shopify/prettier-plugin-liquid": "^1.9.3",
-		"prettier": "^3.6.2"
+		"bun-types": "^1.2.19",
+		"prettier": "^3.6.2",
+		"prettier-plugin-jinja-template": "^2.1.0"
 	},
 	"packageManager": "bun@1.2.19",
-	"trustedDependencies": ["@biomejs/biome", "@parcel/watcher"]
+	"trustedDependencies": [
+		"@biomejs/biome"
+	]
 }

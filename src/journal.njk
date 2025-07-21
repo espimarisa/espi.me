@@ -1,0 +1,11 @@
+---
+title: Journal
+description: I write things.
+layout: post.njk
+---
+
+{% for post in collections.post %}
+	<a href="{{ post.data.permalink }}">{{ post.data.title }}</a>
+	<p>{{ post.data.description }}</p>
+	<p>{{ post.data.published.toLocaleDateString() }}</p>
+{% endfor %}

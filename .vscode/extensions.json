@@ -4,7 +4,10 @@
 		"biomejs.biome",
 		"christian-kohler.path-intellisense",
 		"EditorConfig.EditorConfig",
-		"Shopify.theme-check-vscode",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-cspell-bundled-dictionaries",
+		"oven.bun-vscode",
+		"ginfuru.better-nunjucks",
 		"yzhang.markdown-all-in-one",
 		"DavidAnson.vscode-markdownlint"
 	]

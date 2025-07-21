@@ -1,0 +1,25 @@
+{# Extend from the base layout. #}
+{% extends "./base.njk" %}
+
+{# Metadata #}
+{% block metadata %}
+	{% include "metadata.njk" %}
+{% endblock %}
+
+{# Stylesheets #}
+{% block styles %}
+	<link rel="stylesheet" href="/styles/global.css" />
+{% endblock %}
+
+{# Content #}
+{% block content %}
+	<body>
+		{# Navbar #}
+		{% include "navbar.njk" %}
+
+		{{ content | safe }}
+
+		{# Footer #}
+		{% include "footer.njk" %}
+	</body>
+{% endblock %}

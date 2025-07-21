@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{# Base metadata #}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		{# Metadata #}
+		{% block metadata %}
+		{% endblock %}
+
+		{# Stylesheets #}
+		{% block styles %}
+		{% endblock %}
+	</head>
+
+	{# Content #}
+	{% block content %}
+		{{ content | safe }}
+	{% endblock %}
+</html>
