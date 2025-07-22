@@ -1,11 +1,11 @@
 ---
-title: Test
-description: Test
-published: 2025-07-21
-updated: 2025-07-21
+title: Test Post
+description: Test Description
+date: 2025-07-19
 permalink: /journal/test/
-tags: post
-layout: post
+tags: posts
+type: article
+layout: post.njk
 ---
 
-Hi there.
+This is a test.

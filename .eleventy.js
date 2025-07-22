@@ -6,14 +6,14 @@
 // @ts-check
 
 import path from "node:path";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import externalLinks from "@aloskutov/eleventy-plugin-external-links";
 import browserslist from "browserslist";
 import { compress } from "eleventy-plugin-compress";
+import faviconsPlugin from "eleventy-plugin-gen-favicons";
 import htmlmin from "html-minifier-next";
 import { browserslistToTargets, bundle } from "lightningcss";
-
-// Configures browserslist targets.
-const targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
+import metadata from "./src/_data/metadata.js";
 
 /**
  * Configures Eleventy.
@@ -21,7 +21,7 @@ const targets = browserslistToTargets(browserslist("> 0.2% and not dead"));
  * @see https://www.11ty.dev/docs/config/
  */
 
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
 	// Configures data, input, and output directories.
 	eleventyConfig.setInputDirectory("./src");
 	eleventyConfig.setOutputDirectory("./_site");
@@ -32,18 +32,58 @@ export default async function (eleventyConfig) {
 	// Copy static files in /public to the root output directory.
 	eleventyConfig.addPassthroughCopy({ "./public": "/" });
 
-	// Automatically append target=_blank and rel attributes to external links.
-	eleventyConfig.addPlugin(externalLinks);
-
-	// Automatically compress contents with brotli.
-	eleventyConfig.addPlugin(compress, {
-		algorithm: "brotli",
-		enabled: true,
+	// Adds page generation date to the global data.
+	eleventyConfig.addGlobalData("generated", () => {
+		const now = new Date();
+		return new Intl.DateTimeFormat("en-US", {
+			dateStyle: "full",
+			timeStyle: "long",
+		}).format(now);
 	});
+
+	// Adds the repository URL to the global data.
+	eleventyConfig.addGlobalData(
+		"repository",
+		"https://github.com/espimarisa/espi.me/blob/main",
+	);
 
 	// Configures the Nunjucks engine.
 	eleventyConfig.setNunjucksEnvironmentOptions({
 		throwOnUndefined: true,
+	});
+
+	// Generate favicons and webmanifest.
+	eleventyConfig.addPlugin(faviconsPlugin, {
+		manifestData: {
+			name: metadata.title,
+			theme_color: metadata.theme_color,
+		},
+	});
+
+	// Automatically append target=_blank and rel attributes to external links.
+	eleventyConfig.addPlugin(externalLinks);
+
+	// Automatically compress contents with brotli.
+	eleventyConfig.addPlugin(compress, { algorithm: "brotli", enabled: true });
+
+	// Generates RSS feeds.
+	eleventyConfig.addPlugin(feedPlugin, {
+		collection: {
+			limit: 10,
+			name: "posts",
+		},
+		metadata: {
+			author: {
+				email: metadata.author.email,
+				name: metadata.author.name,
+			},
+			base: metadata.absolute_url,
+			language: "en",
+			subtitle: metadata.journal.subtitle,
+			title: metadata.journal.title,
+		},
+		outputPath: "/feed.xml",
+		type: "atom",
 	});
 
 	// Process CSS with LightningCSS.
@@ -52,14 +92,19 @@ export default async function (eleventyConfig) {
 		outputFileExtension: "css",
 
 		// Compiles the content.
-		compile: async (_content, input) => {
+		compile: (_content, input) => {
+			// Configures browserslist targets.
+			const targets = browserslistToTargets(
+				browserslist("> 0.2% and not dead"),
+			);
+
 			// Parses the content; ignore files starting with _.
 			const parsed = path.parse(input);
 			if (parsed.name.startsWith("_")) {
 				return;
 			}
 
-			return async () => {
+			return () => {
 				// Bundles the content together.
 				const { code } = bundle({
 					filename: input,

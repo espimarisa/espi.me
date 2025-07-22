@@ -1,19 +1,12 @@
 {# Extend from the base layout. #}
 {% extends "./base.njk" %}
 
-{% block metadata %}
-	{% include "metadata.njk" %}
-{% endblock %}
-
-{# Stylesheets #}
-{% block styles %}
-	<link rel="stylesheet" href="/styles/global.css" />
+{# Additional metadata #}
+{% block head %}
 	<link rel="stylesheet" href="/styles/post.css" />
 {% endblock %}
 
 {# Content #}
-<body>
-	{% block content %}
-		<article>{{ content | safe }}</article>
-	{% endblock %}
-</body>
+{% block content %}
+	<article>{{ content | safe }}</article>
+{% endblock %}

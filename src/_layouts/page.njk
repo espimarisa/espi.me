@@ -1,25 +1,16 @@
 {# Extend from the base layout. #}
 {% extends "./base.njk" %}
 
-{# Metadata #}
-{% block metadata %}
-	{% include "metadata.njk" %}
-{% endblock %}
-
-{# Stylesheets #}
-{% block styles %}
-	<link rel="stylesheet" href="/styles/global.css" />
-{% endblock %}
-
 {# Content #}
 {% block content %}
-	<body>
-		{# Navbar #}
-		{% include "navbar.njk" %}
+	{# Navbar #}
+	{% include "navbar.njk" %}
 
+	{# Children contents #}
+	<main id="main-content" aria-label="Jump to main content">
 		{{ content | safe }}
+	</main>
 
-		{# Footer #}
-		{% include "footer.njk" %}
-	</body>
+	{# Footer #}
+	{% include "footer.njk" %}
 {% endblock %}

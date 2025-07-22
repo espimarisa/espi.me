@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or "en" }}">
 	<head>
-		{# Base metadata #}
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		{# Metadata #}
-		{% block metadata %}
-		{% endblock %}
+		{% include "metadata.njk" %}
 
-		{# Stylesheets #}
-		{% block styles %}
+		{# Global stylesheets #}
+		<link rel="stylesheet" href="/styles/global.css" />
+
+		{# Children head #}
+		{% block head %}
 		{% endblock %}
 	</head>
 
-	{# Content #}
-	{% block content %}
-		{{ content | safe }}
-	{% endblock %}
+	<body>
+		{# Content #}
+		{% block content %}
+			{{ content | safe }}
+		{% endblock %}
+
+		{# Children scripts #}
+		{% block scripts %}
+		{% endblock %}
+	</body>
 </html>

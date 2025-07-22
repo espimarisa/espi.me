@@ -1,12 +1,52 @@
-{# Title #}
-{% if title %}
-	<title>{{ title }}</title>
-{% endif %}
+{# Sets metadata variables. #}
+{% set meta_author_name = author.name or metadata.author.name %}
+{% set meta_description = description or metadata.description %}
+{% set meta_title = title or metadata.title %}
+{% set meta_type = type or "website" %}
 
-{# Description #}
-{% if description %}
-	<meta name="description" content="{{ description }}" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:description" content="{{ description }}" />
-	<meta property="og:description" content="{{ description }}" />
+{# Creates absolute URLs and sets social image fallbacks. #}
+{% set absolute_page_url = metadata.absolute_url ~ page.url %}
+{% if image.url %}
+	{% set social_image_path = image.url %}
+	{% set social_image_alt = image.alt %}
+{% else %}
+	{# Fallback to the 512px favicon. #}
+	{% set social_image_path = "/icon-512.png" %}
+	{% set social_image_alt = "A blobcat holding a nonbinary flag colored heart." %}
 {% endif %}
+{% set absolute_image_url = metadata.absolute_url ~ social_image_path %}
+
+{# Head #}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{# Metadata #}
+<link rel="canonical" href="{{ absolute_page_url }}" />
+<link rel="me" href="{{ accounts.fediverse.url }}" />
+<meta name="author" content="{{ meta_author_name }}" />
+<meta name="description" content="{{ meta_description }}" />
+<meta name="generator" content="{{ eleventy.generator }}" />
+<meta name="theme-color" content="{{ metadata.theme_color }}" />
+
+{# Open Graph #}
+<meta property="og:description" content="{{ meta_description }}" />
+<meta property="og:site_name" content="{{ metadata.title }}" />
+<meta property="og:title" content="{{ meta_title }}" />
+<meta property="og:type" content="{{ meta_type }}" />
+<meta property="og:url" content="{{ absolute_page_url }}" />
+<meta property="og:image:alt" content="{{ social_image_alt or '' }}" />
+<meta property="og:image" content="{{ absolute_image_url }}" />
+
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="{{ meta_description }}" />
+<meta name="twitter:site" content="@{{ metadata.author.twitter }}" />
+<meta name="twitter:title" content="{{ meta_title }}" />
+<meta name="twitter:image:alt" content="{{ social_image_alt or '' }}" />
+<meta name="twitter:image" content="{{ absolute_image_url }}" />
+
+{# Favicons #}
+{% favicons "public/favicon.svg" %}
+
+{# Title #}
+<title>{{ meta_title }}</title>

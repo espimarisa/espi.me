@@ -11,46 +11,52 @@
 	--color-blue: #0000ff;
 	--color-white: #ffffff;
 
-	/* Default font stack */
-	--font-stack: sans-serif;
+	/* Font configurations. */
+	--font-default: system-ui;
+	--font-monospace: monospace;
+	--font-sans-serif: sans-serif;
+	--font-serif: serif;
+
+	/* Layout configuration. */
+	--max-width-content: 60rem;
+	--max-width-site: 70rem;
+	--padding-content: 2rem 0;
+	--padding-site: 3rem;
 }
 
 *,
 *::before,
 *::after {
-	/* Use a better box-sizing method. */
 	box-sizing: border-box;
 }
 
 * {
-	/* Remove the default margin and padding from elements. */
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
-body {
-	/* Configures the body colors. */
-	background-color: var(--color-white);
-	color: var(--color-black);
-
-	/* Configures the body layout. */
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	margin: 0 auto;
-	max-width: 70rem;
-	min-height: 100vh;
-	padding: 3rem;
-
-	/* Use a more accessible line-height and font-size. */
+html {
+	font-size: 1rem;
 	line-height: 1.5;
-	font-family: var(--font-stack);
-	font-size: 1.125rem;
-
-	/* Prevents text from inflating. */
+	font-family: var(--font-sans-serif);
+	height: 100%;
+	width: 100%;
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	max-width: var(--max-width-site);
+	height: 100vh;
+	min-height: 100vh;
+	padding: var(--padding-site);
+	margin: 0 auto;
+	font-size: 1.125rem;
+	color: var(--color-black);
+	background-color: var(--color-white);
 }
 
 section {
@@ -59,6 +65,7 @@ section {
 
 footer {
 	display: flex;
+	flex-direction: column;
 	margin-top: auto;
 }
 
@@ -68,7 +75,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 600;
 	line-height: 1.25;
 	text-wrap: balance;
 }
@@ -88,17 +94,26 @@ a:hover {
 }
 
 img,
-picture {
+picture,
+video {
 	display: block;
 	max-width: 100%;
 }
 
 nav ul {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 
 nav ul li {
 	display: inline;
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
 }
