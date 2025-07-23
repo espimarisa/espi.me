@@ -12,9 +12,18 @@ trim_trailing_whitespace = true
 [*.bat]
 end_of_line = crlf
 
+# Follow checkstyle guidelines for Java.
+[*.java]
+indent_size = 3
+
 # Do not remove trailing whitespace from markdown.
 [*.md]
 trim_trailing_whitespace = false
+
+# Follow PEP-8 guidelines for python.
+[*.py]
+indent_size = 4
+indent_style = space
 
 # YAML requires spaces for indentation.
 [*.{yaml,yml}]

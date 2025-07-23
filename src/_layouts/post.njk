@@ -8,5 +8,10 @@
 
 {# Content #}
 {% block content %}
-	<article>{{ content | safe }}</article>
+	<main id="main-content" aria-label="Jump to main content">
+		{{ content | safe }}
+	</main>
+
+	{# Footer #}
+	{% include "footer.njk" %}
 {% endblock %}

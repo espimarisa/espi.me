@@ -1,5 +1,6 @@
 /**
  * @file Configuration file for Eleventy.
+ * @see https://www.11ty.dev/docs/config/
  * @license zlib
  */
 
@@ -11,6 +12,8 @@ import externalLinks from "@aloskutov/eleventy-plugin-external-links";
 import browserslist from "browserslist";
 import { compress } from "eleventy-plugin-compress";
 import faviconsPlugin from "eleventy-plugin-gen-favicons";
+// @ts-expect-error This dependency does not export itself properly.
+import pluginIcons from "eleventy-plugin-icons";
 import htmlmin from "html-minifier-next";
 import { browserslistToTargets, bundle } from "lightningcss";
 import metadata from "./src/_data/metadata.js";
@@ -36,8 +39,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addGlobalData("generated", () => {
 		const now = new Date();
 		return new Intl.DateTimeFormat("en-US", {
-			dateStyle: "full",
-			timeStyle: "long",
+			dateStyle: "long",
 		}).format(now);
 	});
 
@@ -52,6 +54,12 @@ export default function (eleventyConfig) {
 		throwOnUndefined: true,
 	});
 
+	// Automatically add external link attributes.
+	eleventyConfig.addPlugin(externalLinks);
+
+	// Adds support for icon packs.
+	eleventyConfig.addPlugin(pluginIcons);
+
 	// Generate favicons and webmanifest.
 	eleventyConfig.addPlugin(faviconsPlugin, {
 		manifestData: {
@@ -59,12 +67,6 @@ export default function (eleventyConfig) {
 			theme_color: metadata.theme_color,
 		},
 	});
-
-	// Automatically append target=_blank and rel attributes to external links.
-	eleventyConfig.addPlugin(externalLinks);
-
-	// Automatically compress contents with brotli.
-	eleventyConfig.addPlugin(compress, { algorithm: "brotli", enabled: true });
 
 	// Generates RSS feeds.
 	eleventyConfig.addPlugin(feedPlugin, {
@@ -84,6 +86,12 @@ export default function (eleventyConfig) {
 		},
 		outputPath: "/feed.xml",
 		type: "atom",
+	});
+
+	// Automatically compress contents with brotli.
+	eleventyConfig.addPlugin(compress, {
+		algorithm: "brotli",
+		enabled: true,
 	});
 
 	// Process CSS with LightningCSS.

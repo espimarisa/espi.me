@@ -1,15 +1,11 @@
-* text=auto
+# Use LF by default
+* text eol=lf
 
-# Batchfiles require CRLF.
-*.{bat,[bB][aA][tT]} text eol=crlf
-*.{cmd,[cC][mM][dD]} text eol=crlf
+# Batchfiles require CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
 
-# Shell files require LF.
-*.bash text eol=lf
-*.sh text eol=lf
-
-# Specific diff viewer options.
-tsconfig.json linguist-language=JSON-with-Comments
-
-# Hide lockfiles in diff viewers.
-bun.lock text -diff
+# Hide lockfiles and source mappings in diffs
+*.lock* text -diff
+*.lockb binary -diff
+*.map text -diff

@@ -14,28 +14,12 @@
 			}
 		}
 	},
-	"css": {
-		"linter": {
-			"enabled": true
-		}
-	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["./**/*.{css,js,json}", "!**/node_modules", "!**/_site"]
+		"includes": ["**/*.{css,js,json,jsonc}", "!**/node_modules", "!**/_site"]
 	},
 	"formatter": {
 		"enabled": false
-	},
-	"javascript": {
-		"globals": ["Bun"]
-	},
-	"json": {
-		"linter": {
-			"enabled": true
-		},
-		"parser": {
-			"allowComments": true
-		}
 	},
 	"linter": {
 		"enabled": true,

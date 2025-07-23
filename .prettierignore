@@ -1,10 +1,24 @@
-# Ignore artifacts and binaries.
-*.log
+# Artifacts, cache, logs, and temporary files
+*.log*
 *.map
+*.tsbuildinfo
 **/_site
+**/.astro
 **/.cache
 **/.git
-**/node_modules
+**/.jekyll-cache
+**/.next
+**/.npm
+**/.sass-cache
+**/.temp
+**/.tmp
+**/.turbo
+**/cache
+**/logs
 
-# Ignore lockfiles.
-bun.lock
+# Lockfiles
+*.lock
+*.lockb
+
+# Binaries and dependencies
+**/node_modules

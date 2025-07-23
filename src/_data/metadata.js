@@ -1,5 +1,5 @@
 /**
- * @file Site metadata information.
+ * @file Default site metadata.
  * @license zlib
  */
 
@@ -20,8 +20,8 @@ export default {
 		"Blind developer, tinkerer, and activist from Huntsville, Alabama.",
 	journal: {
 		email: accounts.email.username,
-		subtitle: "Writings from a cursed, gifted, and unique being.",
-		title: "Espi's Journal",
+		subtitle: "Writings and ramblings from a broken, curious mind.",
+		title: "Journal :: Espi Marisa",
 	},
 	theme_color: "#111111",
 	title: "Espi Marisa",

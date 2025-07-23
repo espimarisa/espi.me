@@ -1,27 +1,24 @@
-/*------------------------------------------------------------------//
-// global stylesheet :: espi.me :: github.com/espimarisa/espi.me    //
-//------------------------------------------------------------------//
-// this stylesheet performs normalization, browser resets, and      //
-// configures all globally used element styles used on every page.  //
-//------------------------------------------------------------------*/
-
 :root {
 	/* Colors */
-	--color-black: #000000;
-	--color-blue: #0000ff;
-	--color-white: #ffffff;
+	--color-black: rgb(0, 0, 0);
+	--color-blue: rgb(0, 0, 255);
+	--color-white: rgb(255, 255, 255);
+	--color-whitesmoke: rgb(245, 245, 245);
+	--color-blacksmoke: rgb(10, 10, 10);
+	--color-pink: rgb(255, 150, 240);
 
-	/* Font configurations. */
+	/* Fonts */
 	--font-default: system-ui;
-	--font-monospace: monospace;
 	--font-sans-serif: sans-serif;
-	--font-serif: serif;
 
-	/* Layout configuration. */
-	--max-width-content: 60rem;
-	--max-width-site: 70rem;
-	--padding-content: 2rem 0;
-	--padding-site: 3rem;
+	/* Layout */
+	--content-max-width: 60rem;
+	--content-padding: 2rem;
+}
+
+::selection {
+	color: var(--color-black);
+	background-color: var(--color-blue);
 }
 
 *,
@@ -31,42 +28,45 @@
 }
 
 * {
-	padding: 0;
 	margin: 0;
 }
 
 html {
-	font-size: 1rem;
-	line-height: 1.5;
-	font-family: var(--font-sans-serif);
-	height: 100%;
 	width: 100%;
+	height: 100%;
+	font-size: 1rem;
+}
+
+body {
+	background-color: var(--color-white);
+	color: var(--color-black);
+	display: flex;
+	flex-flow: column nowrap;
+	font-family: var(--font-sans-serif);
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100%;
+
+	/* Prevents text from inflating on mobile browsers. */
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-	max-width: var(--max-width-site);
-	height: 100vh;
-	min-height: 100vh;
-	padding: var(--padding-site);
+main {
+	width: 100%;
+	max-width: var(--content-max-width);
+	padding: var(--content-padding);
 	margin: 0 auto;
-	font-size: 1.125rem;
-	color: var(--color-black);
-	background-color: var(--color-white);
-}
-
-section {
-	padding: 2rem 0;
 }
 
 footer {
-	display: flex;
-	flex-direction: column;
-	margin-top: auto;
+	width: 100%;
+	max-width: var(--content-max-width);
+	padding: var(--content-padding);
+	margin: auto auto 0 auto;
+	font-size: 80%;
 }
 
 h1,
@@ -75,22 +75,62 @@ h3,
 h4,
 h5,
 h6 {
+	margin-bottom: 0.25rem;
+	font-weight: 600;
 	line-height: 1.25;
 	text-wrap: balance;
 }
 
+h1 {
+	font-size: 300%;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+h3 {
+	font-size: 150%;
+}
+
+h4 {
+	font-size: 125%;
+}
+
+h5 {
+	font-size: 115%;
+}
+
+h6 {
+	font-size: 100%;
+}
+
 p {
+	margin-bottom: 1rem;
+	font-size: 100%;
 	text-wrap: pretty;
 }
 
 a,
-a:hover,
 a:visited {
 	color: var(--color-blue);
 }
 
 a:hover {
 	text-decoration: none;
+}
+
+li {
+	margin: 0.25rem;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
 }
 
 img,
@@ -100,20 +140,19 @@ video {
 	max-width: 100%;
 }
 
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
+@media (prefers-color-scheme: dark) {
+	::selection {
+		color: var(--color-black);
+		background-color: var(--color-pink);
+	}
 
-nav ul li {
-	display: inline;
-}
+	body {
+		color: var(--color-whitesmoke);
+		background-color: var(--color-blacksmoke);
+	}
 
-nav ul li a {
-	text-decoration: none;
-}
-
-nav ul li a:hover {
-	text-decoration: underline;
+	a,
+	a:visited {
+		color: var(--color-pink);
+	}
 }

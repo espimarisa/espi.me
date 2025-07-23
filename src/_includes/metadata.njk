@@ -1,7 +1,13 @@
 {# Sets metadata variables. #}
 {% set meta_author_name = author.name or metadata.author.name %}
 {% set meta_description = description or metadata.description %}
+
+{# Append the site name after pages besides the root one. #}
 {% set meta_title = title or metadata.title %}
+{% if page.url != "/" %}
+	{% set meta_title = (title or metadata.title) ~ " :: Espi Marisa" %}
+{% endif %}
+
 {% set meta_type = type or "website" %}
 
 {# Creates absolute URLs and sets social image fallbacks. #}

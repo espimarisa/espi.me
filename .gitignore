@@ -1,3 +1,74 @@
-_site/
-.cache
-node_modules/
+# Explicitly allowed files
+!.env.example*
+!bun.lock
+!bun.lockb
+
+# Other lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Binaries and dependencies
+*.db
+*.diff
+*.sqlite3
+**/node_modules
+
+# Secrets and virtual environments
+*.env*
+*.pem
+**/credentials
+**/env
+**/venv
+
+# Artifacts, cache, logs, and temporary files
+*.bak
+*.cache
+*.cachefile
+*.log*
+*.map
+*.pid
+*.tmp
+*.tsbuildinfo
+**/_site
+**/.astro
+**/.cache
+**/.git
+**/.jekyll-cache
+**/.next
+**/.npm
+**/.sass-cache
+**/.temp
+**/.tmp
+**/.turbo
+**/cache
+**/logs
+*~
+
+# OS files.
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.DS_Store?
+.ehthumbs_vista.db
+.ehthumbs.db
+.fseventsd/
+.fuse_hidden*
+.Icon?
+.LSOverride
+.Spotlight-V100
+.TemporaryItems/
+.Trashes/
+.VolumeIcon.icns
+*.icloud
+*.lnk
+$RECYCLE.BIN/
+desktop.ini
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable

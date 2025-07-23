@@ -3,3 +3,18 @@ title: Espi Marisa
 description: Blind developer, tinkerer, and activist from Huntsville, Alabama.
 layout: page.njk
 ---
+
+<h1>Hi, I'm Espi!</h1>
+<p>This is a test.</p>
+
+<ul>
+	{# Iterates over each account. #}
+	{% for key, account in accounts %}
+		{# Only display accounts not set to be hidden. #}
+		{% if not account.hide %}
+			<li>
+				<a href="{{ account.url }}">{{ account.name }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

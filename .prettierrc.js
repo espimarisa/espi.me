@@ -19,16 +19,34 @@ export default {
 	objectWrap: "preserve",
 	overrides: [
 		{
-			files: ["*.njk"],
+			/**
+			 * Enables support for nunjucks and ninja-like files.
+			 * Add prettier-plugin-jinja-template to plugins after installing it.
+			 * @see https://saneef.com/blog/format-nunjucks-files-with-prettier/
+			 */
+
+			files: ["**/*.njk"],
 			options: {
 				parser: "jinja-template",
+			},
+		},
+		{
+			/**
+			 * Prettier puts trailing commas on jsonc files by default.
+			 * This is *technically* allowed, but many parsers do not allow it.
+			 * @see https://github.com/prettier/prettier/issues/15956
+			 */
+
+			files: ["**/*.jsonc"],
+			options: {
+				trailingComma: "none",
 			},
 		},
 	],
 	plugins: ["prettier-plugin-jinja-template"],
 	printWidth: 80,
 	proseWrap: "preserve",
-	quoteProps: "as-needed",
+	quoteProps: "consistent",
 	semi: true,
 	singleAttributePerLine: false,
 	singleQuote: false,
