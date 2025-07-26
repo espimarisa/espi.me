@@ -6,17 +6,14 @@
 
 // @ts-check
 
-import path from "node:path";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import externalLinks from "@aloskutov/eleventy-plugin-external-links";
-import browserslist from "browserslist";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginSass from "@11tyrocks/eleventy-plugin-sass-lightningcss";
+import pluginExternalLinks from "@aloskutov/eleventy-plugin-external-links";
 import { compress } from "eleventy-plugin-compress";
-import faviconsPlugin from "eleventy-plugin-gen-favicons";
-// @ts-expect-error This dependency does not export itself properly.
-import pluginIcons from "eleventy-plugin-icons";
-import htmlmin from "html-minifier-next";
-import { browserslistToTargets, bundle } from "lightningcss";
-import metadata from "./src/_data/metadata.js";
+import pluginFavicons from "eleventy-plugin-gen-favicons";
+import htmlMinifierNext from "html-minifier-next";
+import site from "./src/_data/site.js";
 
 /**
  * Configures Eleventy.
@@ -32,43 +29,44 @@ export default function (eleventyConfig) {
 	eleventyConfig.setIncludesDirectory("_includes");
 	eleventyConfig.setLayoutsDirectory("_layouts");
 
-	// Copy static files in /public to the root output directory.
+	// Copies CNAME, static files, and webfonts to output directories.
+	eleventyConfig.addPassthroughCopy("CNAME");
 	eleventyConfig.addPassthroughCopy({ "./public": "/" });
-
-	// Adds page generation date to the global data.
-	eleventyConfig.addGlobalData("generated", () => {
-		const now = new Date();
-		return new Intl.DateTimeFormat("en-US", {
-			dateStyle: "long",
-		}).format(now);
+	eleventyConfig.addPassthroughCopy({
+		"node_modules/@fontsource/**/*/files/**/*.woff2": "/fonts",
 	});
-
-	// Adds the repository URL to the global data.
-	eleventyConfig.addGlobalData(
-		"repository",
-		"https://github.com/espimarisa/espi.me/blob/main",
-	);
 
 	// Configures the Nunjucks engine.
 	eleventyConfig.setNunjucksEnvironmentOptions({
+		lstripBlocks: true,
 		throwOnUndefined: true,
+		trimBlocks: true,
 	});
 
-	// Automatically add external link attributes.
-	eleventyConfig.addPlugin(externalLinks);
+	// Enables SASS support.
+	eleventyConfig.addPlugin(pluginSass);
 
-	// Adds support for icon packs.
-	eleventyConfig.addPlugin(pluginIcons);
+	// Enables syntax highlighting support.
+	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-	// Generate favicons and webmanifest.
-	eleventyConfig.addPlugin(faviconsPlugin, {
+	// Enables brotli compression.
+	eleventyConfig.addPlugin(compress, {
+		algorithm: "brotli",
+		enabled: true,
+	});
+
+	// Automatically appends link attributes to external links.
+	eleventyConfig.addPlugin(pluginExternalLinks, { url: site.url });
+
+	// Automatically generates favicons and webmanifest details.
+	eleventyConfig.addPlugin(pluginFavicons, {
 		manifestData: {
-			name: metadata.title,
-			theme_color: metadata.theme_color,
+			name: site.title,
+			theme_color: site.theme_color,
 		},
 	});
 
-	// Generates RSS feeds.
+	// Automatically generates RSS feeds.
 	eleventyConfig.addPlugin(feedPlugin, {
 		collection: {
 			limit: 10,
@@ -76,61 +74,23 @@ export default function (eleventyConfig) {
 		},
 		metadata: {
 			author: {
-				email: metadata.author.email,
-				name: metadata.author.name,
+				email: site.author.email,
+				name: site.author.name,
 			},
-			base: metadata.absolute_url,
+			base: site.url,
 			language: "en",
-			subtitle: metadata.journal.subtitle,
-			title: metadata.journal.title,
+			subtitle: site.journal.subtitle,
+			title: site.journal.title,
 		},
 		outputPath: "/feed.xml",
 		type: "atom",
 	});
 
-	// Automatically compress contents with brotli.
-	eleventyConfig.addPlugin(compress, {
-		algorithm: "brotli",
-		enabled: true,
-	});
-
-	// Process CSS with LightningCSS.
-	eleventyConfig.addTemplateFormats(["css"]);
-	eleventyConfig.addExtension("css", {
-		outputFileExtension: "css",
-
-		// Compiles the content.
-		compile: (_content, input) => {
-			// Configures browserslist targets.
-			const targets = browserslistToTargets(
-				browserslist("> 0.2% and not dead"),
-			);
-
-			// Parses the content; ignore files starting with _.
-			const parsed = path.parse(input);
-			if (parsed.name.startsWith("_")) {
-				return;
-			}
-
-			return () => {
-				// Bundles the content together.
-				const { code } = bundle({
-					filename: input,
-					minify: true,
-					sourceMap: false,
-					targets: targets,
-				});
-
-				return code;
-			};
-		},
-	});
-
 	// Minifies HTML contents.
-	eleventyConfig.addTransform("htmlmin", function (content) {
+	eleventyConfig.addTransform("htmlMinifierNext", function (content) {
 		// Only minify pages processed as HTML templates.
-		if ((this.page.outputPath || "").endsWith(".html")) {
-			const minified = htmlmin.minify(content, {
+		if (this.page.outputPath.endsWith("html")) {
+			return htmlMinifierNext.minify(content, {
 				collapseBooleanAttributes: true,
 				collapseInlineTagWhitespace: true,
 				collapseWhitespace: true,
@@ -155,8 +115,6 @@ export default function (eleventyConfig) {
 				trimCustomFragments: true,
 				useShortDoctype: true,
 			});
-
-			return minified;
 		}
 
 		return content;

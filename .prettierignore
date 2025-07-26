@@ -1,3 +1,6 @@
+# Specific files
+robots.njk
+
 # Artifacts, cache, logs, and temporary files
 *.log*
 *.map

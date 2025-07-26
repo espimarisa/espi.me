@@ -1,25 +1,5 @@
-:root {
-	/* Colors */
-	--color-black: rgb(0, 0, 0);
-	--color-blue: rgb(0, 0, 255);
-	--color-white: rgb(255, 255, 255);
-	--color-whitesmoke: rgb(245, 245, 245);
-	--color-blacksmoke: rgb(10, 10, 10);
-	--color-pink: rgb(255, 150, 240);
-
-	/* Fonts */
-	--font-default: system-ui;
-	--font-sans-serif: sans-serif;
-
-	/* Layout */
-	--content-max-width: 60rem;
-	--content-padding: 2rem;
-}
-
-::selection {
-	color: var(--color-black);
-	background-color: var(--color-blue);
-}
+@use "fonts";
+@use "variables" as variables;
 
 *,
 *::before,
@@ -38,11 +18,11 @@ html {
 }
 
 body {
-	background-color: var(--color-white);
-	color: var(--color-black);
+	background-color: variables.$color-white;
+	color: variables.$color-black;
 	display: flex;
 	flex-flow: column nowrap;
-	font-family: var(--font-sans-serif);
+	font-family: variables.$font-sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.5;
 	margin: 0;
@@ -56,15 +36,15 @@ body {
 
 main {
 	width: 100%;
-	max-width: var(--content-max-width);
-	padding: var(--content-padding);
+	max-width: 70rem;
+	padding: 2rem;
 	margin: 0 auto;
 }
 
 footer {
 	width: 100%;
-	max-width: var(--content-max-width);
-	padding: var(--content-padding);
+	max-width: 70rem;
+	padding: 2rem;
 	margin: auto auto 0 auto;
 	font-size: 80%;
 }
@@ -76,7 +56,6 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0.25rem;
-	font-weight: 600;
 	line-height: 1.25;
 	text-wrap: balance;
 }
@@ -113,7 +92,7 @@ p {
 
 a,
 a:visited {
-	color: var(--color-blue);
+	color: variables.$color-blue;
 }
 
 a:hover {
@@ -140,19 +119,7 @@ video {
 	max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-	::selection {
-		color: var(--color-black);
-		background-color: var(--color-pink);
-	}
-
-	body {
-		color: var(--color-whitesmoke);
-		background-color: var(--color-blacksmoke);
-	}
-
-	a,
-	a:visited {
-		color: var(--color-pink);
-	}
+pre,
+code {
+	font-family: variables.$font-monospace;
 }

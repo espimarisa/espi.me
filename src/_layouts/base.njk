@@ -4,8 +4,13 @@
 		{# Metadata #}
 		{% include "metadata.njk" %}
 
-		{# Global stylesheets #}
+		{# Global styles #}
 		<link rel="stylesheet" href="/styles/global.css" />
+
+		{# Syntax highlighting #}
+		{% if syntax_highlighting %}
+			<link rel="stylesheet" href="/styles/syntax.css" />
+		{% endif %}
 
 		{# Children head #}
 		{% block head %}
