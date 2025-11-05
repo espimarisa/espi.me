@@ -45,6 +45,6 @@ export const projects = [
     name: "session-rethinkdb-ts",
     description: "A RethinkDB session store for express-session.",
     href: "https://altgo.us",
-    technologies: ["Python", "HTML", "SASS", "Pelican"],
+    technologies: ["TypeScript", "NodeJS", "RethinkDB", "Express"],
   },
 ] satisfies Project[];
