@@ -1,56 +1,73 @@
-# Metadata and site options.
+# Site configuration.
 title: Espi Marisa
-permalink: /journal/:year/:title/
 url: https://espi.me
-social:
+permalink: /journal/:title/
+logo: /assets/images/favicon.png
+
+# Default author and social data.
+author:
+  github: espimarisa
   name: Espi Marisa
-  links:
-    - https://twitter.com/espimarisa_
-    - https://github.com/espimarisa
+  twitter: espimarisa_
 twitter:
-  username: espimarisa_
   card: summary
+  username: espimarisa_
 
-# Configures collections.
-collections:
-  - posts
-
-# Configures the Jekyll engine.
-sass:
-  style: compressed
-  sourcemap: development
+# Directory configuration.
+destination: _site
 source: src
-compress_html:
-  comments: all
 
-# Exclude unnecessary files.
-exclude:
-  - _config.yml
-  - .gitattributes
-  - .gitignore
-  - .prettierignore
-  - .prettierrc
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.md
-  - README.md
+# SASS configuration.
+sass:
+  sourcemap: development
+  style: compressed
 
-# Configures syntax highlighting.
+# Pagination.
+paginate: 5
+paginate_path: /journal/page:num/
+
+# Markdown processing.
+highlighter: rouge
+markdown: kramdown
 kramdown:
   parse_block_html: false
   syntax_highlighter: rouge
   input: GFM
-highlighter: rouge
-markdown: kramdown
 
-# Configures blog post pagination.
-paginate: 5
-paginate_path: "/journal/page:num/"
+# Compression.
+compress_html:
+  clippings: all
+  comments: all
+  profile: false
 
-# Plugins to enable.
+# Collections.
+collections:
+  buttons:
+  posts:
+    output: true
+
+# Only keep required files.
+exclude:
+  - .gitattributes
+  - .gitignore
+  - .jekyll-cache
+  - .jekyll-metadata
+  - .prettierignore
+  - .prettierrc
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - init.sh
+  - LICENSE
+  - LICENSE-posts
+  - node_modules
+  - README.md
+  - vendor
+
+# Plugins.
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap
+  - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-sitemap

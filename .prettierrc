@@ -5,7 +5,7 @@
 	"embeddedLanguageFormatting": "auto",
 	"endOfLine": "lf",
 	"experimentalTernaries": true,
-	"htmlWhitespaceSensitivity": "css",
+	"htmlWhitespaceSensitivity": "ignore",
 	"jsxSingleQuote": false,
 	"objectWrap": "preserve",
 	"overrides": [

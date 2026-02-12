@@ -5,6 +5,3 @@ _site/
 .sass-cache/
 node_modules/
 
-# we use liquify's formatter here
-*.html
-*.liquid
