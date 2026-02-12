@@ -1,12 +1,31 @@
 {
-  "biome.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "eslint.enable": false,
-  "javascript.preferences.importModuleSpecifier": "project-relative",
-  "javascript.preferences.importModuleSpecifierEnding": "js",
-  "prettier.enable": true,
-  "typescript.preferences.importModuleSpecifier": "project-relative",
-  "typescript.preferences.importModuleSpecifierEnding": "js",
-  "typescript.preferences.useAliasesForRenames": false
+	"[liquid]": {
+		"editor.defaultFormatter": "Shopify.theme-check-vscode"
+	},
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"prettier.tabWidth": 2,
+		"prettier.useTabs": false
+	},
+	"colorize.colorized_variables": ["CSS", "SASS"],
+	"colorize.languages": ["css", "liquid", "html", "sass", "scss"],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"files.associations": {
+		"*.html": "liquid"
+	},
+	"files.exclude": {
+		"**/.jekyll-cache": true,
+		"**/.jekyll-metadata": true,
+		"**/.sass-cache": true
+	},
+	"search.exclude": {
+		"**/.jekyll-cache": true,
+		"**/.jekyll-metadata": true,
+		"**/.sass-cache": true
+	}
 }

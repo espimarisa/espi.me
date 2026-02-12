@@ -1,39 +1,34 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to Github Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [main]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        # with:
-        # path: . # The root location of your Astro project inside the repository. (optional)
-        # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-        # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      - uses: actions/checkout@v4
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # Use GitHub Actions' cache to cache dependencies on servers.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .asdf/**
+            vendor/bundle
+          key: ${{ runner.os }}-cache-${{ hashFiles('**/cache.key') }}
+          restore-keys: |
+            ${{ runner.os }}-cache-
+
+      # Use GitHub Deploy Action to build and deploy to Github.
+      - uses: jeffreytse/jekyll-deploy-action@v0.7.0
+        with:
+          provider: "github"
+          token: ${{ secrets.GITHUB_TOKEN }} # GitHub PAT.
+          branch: "gh-pages" # Use the gh-pages branch.
+          jekyll_src: "./src" # Use the src directory.
+          jekyll_cfg: "_config.yml" # Use the config file.
+          ruby_ver: "4.0.1" # Sets the Ruby version.
+          bundler_ver: "4.0.6" # Sets the bundler version.
+          cname: "CNAME" # Use the CNAME.

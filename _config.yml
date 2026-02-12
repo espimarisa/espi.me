@@ -1,0 +1,73 @@
+# Site configuration.
+title: Espi Marisa
+url: https://espi.me
+permalink: /journal/:title/
+logo: /assets/images/favicon.png
+
+# Default author and social data.
+author:
+  github: espimarisa
+  name: Espi Marisa
+  twitter: espimarisa_
+twitter:
+  card: summary
+  username: espimarisa_
+
+# Directory configuration.
+destination: _site
+source: src
+
+# SASS configuration.
+sass:
+  sourcemap: development
+  style: compressed
+
+# Pagination.
+paginate: 5
+paginate_path: /journal/page:num/
+
+# Markdown processing.
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  parse_block_html: false
+  syntax_highlighter: rouge
+  input: GFM
+
+# Compression.
+compress_html:
+  clippings: all
+  comments: all
+  profile: false
+
+# Collections.
+collections:
+  buttons:
+  posts:
+    output: true
+
+# Only keep required files.
+exclude:
+  - .gitattributes
+  - .gitignore
+  - .jekyll-cache
+  - .jekyll-metadata
+  - .prettierignore
+  - .prettierrc
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - init.sh
+  - LICENSE
+  - LICENSE-posts
+  - node_modules
+  - README.md
+  - vendor
+
+# Plugins.
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap

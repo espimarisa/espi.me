@@ -1,0 +1,55 @@
+---
+---
+
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	font-size: 1.25rem;
+	margin: 1rem auto;
+	max-width: 60rem;
+	min-height: 100vh;
+	padding: 0 1rem;
+	color: #111;
+	background-color: #eee;
+}
+
+main {
+	flex: 1;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+span {
+	display: inline;
+}
+
+header {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		display: inline;
+	}
+}
+
+.button-list {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: #eee;
+		background-color: #111;
+	}
+}

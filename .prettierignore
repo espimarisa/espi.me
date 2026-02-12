@@ -1,4 +1,7 @@
-.astro/
-bun.lock
-dist/
+_site/
+.cache/
+.jekyll-cache/
+.jekyll-metadata.
+.sass-cache/
 node_modules/
+

@@ -1,0 +1,39 @@
+{% assign featured_buttons = site.buttons
+	| where: 'front', true
+	| sort: 'name'
+%}
+{% assign regular_buttons = site.buttons
+	| where_exp: 'item', 'item.front != true'
+	| sort: 'name'
+%}
+{% assign all_buttons = featured_buttons | concat: regular_buttons %}
+
+{% for button in all_buttons %}
+	{% if button.hotlink %}
+		{% assign btn_src = button.hotlink %}
+	{% else %}
+		{% assign btn_src = button.file
+			| prepend: '/assets/images/buttons/'
+			| absolute_url
+		%}
+	{% endif %}
+
+	{% capture button_image %}
+    <img
+      src="{{ btn_src }}"
+      alt="{{ button.name }}"
+      title="{{ button.name }}"
+      width="88"
+      height="31" />
+  {% endcapture %}
+	{% if button.link %}
+		<a
+			href="{{ button.link }}"
+			class="button"
+			target="_blank">
+			{{ button_image }}
+		</a>
+	{% else %}
+		{{ button_image }}
+	{% endif %}
+{% endfor %}
