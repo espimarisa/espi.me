@@ -1,6 +1,11 @@
-* text=auto eol=lf
+# Use LF by default.
+* text eol=lf
 
-*.lock -diff -merge
-*.md text eol=lf diff=markdown
-*.sh text eol=lf executable
-tsconfig.json linguist-language=JSON-with-Comments
+# Batchfiles require CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Hide lockfiles and source mappings in diffs.
+*.lock* text -diff
+*.lockb binary -diff
+*.map text -diff

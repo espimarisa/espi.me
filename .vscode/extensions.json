@@ -1,9 +1,10 @@
 {
-  "recommendations": [
-    "astro-build.astro-vscode",
-    "biomejs.biome",
-    "DavidAnson.vscode-markdownlint",
-    "unifiedjs.vscode-mdx",
-    "esbenp.prettier-vscode"
-  ]
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"sissel.shopify-liquid",
+		"EditorConfig.EditorConfig",
+		"SomewhatStationery.some-sass",
+		"kamikillerto.vscode-colorize",
+		"DavidAnson.vscode-markdownlint"
+	]
 }

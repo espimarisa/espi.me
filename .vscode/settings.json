@@ -1,12 +1,53 @@
 {
-  "biome.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "eslint.enable": false,
-  "javascript.preferences.importModuleSpecifier": "project-relative",
-  "javascript.preferences.importModuleSpecifierEnding": "js",
-  "prettier.enable": true,
-  "typescript.preferences.importModuleSpecifier": "project-relative",
-  "typescript.preferences.importModuleSpecifierEnding": "js",
-  "typescript.preferences.useAliasesForRenames": false
+	"[liquid]": {
+		"editor.defaultFormatter": "sissel.shopify-liquid",
+		"editor.formatOnSave": true
+	},
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"prettier.tabWidth": 2,
+		"prettier.useTabs": false
+	},
+	"colorize.colorized_variables": ["CSS", "SASS"],
+	"colorize.languages": ["css", "liquid", "html", "sass", "scss"],
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.associations": {
+		"*.html": "liquid"
+	},
+	"liquid.format.rules": {
+		"endNewline": true,
+		"ignore": ["minify.html"],
+		"indentSize": 4,
+		"liquid": {
+			"commentIndent": true,
+			"commentNewline": true,
+			"delimiterPlacement": "consistent",
+			"delimiterTrims": "always",
+			"indentAttribute": true,
+			"normalizeSpacing": true,
+			"quoteConvert": "double"
+		},
+		"markup": {
+			"attributeSort": true,
+			"commentDelimiters": "consistent",
+			"commentIndent": true,
+			"commentNewline": true,
+			"forceAttribute": true,
+			"quoteConvert": "double",
+			"selfCloseSpace": true
+		},
+		"style": {
+			"atRuleSpace": true,
+			"classPadding": true,
+			"commentIndent": true,
+			"commentNewline": true,
+			"correct": true,
+			"noLeadZero": true,
+			"quoteConvert": "double",
+			"sortProperties": true,
+			"sortSelectors": true
+		},
+		"wrap": 80
+	}
 }

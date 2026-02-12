@@ -1,0 +1,56 @@
+# Metadata and site options.
+title: Espi Marisa
+permalink: /journal/:year/:title/
+url: https://espi.me
+social:
+  name: Espi Marisa
+  links:
+    - https://twitter.com/espimarisa_
+    - https://github.com/espimarisa
+twitter:
+  username: espimarisa_
+  card: summary
+
+# Configures collections.
+collections:
+  - posts
+
+# Configures the Jekyll engine.
+sass:
+  style: compressed
+  sourcemap: development
+source: src
+compress_html:
+  comments: all
+
+# Exclude unnecessary files.
+exclude:
+  - _config.yml
+  - .gitattributes
+  - .gitignore
+  - .prettierignore
+  - .prettierrc
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+# Configures syntax highlighting.
+kramdown:
+  parse_block_html: false
+  syntax_highlighter: rouge
+  input: GFM
+highlighter: rouge
+markdown: kramdown
+
+# Configures blog post pagination.
+paginate: 5
+paginate_path: "/journal/page:num/"
+
+# Plugins to enable.
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
