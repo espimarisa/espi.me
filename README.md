@@ -18,6 +18,6 @@ My personal website and blog, powered by Jekyll.
 
 [espi.me]: https://espi.me "A link to espi (dot) me."
 [license-zlib]: LICENSE "A link to the zlib license."
-[license-cc]: LICENSE-posts "A link to the CC BY-NC-SA license."
+[license-cc]: LICENSE-CC-BY-NC-SA "A link to the CC BY-NC-SA license."
 [src-code]: ./src "A link to the site's source code."
 [src-posts]: ./src/_posts "A link to the blog posts."
