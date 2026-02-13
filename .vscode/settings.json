@@ -1,6 +1,7 @@
 {
 	"[liquid]": {
-		"editor.defaultFormatter": "Shopify.theme-check-vscode"
+		"editor.defaultFormatter": "Shopify.theme-check-vscode",
+		"editor.formatOnSave": true
 	},
 	"[yaml]": {
 		"editor.insertSpaces": true,
@@ -21,11 +22,14 @@
 	"files.exclude": {
 		"**/.jekyll-cache": true,
 		"**/.jekyll-metadata": true,
-		"**/.sass-cache": true
+		"**/.sass-cache": true,
+		"**/node_modules": true
 	},
 	"search.exclude": {
+		"**/_site": true,
 		"**/.jekyll-cache": true,
 		"**/.jekyll-metadata": true,
-		"**/.sass-cache": true
+		"**/.sass-cache": true,
+		"**/node_modules": true
 	}
 }

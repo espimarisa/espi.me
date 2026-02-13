@@ -1,0 +1,27 @@
+{
+	"name": "@espimarisa/espi.me",
+	"version": "0.0.0",
+	"private": "true",
+	"description": "My personal website and blog, powered by Jekyll.",
+	"homepage": "https://github.com/espimarisa/espi.me#readme",
+	"bugs": {
+		"url": "https://github.com/espimarisa/espi.me/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/espimarisa/espi.me.git"
+	},
+	"license": "Zlib",
+	"author": {
+		"email": "hi@espi.me",
+		"name": "Espi Marisa",
+		"url": "https://espi.me"
+	},
+	"scripts": {
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@shopify/prettier-plugin-liquid": "^1.10.0",
+		"prettier": "^3.8.1"
+	}
+}

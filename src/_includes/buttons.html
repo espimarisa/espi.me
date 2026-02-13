@@ -2,14 +2,11 @@
 	| where: 'front', true
 	| sort_natural: 'name'
 %}
-
 {% assign regular_buttons = site.buttons
 	| where_exp: 'item', 'item.front != true'
 	| sort_natural: 'name'
 %}
-
 {% assign all_buttons = featured_buttons | concat: regular_buttons %}
-
 {% for button in all_buttons %}
 	{% if button.hotlink %}
 		{% assign btn_src = button.hotlink %}
@@ -19,21 +16,16 @@
 			| absolute_url
 		%}
 	{% endif %}
-
 	{% capture button_image %}
-    <img
-      src="{{ btn_src }}"
-      alt="{{ button.name }}"
-      title="{{ button.name }}"
-      width="88"
-      height="31" />
-  {% endcapture %}
-
+<img
+	src="{{ btn_src }}"
+	alt="{{ button.name }}"
+	title="{{ button.name }}"
+	width="88"
+	height="31" />
+{% endcapture %}
 	{% if button.link %}
-		<a
-			href="{{ button.link }}"
-			class="button"
-			target="_blank">
+		<a href="{{ button.link }}" class="button" target="_blank">
 			{{ button_image }}
 		</a>
 	{% else %}

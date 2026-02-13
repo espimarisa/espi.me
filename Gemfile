@@ -1,30 +1,25 @@
 source "https://rubygems.org"
-
-# Enforce the Ruby version.
-# This should match .github/workflows/deploy.yml and ./init.sh.
-ruby "4.0.1"
-
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-# Core dependencies and shims.
+# Read minimum Ruby version from .ruby-version.
+ruby file: ".ruby-version"
+
+gem "base64"
+gem "bundler"
+gem "csv"
 gem "jekyll"
 gem "minima"
-gem "bundler"
-gem "base64"
-gem "csv"
-gem "webrick"
-gem "wdm", :platforms => [:windows]
-
-# Syntax highlighting.
 gem "rouge"
+gem "wdm", :platforms => [:windows]
+gem "webrick"
 
 # Plugins
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-paginate"
   gem "jekyll-redirect-from"
-  gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
 
 # Windows and JRuby timezone support.

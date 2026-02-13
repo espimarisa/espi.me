@@ -16,6 +16,12 @@
 			}
 		},
 		{
+			"files": ["**/*.html"],
+			"options": {
+				"parser": "liquid-html"
+			}
+		},
+		{
 			"files": ["**/*.{yaml,yml}"],
 			"options": {
 				"tabWidth": 2,
@@ -23,6 +29,7 @@
 			}
 		}
 	],
+	"plugins": ["@shopify/prettier-plugin-liquid"],
 	"printWidth": 80,
 	"proseWrap": "preserve",
 	"quoteProps": "consistent",

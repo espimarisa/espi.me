@@ -2,6 +2,6 @@ _site/
 .cache/
 .env*
 .jekyll-cache/
-.jekyll-metadata.
+.jekyll-metadata/
 .sass-cache/
 node_modules/

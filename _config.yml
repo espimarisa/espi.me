@@ -2,6 +2,7 @@
 title: Espi Marisa
 url: https://espi.me
 permalink: /journal/:title/
+repository: https://github.com/espimarisa/espi.me
 logo: /assets/images/favicon.png
 
 # Default author and social data.
@@ -45,24 +46,6 @@ collections:
   buttons:
   posts:
     output: true
-
-# Only keep required files.
-exclude:
-  - .gitattributes
-  - .gitignore
-  - .jekyll-cache
-  - .jekyll-metadata
-  - .prettierignore
-  - .prettierrc
-  - .sass-cache
-  - Gemfile
-  - Gemfile.lock
-  - init.sh
-  - LICENSE
-  - LICENSE-posts
-  - node_modules
-  - README.md
-  - vendor
 
 # Plugins.
 plugins:
