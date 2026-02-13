@@ -1,11 +1,1 @@
-# Use LF by default.
-* text eol=lf
-
-# Batchfiles require CRLF.
-*.bat text eol=crlf
-*.cmd text eol=crlf
-
-# Hide lockfiles and source mappings in diffs.
-*.lock* text -diff
-*.lockb binary -diff
-*.map text -diff
+* text=auto
