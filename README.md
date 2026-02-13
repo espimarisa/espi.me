@@ -13,11 +13,11 @@ My personal website and blog, powered by Jekyll.
 ## License
 
 - [Source code][src-code] is licensed under the [zlib][license-zlib] license.
-- [Blog posts][src-posts] are licensed under [CC BY-NC-SA][license-cc].
+- [Blog posts][src-posts] are licensed under [CC BY 4.0][license-cc].
 - Assets and images belong to their original creators.
 
 [espi.me]: https://espi.me "A link to espi (dot) me."
-[license-zlib]: LICENSE "A link to the zlib license."
-[license-cc]: LICENSE-CC-BY-NC-SA "A link to the CC BY-NC-SA license."
+[license-zlib]: LICENSE.txt "A link to the zlib license."
+[license-cc]: LICENSE-CC.txt "A link to the CC BY 4.0 license."
 [src-code]: ./src "A link to the site's source code."
 [src-posts]: ./src/_posts "A link to the blog posts."
