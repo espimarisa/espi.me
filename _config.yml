@@ -4,6 +4,7 @@ url: https://espi.me
 permalink: /journal/:title/
 repository: https://github.com/espimarisa/espi.me
 logo: /assets/images/favicon.png
+fediverse: "@espi@blahaj.zone"
 
 # Default author and social data.
 author:
