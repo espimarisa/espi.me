@@ -45,6 +45,14 @@ header {
 .button-list {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			opacity: 90%;
+		}
+	}
 }
 
 @media (prefers-color-scheme: dark) {

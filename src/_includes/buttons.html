@@ -1,11 +1,13 @@
 {% assign featured_buttons = site.buttons
 	| where: 'front', true
-	| sort: 'name'
+	| sort_natural: 'name'
 %}
+
 {% assign regular_buttons = site.buttons
 	| where_exp: 'item', 'item.front != true'
-	| sort: 'name'
+	| sort_natural: 'name'
 %}
+
 {% assign all_buttons = featured_buttons | concat: regular_buttons %}
 
 {% for button in all_buttons %}
@@ -26,6 +28,7 @@
       width="88"
       height="31" />
   {% endcapture %}
+
 	{% if button.link %}
 		<a
 			href="{{ button.link }}"
