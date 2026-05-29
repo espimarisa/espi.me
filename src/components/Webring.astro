@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import { webring } from "@/utils/webring";
+---
+
+<ul class="webring-list">
+	{
+		Object.keys(webring)
+			.sort()
+			.map((key) => {
+				const entry = webring[key as keyof typeof webring];
+				const button = (
+					<Image
+						alt={entry.alt}
+						decoding="async"
+						height={31}
+						loading="lazy"
+						src={entry.button}
+						title={entry.alt}
+						width={88}
+					/>
+				);
+
+				return (
+					<li>
+						{entry.url ?
+							<a
+								href={entry.url}
+								target="_blank"
+								rel="noreferrer noopener">
+								{button}
+							</a>
+						:	button}
+					</li>
+				);
+			})
+	}
+</ul>
+
+<style>
+	ul {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+	}
+
+	img {
+		image-rendering: pixelated;
+	}
+</style>

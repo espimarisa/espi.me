@@ -12,10 +12,6 @@ trim_trailing_whitespace = true
 [*.bat]
 end_of_line = crlf
 
-# Follow checkstyle guidelines for Java.
-[*.java]
-indent_size = 3
-
 # Do not remove trailing whitespace from markdown.
 [*.{markdown,md,mdx}]
 trim_trailing_whitespace = false

@@ -1,9 +1,10 @@
 _site/
+.astro/
 .cache/
 .jekyll-cache/
 .jekyll-metadata/
 .sass-cache/
+compress.html
 images/
 node_modules/
 package-lock.json
-compress.html

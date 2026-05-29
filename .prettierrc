@@ -10,15 +10,15 @@
 	"objectWrap": "preserve",
 	"overrides": [
 		{
-			"files": ["**/*.jsonc"],
+			"files": "*.astro",
 			"options": {
-				"trailingComma": "none"
+				"parser": "astro"
 			}
 		},
 		{
-			"files": ["**/*.html"],
+			"files": ["**/*.jsonc"],
 			"options": {
-				"parser": "liquid-html"
+				"trailingComma": "none"
 			}
 		},
 		{
@@ -29,7 +29,7 @@
 			}
 		}
 	],
-	"plugins": ["@shopify/prettier-plugin-liquid"],
+	"plugins": ["prettier-plugin-astro"],
 	"printWidth": 80,
 	"proseWrap": "preserve",
 	"quoteProps": "consistent",

@@ -2,7 +2,7 @@
 	"name": "@espimarisa/espi.me",
 	"version": "0.0.0",
 	"private": "true",
-	"description": "My personal website and blog, powered by Jekyll.",
+	"description": "My personal website, blog, and portfolio.",
 	"homepage": "https://github.com/espimarisa/espi.me#readme",
 	"bugs": {
 		"url": "https://github.com/espimarisa/espi.me/issues"
@@ -13,15 +13,39 @@
 	},
 	"license": "Zlib",
 	"author": {
-		"email": "hi@espi.me",
 		"name": "Espi Marisa",
+		"email": "hi@espi.me",
 		"url": "https://espi.me"
 	},
+	"type": "module",
 	"scripts": {
-		"format": "prettier --write ."
+		"build": "astro build",
+		"check": "astro check",
+		"dev": "astro dev",
+		"format": "prettier --write .",
+		"preview": "astro preview",
+		"start": "astro dev"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^5.0.6",
+		"@astrojs/prism": "^4.0.2",
+		"@astrojs/rss": "^4.0.18",
+		"@astrojs/sitemap": "^3.7.2",
+		"@catppuccin/palette": "^1.8.0",
+		"@iconify-json/mdi": "^1.2.3",
+		"@iconify-json/simple-icons": "^1.2.83",
+		"astro": "^6.3.5",
+		"astro-compress": "^2.4.1",
+		"astro-favicons": "^3.1.6",
+		"astro-icon": "^1.1.5",
+		"astro-seo": "^1.1.0",
+		"modern-normalize": "^3.0.1"
 	},
 	"devDependencies": {
-		"@shopify/prettier-plugin-liquid": "^1.10.0",
-		"prettier": "^3.8.1"
+		"@astrojs/check": "^0.9.9",
+		"prettier": "^3.8.3",
+		"prettier-plugin-astro": "^0.14.1",
+		"sass": "^1.99.0",
+		"typescript": "^6.0.3"
 	}
 }

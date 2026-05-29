@@ -1,0 +1,127 @@
+@use "modern-normalize";
+@use "variables";
+
+//
+// Layout
+//
+
+body {
+	background-color: variables.$cat-latte-base;
+	color: variables.$cat-latte-text;
+	display: flex;
+	flex-direction: column;
+	font-family: var(--font-atkinson-hyperlegible-next);
+	font-size: 1.125rem;
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100vh;
+	overflow-wrap: break-word;
+	text-wrap: pretty;
+
+	@media screen and (prefers-color-scheme: dark) {
+		background-color: variables.$cat-mocha-base;
+		color: variables.$cat-mocha-text;
+	}
+}
+
+header,
+main {
+	max-width: variables.$site-max-width;
+	margin: 0 auto;
+	width: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex: 1;
+}
+
+header {
+	padding: 0 variables.$site-padding;
+}
+
+section {
+	padding: variables.$site-padding;
+}
+
+footer {
+	border-top: 1px solid variables.$cat-latte-mauve;
+	background-color: variables.$cat-latte-crust;
+	width: 100%;
+	flex-shrink: 0;
+
+	.footer-contents {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		max-width: variables.$site-max-width;
+		padding: 1rem variables.$site-padding;
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		background-color: variables.$cat-mocha-crust;
+		border-top: 1px solid variables.$cat-mocha-mauve;
+	}
+}
+
+img,
+video {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+//
+// Typography
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 1.5rem 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+a,
+a:hover,
+a:visited {
+	color: variables.$cat-latte-mauve;
+
+	@media screen and (prefers-color-scheme: dark) {
+		color: variables.$cat-mocha-mauve;
+	}
+}
+
+hr {
+	border: 1px solid variables.$cat-latte-mauve;
+
+	@media screen and (prefers-color-scheme: dark) {
+		border: 1px solid variables.$cat-mocha-mauve;
+	}
+}
+
+.title {
+	margin-bottom: 0;
+}
+
+.subtitle {
+	margin-top: 0;
+}
