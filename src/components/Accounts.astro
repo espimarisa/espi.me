@@ -1,3 +1,26 @@
 ---
-
+import { socials } from "@/utils/accounts";
 ---
+
+<ul>
+	{
+		// Returns a list of visible socials.
+		Object.values(socials)
+			.filter((account) => account.visible)
+			.map((account) => {
+				return (
+					<li>
+						<a href={account.url} title={account.name}>
+							{account.name}
+						</a>
+					</li>
+				);
+			})
+	}
+</ul>
+
+<style lang="scss">
+	a {
+		text-decoration: none;
+	}
+</style>

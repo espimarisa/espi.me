@@ -3,13 +3,13 @@
 	"version": "0.0.0",
 	"private": "true",
 	"description": "My personal website, blog, and portfolio.",
-	"homepage": "https://github.com/espimarisa/espi.me#readme",
+	"homepage": "https://codeberg.org/espi/espi.me#readme",
 	"bugs": {
-		"url": "https://github.com/espimarisa/espi.me/issues"
+		"url": "https://codeberg.org/espi/espi.me/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/espimarisa/espi.me.git"
+		"url": "git+https://codeberg.org/espi/espi.me.git"
 	},
 	"license": "Zlib",
 	"author": {
@@ -27,14 +27,14 @@
 		"start": "astro dev"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^5.0.6",
+		"@astrojs/mdx": "^6.0.2",
 		"@astrojs/prism": "^4.0.2",
 		"@astrojs/rss": "^4.0.18",
-		"@astrojs/sitemap": "^3.7.2",
+		"@astrojs/sitemap": "^3.7.3",
 		"@catppuccin/palette": "^1.8.0",
 		"@iconify-json/mdi": "^1.2.3",
-		"@iconify-json/simple-icons": "^1.2.83",
-		"astro": "^6.3.5",
+		"@iconify-json/simple-icons": "^1.2.85",
+		"astro": "^6.4.4",
 		"astro-compress": "^2.4.1",
 		"astro-favicons": "^3.1.6",
 		"astro-icon": "^1.1.5",
@@ -45,7 +45,7 @@
 		"@astrojs/check": "^0.9.9",
 		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.99.0",
+		"sass": "^1.100.0",
 		"typescript": "^6.0.3"
 	}
 }

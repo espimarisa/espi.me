@@ -2,16 +2,19 @@
 import Page from "@/layouts/Page.astro";
 
 const title = "Espi Marisa";
-const description = "Blind developer and tinkerer from Cincinnati, Ohio.";
+const location = "Cincinnati, Ohio";
+const description = `Blind developer and tinkerer from ${location}.`;
 ---
 
 <Page title={title} description={description}>
 	<header>
-		<h1 class="title">Hi, I'm Espi!</h1>
-		<p class="subtitle">
-			I'm a blind developer and tinkerer from Cincinnati, Ohio.
-		</p>
+		<h1 class="title">{title}</h1>
+		<em class="">what is a javascript</em>
 	</header>
 
-	<main></main>
+	<main>
+		<h2 class="title">Hi, I'm Espi!</h2>
+		<p>I'm a blind developer and tinkerer from {location}.</p>
+		<p>I'm also a Computer Science student attending Auburn University.</p>
+	</main>
 </Page>

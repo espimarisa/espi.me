@@ -38,6 +38,7 @@ main {
 	flex: 1;
 }
 
+main,
 header {
 	padding: 0 variables.$site-padding;
 }
@@ -89,15 +90,19 @@ h6 {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 3.5rem;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.5rem;
+}
+
+p {
+	margin: 0;
 }
 
 a,
@@ -124,4 +129,12 @@ hr {
 
 .subtitle {
 	margin-top: 0;
+}
+
+.is-inline {
+	display: inline-block;
+
+	@media screen and (max-width: 600px) {
+		display: block;
+	}
 }

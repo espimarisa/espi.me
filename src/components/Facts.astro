@@ -1,0 +1,13 @@
+---
+import { facts } from "@/utils/facts.ts";
+---
+
+<div id="facts">
+	<ul>
+		{
+			facts.map((fact) => {
+				return <li>{fact}</li>;
+			})
+		}
+	</ul>
+</div>

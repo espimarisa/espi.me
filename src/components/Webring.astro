@@ -37,11 +37,11 @@ import { webring } from "@/utils/webring";
 	}
 </ul>
 
-<style>
+<style lang="scss">
 	ul {
 		display: inline-flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: 0.25rem;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -50,6 +50,11 @@ import { webring } from "@/utils/webring";
 	li {
 		margin: 0;
 		padding: 0;
+
+		:hover {
+			opacity: 90%;
+			transition: 0.2ms;
+		}
 	}
 
 	a {
